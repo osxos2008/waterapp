@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :water_liter_delivereds
   resources :districts
   resources :projects
   resources :users

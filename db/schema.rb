@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_19_135918) do
+ActiveRecord::Schema.define(version: 2020_03_19_140148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,8 +45,21 @@ ActiveRecord::Schema.define(version: 2020_03_19_135918) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "water_liter_delivereds", force: :cascade do |t|
+    t.float "quantity"
+    t.date "date"
+    t.bigint "user_id", null: false
+    t.bigint "district_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["district_id"], name: "index_water_liter_delivereds_on_district_id"
+    t.index ["user_id"], name: "index_water_liter_delivereds_on_user_id"
+  end
+
   add_foreign_key "districts", "projects"
   add_foreign_key "districts", "users"
   add_foreign_key "projects", "users"
   add_foreign_key "projects", "users", column: "assignee_id"
+  add_foreign_key "water_liter_delivereds", "districts"
+  add_foreign_key "water_liter_delivereds", "users"
 end

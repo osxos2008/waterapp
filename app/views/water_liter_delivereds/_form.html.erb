@@ -1,0 +1,37 @@
+<%= form_with(model: water_liter_delivered, local: true) do |form| %>
+  <% if water_liter_delivered.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(water_liter_delivered.errors.count, "error") %> prohibited this water_liter_delivered from being saved:</h2>
+
+      <ul>
+        <% water_liter_delivered.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.text_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :district_id %>
+    <%= form.text_field :district_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
