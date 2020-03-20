@@ -14,6 +14,16 @@
   <strong>Assignee:</strong>
   <%= @project.assignee_id %>
 </p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<div class="column is-3 is-offset-1">
+    <% if project_author(@project) %>
+      <div class="bg-light pa3 mb4 border-radius-3">
+        <p class="f6 pb1">Author actions:</p>
+        <div class="button-group">
+          <%= link_to "Edit trade: #{@project.name}", edit_project_path(@project), class: 'button is-small' %>
+          <%= link_to "Back", projects_path, class: "button is-small" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<%#= link_to 'Edit', edit_project_path(@project) %> |
+<%#= link_to 'Back', projects_path %>

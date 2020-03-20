@@ -1,5 +1,6 @@
 class DistrictsController < ApplicationController
   before_action :set_district, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /districts
   # GET /districts.json
@@ -14,7 +15,7 @@ class DistrictsController < ApplicationController
 
   # GET /districts/new
   def new
-    @district = District.new
+    @district = current_user.districts.build
   end
 
   # GET /districts/1/edit
@@ -24,7 +25,7 @@ class DistrictsController < ApplicationController
   # POST /districts
   # POST /districts.json
   def create
-    @district = District.new(district_params)
+    @district = current_user.districts.build(district_params)
 
     respond_to do |format|
       if @district.save
