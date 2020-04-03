@@ -1,0 +1,41 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  date: 2020-04-03
+  product: MyString
+  purification_station: 
+  alrahwah_Well: 
+  quantity_sent_from_desalination: 
+  product_total: 
+  distribution: MyString
+  networks: MyString
+  abdaan: 
+  alfrya: 
+  alqame: 
+  shra: 
+  alrahwah: 
+  networks_total: 
+  almnahel: MyString
+  aljbail_aljnaben: 
+  distribution_total: 
+
+two:
+  user: two
+  date: 2020-04-03
+  product: MyString
+  purification_station: 
+  alrahwah_Well: 
+  quantity_sent_from_desalination: 
+  product_total: 
+  distribution: MyString
+  networks: MyString
+  abdaan: 
+  alfrya: 
+  alqame: 
+  shra: 
+  alrahwah: 
+  networks_total: 
+  almnahel: MyString
+  aljbail_aljnaben: 
+  distribution_total: 

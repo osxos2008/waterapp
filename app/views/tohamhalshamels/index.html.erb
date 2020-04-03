@@ -1,0 +1,83 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tohamhalshamels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Date</th>
+      <th>Product</th>
+      <th>Alahsabiawell almekhwah</th>
+      <th>Doqahwell qlwah</th>
+      <th>Doqatabdulhamedwell</th>
+      <th>Elepwell alhjrah</th>
+      <th>Alrmedahwell</th>
+      <th>Product total</th>
+      <th>Distribution</th>
+      <th>Networks</th>
+      <th>Almekhwah</th>
+      <th>Qlwah</th>
+      <th>Doqatabdulhamed</th>
+      <th>Alhjrah</th>
+      <th>Networks total</th>
+      <th>Almnahel</th>
+      <th>Ghamidalznad</th>
+      <th>Nsbah</th>
+      <th>Almswdah</th>
+      <th>Nawan</th>
+      <th>Shmalalmekhwah</th>
+      <th>Nera</th>
+      <th>Mmna</th>
+      <th>Bneatta</th>
+      <th>Algreen</th>
+      <th>Alrmedah</th>
+      <th>Almnahl total</th>
+      <th>Distribution total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tohamhalshamels.each do |tohamhalshamel| %>
+      <tr>
+        <td><%= tohamhalshamel.user_id %></td>
+        <td><%= tohamhalshamel.date %></td>
+        <td><%= tohamhalshamel.product %></td>
+        <td><%= tohamhalshamel.alahsabiawell_almekhwah %></td>
+        <td><%= tohamhalshamel.doqahwell_qlwah %></td>
+        <td><%= tohamhalshamel.doqatabdulhamedwell %></td>
+        <td><%= tohamhalshamel.elepwell_alhjrah %></td>
+        <td><%= tohamhalshamel.alrmedahwell %></td>
+        <td><%= tohamhalshamel.product_total %></td>
+        <td><%= tohamhalshamel.distribution %></td>
+        <td><%= tohamhalshamel.networks %></td>
+        <td><%= tohamhalshamel.almekhwah %></td>
+        <td><%= tohamhalshamel.qlwah %></td>
+        <td><%= tohamhalshamel.doqatabdulhamed %></td>
+        <td><%= tohamhalshamel.alhjrah %></td>
+        <td><%= tohamhalshamel.networks_total %></td>
+        <td><%= tohamhalshamel.almnahel %></td>
+        <td><%= tohamhalshamel.ghamidalznad %></td>
+        <td><%= tohamhalshamel.nsbah %></td>
+        <td><%= tohamhalshamel.almswdah %></td>
+        <td><%= tohamhalshamel.nawan %></td>
+        <td><%= tohamhalshamel.shmalalmekhwah %></td>
+        <td><%= tohamhalshamel.nera %></td>
+        <td><%= tohamhalshamel.mmna %></td>
+        <td><%= tohamhalshamel.bneatta %></td>
+        <td><%= tohamhalshamel.algreen %></td>
+        <td><%= tohamhalshamel.alrmedah %></td>
+        <td><%= tohamhalshamel.almnahl_total %></td>
+        <td><%= tohamhalshamel.distribution_total %></td>
+        <td><%= link_to 'Show', tohamhalshamel %></td>
+        <td><%= link_to 'Edit', edit_tohamhalshamel_path(tohamhalshamel) %></td>
+        <td><%= link_to 'Destroy', tohamhalshamel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tohamhalshamel', new_tohamhalshamel_path %>

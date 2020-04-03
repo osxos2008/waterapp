@@ -1,0 +1,2 @@
+module AradahsHelper
+end

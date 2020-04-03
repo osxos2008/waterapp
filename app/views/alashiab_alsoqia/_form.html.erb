@@ -1,0 +1,212 @@
+<%= form_with(model: alashiab_alsoqium, local: true) do |form| %>
+  <% if alashiab_alsoqium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(alashiab_alsoqium.errors.count, "error") %> prohibited this alashiab_alsoqium from being saved:</h2>
+
+      <ul>
+        <% alashiab_alsoqium.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almzre_soqia %>
+    <%= form.text_field :almzre_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almzre_naqlat %>
+    <%= form.text_field :almzre_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bljorashy_soqia %>
+    <%= form.text_field :bljorashy_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bljorashy_naqlat %>
+    <%= form.text_field :bljorashy_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnekbeer_soqia %>
+    <%= form.text_field :bnekbeer_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnekbeer_naqlat %>
+    <%= form.text_field :bnekbeer_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almosa_soqia %>
+    <%= form.text_field :almosa_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almosa_naqlat %>
+    <%= form.text_field :almosa_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aljnaben_soqia %>
+    <%= form.text_field :aljnaben_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aljnaben_naqlat %>
+    <%= form.text_field :aljnaben_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alaqeq_soqia %>
+    <%= form.text_field :alaqeq_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alaqeq_naqlat %>
+    <%= form.text_field :alaqeq_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lef_soqia %>
+    <%= form.text_field :lef_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lef_naqlat %>
+    <%= form.text_field :lef_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnehasan_soqia %>
+    <%= form.text_field :bnehasan_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnehasan_naqlat %>
+    <%= form.text_field :bnehasan_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alhlah_soqia %>
+    <%= form.text_field :alhlah_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alhalah_naqlat %>
+    <%= form.text_field :alhalah_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dos_soqia %>
+    <%= form.text_field :dos_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dos_naqlat %>
+    <%= form.text_field :dos_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blkhzmr_soqia %>
+    <%= form.text_field :blkhzmr_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blkhzmr_naqlat %>
+    <%= form.text_field :blkhzmr_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bneadwan_soqia %>
+    <%= form.text_field :bneadwan_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bneadwan_naqlat %>
+    <%= form.text_field :bneadwan_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :althrawen_soqia %>
+    <%= form.text_field :althrawen_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :althrawen_naqlat %>
+    <%= form.text_field :althrawen_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alqsmh_soqia %>
+    <%= form.text_field :alqsmh_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alqsmh_naqlat %>
+    <%= form.text_field :alqsmh_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nbhan_soqia %>
+    <%= form.text_field :nbhan_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nbhan_naqlat %>
+    <%= form.text_field :nbhan_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nkhal_soqia %>
+    <%= form.text_field :nkhal_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nkhal_naqlat %>
+    <%= form.text_field :nkhal_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kra_soqia %>
+    <%= form.text_field :kra_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kra_naqlat %>
+    <%= form.text_field :kra_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ghamidalznad_soqia %>
+    <%= form.text_field :ghamidalznad_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ghamidalznad_naqlat %>
+    <%= form.text_field :ghamidalznad_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tota_soqia %>
+    <%= form.text_field :tota_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_naqlat %>
+    <%= form.text_field :total_naqlat %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

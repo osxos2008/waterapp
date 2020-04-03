@@ -1,4 +1,4 @@
-<%= form_with(model: water_liter_delivered, local: true) do |form| %>
+<%= form_for(water_liter_delivered) do |form|%>
   <% if water_liter_delivered.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(water_liter_delivered.errors.count, "error") %> prohibited this water_liter_delivered from being saved:</h2>
@@ -11,27 +11,72 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :quantity %>
-    <%= form.text_field :quantity %>
-  </div>
+<h1> <%= Project.find(8).name%> </h1>  
 
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
-  </div>
+<br>
+<table class="table is-striped is-bordered">
+  <thead>
+  <tr>
+    <th>Quantity</th>
+    <th>Date</th>
+    <th>District</th>
+    <th>District Name</th>
+  </tr>
+  </thead>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :district_id %>
-    <%= form.text_field :district_id %>
-  </div>
-
-  <div class="actions">
+  <tbody>
+      <tr>
+        <td><%= form.text_field :quantity %></td>
+        <td><%= form.date_field :date %></td>
+        <td><%= form.text_field :district_id %></td>
+        <td><%= District.find(4).name %></td>
+      </tr>
+      <tr>
+        <td><%= form.text_field :quantity %></td>
+        <td><%= form.date_field :date %></td>
+        <td><%= form.text_field :district_id %></td>
+        <td><%= District.find(5).name %></td>
+      </tr>
+      <tr>
+        <td><%= form.text_field :quantity %></td>
+        <td><%= form.date_field :date %></td>
+        <td><%= form.text_field :district_id %></td>
+        <td><%= District.find(6).name %></td>
+      </tr>
+      <tr>
+        <td><%= form.text_field :quantity %></td>
+        <td><%= form.date_field :date %></td>
+        <td><%= form.text_field :district_id %></td>
+        <td><%= District.find(7).name %></td>
+      </tr>
+      <tr>
+        <td><%= form.text_field :quantity %></td>
+        <td><%= form.date_field :date %></td>
+        <td><%= form.text_field :district_id %></td>
+        <td><%= District.find(8).name %></td>
+      </tr>
+      <tr>
+        <td><%= form.text_field :quantity %></td>
+        <td><%= form.date_field :date %></td>
+        <td><%= form.text_field :district_id %></td>
+        <td><%= District.find(9).name %></td>
+      </tr>
+      <tr>
+        <td><%= form.text_field :quantity %></td>
+        <td><%= form.date_field :date %></td>
+        <td><%= form.text_field :district_id %></td>
+        <td><%= District.find(10).name %></td>
+      </tr>
+      
+  </tbody>
+</table>
+<div class="actions">
     <%= form.submit %>
   </div>
+<br>
+<br>
+<br>
+<br>
+
+  
 <% end %>

@@ -14,7 +14,7 @@ class WaterLiterDeliveredsController < ApplicationController
 
   # GET /water_liter_delivereds/new
   def new
-    @water_liter_delivered = WaterLiterDelivered.new
+    @water_liter_delivered = current_user.water_liter_delivereds.build
   end
 
   # GET /water_liter_delivereds/1/edit
@@ -24,7 +24,7 @@ class WaterLiterDeliveredsController < ApplicationController
   # POST /water_liter_delivereds
   # POST /water_liter_delivereds.json
   def create
-    @water_liter_delivered = WaterLiterDelivered.new(water_liter_delivered_params)
+    @water_liter_delivered = current_user.water_liter_delivereds.build(water_liter_delivered_params)
 
     respond_to do |format|
       if @water_liter_delivered.save

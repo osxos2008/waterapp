@@ -1,0 +1,101 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Alashiab Alsoqia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Almzre soqia</th>
+      <th>Almzre naqlat</th>
+      <th>Bljorashy soqia</th>
+      <th>Bljorashy naqlat</th>
+      <th>Bnekbeer soqia</th>
+      <th>Bnekbeer naqlat</th>
+      <th>Almosa soqia</th>
+      <th>Almosa naqlat</th>
+      <th>Aljnaben soqia</th>
+      <th>Aljnaben naqlat</th>
+      <th>Alaqeq soqia</th>
+      <th>Alaqeq naqlat</th>
+      <th>Lef soqia</th>
+      <th>Lef naqlat</th>
+      <th>Bnehasan soqia</th>
+      <th>Bnehasan naqlat</th>
+      <th>Alhlah soqia</th>
+      <th>Alhalah naqlat</th>
+      <th>Dos soqia</th>
+      <th>Dos naqlat</th>
+      <th>Blkhzmr soqia</th>
+      <th>Blkhzmr naqlat</th>
+      <th>Bneadwan soqia</th>
+      <th>Bneadwan naqlat</th>
+      <th>Althrawen soqia</th>
+      <th>Althrawen naqlat</th>
+      <th>Alqsmh soqia</th>
+      <th>Alqsmh naqlat</th>
+      <th>Nbhan soqia</th>
+      <th>Nbhan naqlat</th>
+      <th>Nkhal soqia</th>
+      <th>Nkhal naqlat</th>
+      <th>Kra soqia</th>
+      <th>Kra naqlat</th>
+      <th>Ghamidalznad soqia</th>
+      <th>Ghamidalznad naqlat</th>
+      <th>Tota soqia</th>
+      <th>Total naqlat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alashiab_alsoqia.each do |alashiab_alsoqium| %>
+      <tr>
+        <td><%= alashiab_alsoqium.almzre_soqia %></td>
+        <td><%= alashiab_alsoqium.almzre_naqlat %></td>
+        <td><%= alashiab_alsoqium.bljorashy_soqia %></td>
+        <td><%= alashiab_alsoqium.bljorashy_naqlat %></td>
+        <td><%= alashiab_alsoqium.bnekbeer_soqia %></td>
+        <td><%= alashiab_alsoqium.bnekbeer_naqlat %></td>
+        <td><%= alashiab_alsoqium.almosa_soqia %></td>
+        <td><%= alashiab_alsoqium.almosa_naqlat %></td>
+        <td><%= alashiab_alsoqium.aljnaben_soqia %></td>
+        <td><%= alashiab_alsoqium.aljnaben_naqlat %></td>
+        <td><%= alashiab_alsoqium.alaqeq_soqia %></td>
+        <td><%= alashiab_alsoqium.alaqeq_naqlat %></td>
+        <td><%= alashiab_alsoqium.lef_soqia %></td>
+        <td><%= alashiab_alsoqium.lef_naqlat %></td>
+        <td><%= alashiab_alsoqium.bnehasan_soqia %></td>
+        <td><%= alashiab_alsoqium.bnehasan_naqlat %></td>
+        <td><%= alashiab_alsoqium.alhlah_soqia %></td>
+        <td><%= alashiab_alsoqium.alhalah_naqlat %></td>
+        <td><%= alashiab_alsoqium.dos_soqia %></td>
+        <td><%= alashiab_alsoqium.dos_naqlat %></td>
+        <td><%= alashiab_alsoqium.blkhzmr_soqia %></td>
+        <td><%= alashiab_alsoqium.blkhzmr_naqlat %></td>
+        <td><%= alashiab_alsoqium.bneadwan_soqia %></td>
+        <td><%= alashiab_alsoqium.bneadwan_naqlat %></td>
+        <td><%= alashiab_alsoqium.althrawen_soqia %></td>
+        <td><%= alashiab_alsoqium.althrawen_naqlat %></td>
+        <td><%= alashiab_alsoqium.alqsmh_soqia %></td>
+        <td><%= alashiab_alsoqium.alqsmh_naqlat %></td>
+        <td><%= alashiab_alsoqium.nbhan_soqia %></td>
+        <td><%= alashiab_alsoqium.nbhan_naqlat %></td>
+        <td><%= alashiab_alsoqium.nkhal_soqia %></td>
+        <td><%= alashiab_alsoqium.nkhal_naqlat %></td>
+        <td><%= alashiab_alsoqium.kra_soqia %></td>
+        <td><%= alashiab_alsoqium.kra_naqlat %></td>
+        <td><%= alashiab_alsoqium.ghamidalznad_soqia %></td>
+        <td><%= alashiab_alsoqium.ghamidalznad_naqlat %></td>
+        <td><%= alashiab_alsoqium.tota_soqia %></td>
+        <td><%= alashiab_alsoqium.total_naqlat %></td>
+        <td><%= link_to 'Show', alashiab_alsoqium %></td>
+        <td><%= link_to 'Edit', edit_alashiab_alsoqium_path(alashiab_alsoqium) %></td>
+        <td><%= link_to 'Destroy', alashiab_alsoqium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alashiab Alsoqium', new_alashiab_alsoqium_path %>

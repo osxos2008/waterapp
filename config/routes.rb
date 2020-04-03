@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
+  resources :aradahs
+  resources :alashiab_alsoqia
+  resources :tohamhalshamels
+  resources :aljnabens
+  resources :smallprojects
+  devise_for :users, :path_prefix => 'd'
   resources :water_liter_delivereds
   resources :districts
   resources :projects

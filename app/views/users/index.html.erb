@@ -1,0 +1,51 @@
+
+<p id="notice"><%= notice %></p>
+
+<% content_for :header do %>
+<section class="hero is-warning is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Users
+      </h1>
+    </div>
+  </div>
+</section>
+<% end %>
+<table class="table is-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>ID</th>
+      <th>Admin</th>
+      <th>Project</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.id %></td>
+        <td><%= user.admin%></td>
+        <td><%= user.project%></td>
+        <% if project_admin(user) %>
+          <td><%= link_to 'Edit', edit_user_path(user) %></td>
+          <td><%= link_to 'Destroy', registration_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<ul>
+  <% @users.each do |user| %>
+    <li><%= user.name %></li>
+    <li><%= user.id %></li>
+    <li><%= user.admin %></li>
+  <% end %>
+</ul>

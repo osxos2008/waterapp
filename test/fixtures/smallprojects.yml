@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  date: 2020-04-03
+  smallproject: MyString
+  total_wo_thrad_btat: 1.5
+  product_thrad: 1.5
+  product_btat: 1.5
+  product_total: 1.5
+  detailed_production: MyString
+  albaha: 1.5
+  bljorashy: 1.5
+  alqora: 1.5
+  almandaq: 1.5
+  alaqeq: 1.5
+  almekhwah: 1.5
+  qolwah: 1.5
+  alhgrah: 1.5
+
+two:
+  user: two
+  date: 2020-04-03
+  smallproject: MyString
+  total_wo_thrad_btat: 1.5
+  product_thrad: 1.5
+  product_btat: 1.5
+  product_total: 1.5
+  detailed_production: MyString
+  albaha: 1.5
+  bljorashy: 1.5
+  alqora: 1.5
+  almandaq: 1.5
+  alaqeq: 1.5
+  almekhwah: 1.5
+  qolwah: 1.5
+  alhgrah: 1.5

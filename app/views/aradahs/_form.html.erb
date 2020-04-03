@@ -1,0 +1,262 @@
+<%= form_with(model: aradah, local: true) do |form| %>
+  <% if aradah.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(aradah.errors.count, "error") %> prohibited this aradah from being saved:</h2>
+
+      <ul>
+        <% aradah.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product %>
+    <%= form.text_field :product %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wells %>
+    <%= form.text_field :wells %>
+  </div>
+
+  <div class="field">
+    <%= form.label :from_thrawen_tank %>
+    <%= form.text_field :from_thrawen_tank %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_total %>
+    <%= form.text_field :product_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distribution %>
+    <%= form.text_field :distribution %>
+  </div>
+
+  <div class="field">
+    <%= form.label :networks %>
+    <%= form.text_field :networks %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnet_alqsmh %>
+    <%= form.text_field :qnet_alqsmh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnet_althrawen %>
+    <%= form.text_field :qnet_althrawen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnet_althrawen_alatawlah %>
+    <%= form.text_field :qnet_althrawen_alatawlah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnet_bneedwan1 %>
+    <%= form.text_field :qnet_bneedwan1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnet_bneedwan2 %>
+    <%= form.text_field :qnet_bneedwan2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnet_bedah %>
+    <%= form.text_field :qnet_bedah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnet_mashoqah %>
+    <%= form.text_field :qnet_mashoqah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mrawah %>
+    <%= form.text_field :mrawah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnet_total %>
+    <%= form.text_field :qnet_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnenet_blkhzmr %>
+    <%= form.text_field :bnenet_blkhzmr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnenet_bnehasan %>
+    <%= form.text_field :bnenet_bnehasan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnenet_total %>
+    <%= form.text_field :bnenet_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_alhalah %>
+    <%= form.text_field :mnet_alhalah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_alkhlb %>
+    <%= form.text_field :mnet_alkhlb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_dos %>
+    <%= form.text_field :mnet_dos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_alkahla1 %>
+    <%= form.text_field :mnet_alkahla1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_alkahla2 %>
+    <%= form.text_field :mnet_alkahla2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_sehan %>
+    <%= form.text_field :mnet_sehan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_blhkm %>
+    <%= form.text_field :mnet_blhkm %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_aljawfaa %>
+    <%= form.text_field :mnet_aljawfaa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_total %>
+    <%= form.text_field :mnet_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnet_almosa %>
+    <%= form.text_field :bnet_almosa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnet_qrnthbe %>
+    <%= form.text_field :bnet_qrnthbe %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnet_total %>
+    <%= form.text_field :bnet_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :network_total %>
+    <%= form.text_field :network_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almnahel %>
+    <%= form.text_field :almnahel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qshep_nkhal %>
+    <%= form.text_field :qshep_nkhal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qshep_alqsmh %>
+    <%= form.text_field :qshep_alqsmh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qshep_althrawen %>
+    <%= form.text_field :qshep_althrawen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qshep_bneodwan %>
+    <%= form.text_field :qshep_bneodwan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qshep_mashoqah %>
+    <%= form.text_field :qshep_mashoqah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qshep_total %>
+    <%= form.text_field :qshep_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bneshep_blkhzmr %>
+    <%= form.text_field :bneshep_blkhzmr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bneshep_bnehasan %>
+    <%= form.text_field :bneshep_bnehasan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bneshep_total %>
+    <%= form.text_field :bneshep_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mshep_alhalah %>
+    <%= form.text_field :mshep_alhalah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mshep_dos %>
+    <%= form.text_field :mshep_dos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mshep_total %>
+    <%= form.text_field :mshep_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bshep_almosa %>
+    <%= form.text_field :bshep_almosa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnahel_total %>
+    <%= form.text_field :mnahel_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distripution_total %>
+    <%= form.text_field :distripution_total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

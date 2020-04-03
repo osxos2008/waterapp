@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Smallprojects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Date</th>
+      <th>Smallproject</th>
+      <th>Total wo thrad btat</th>
+      <th>Product thrad</th>
+      <th>Product btat</th>
+      <th>Product total</th>
+      <th>Detailed production</th>
+      <th>Albaha</th>
+      <th>Bljorashy</th>
+      <th>Alqora</th>
+      <th>Almandaq</th>
+      <th>Alaqeq</th>
+      <th>Almekhwah</th>
+      <th>Qolwah</th>
+      <th>Alhgrah</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @smallprojects.each do |smallproject| %>
+      <tr>
+        <td><%= smallproject.user_id %></td>
+        <td><%= smallproject.date %></td>
+        <td><%= smallproject.smallproject %></td>
+        <td><%= smallproject.total_wo_thrad_btat %></td>
+        <td><%= smallproject.product_thrad %></td>
+        <td><%= smallproject.product_btat %></td>
+        <td><%= smallproject.product_total %></td>
+        <td><%= smallproject.detailed_production %></td>
+        <td><%= smallproject.albaha %></td>
+        <td><%= smallproject.bljorashy %></td>
+        <td><%= smallproject.alqora %></td>
+        <td><%= smallproject.almandaq %></td>
+        <td><%= smallproject.alaqeq %></td>
+        <td><%= smallproject.almekhwah %></td>
+        <td><%= smallproject.qolwah %></td>
+        <td><%= smallproject.alhgrah %></td>
+        <td><%= link_to 'Show', smallproject %></td>
+        <td><%= link_to 'Edit', edit_smallproject_path(smallproject) %></td>
+        <td><%= link_to 'Destroy', smallproject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Smallproject', new_smallproject_path %>

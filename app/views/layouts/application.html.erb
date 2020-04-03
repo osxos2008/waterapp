@@ -15,16 +15,41 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
-  <body>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+  <body class="<%= yield (:body_class) %>">
+      <% if flash[:notice] %>
+      <div class="notification is-success global-notification">
+        <p class="notice"><%= notice %></p>
+      </div>
+      <% end %>
+
+      <% if flash[:alert] %>
+      <div class="notification is-danger global-notification">
+        <p class="alert"><%= alert %></p>
+      </div>
+      <% end %>
+
+      <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <%= link_to root_path, class:"navbar-item" do %>
+          <h1 class="title is-4 has-text-white">WaterApp</h1>
+        <% end  %>
+        <div class="navbar-burger burger" data-target="navbar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
       <div id="navbar" class="navbar-menu">
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="field is-grouped">
             <% if user_signed_in? %>
               <%= link_to 'New project', new_project_path, class: "navbar-item button is-dark" %>
-
+              <%= link_to 'New district', new_district_path, class: "navbar-item button is-dark" %>
+              <%= link_to 'New Water Dilivred', new_water_liter_delivered_path, class: "navbar-item button is-dark" %>
+              <%= link_to 'Show district', districts_path, class: "navbar-item" %>
+              <%= link_to 'Show Water Dilivred', water_liter_delivereds_path, class: "navbar-item" %>
               <div class="navbar-item has-dropdown is-hoverable">
                 <%= link_to 'Account', edit_user_registration_path, class: "navbar-link" %>
                 <div class="navbar-dropdown is-right">
@@ -44,6 +69,13 @@
           </div>
         </div>
       </div>
-    <%= yield %>
+      </div>
+  </nav>
+    <%= yield(:header) %>
+    <section class="section">
+    <div class="container">
+      <%= yield %>
+    </div>
+  </section>
   </body>
 </html>

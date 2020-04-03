@@ -1,0 +1,2 @@
+json.extract! tohamhalshamel, :id, :user_id, :date, :product, :alahsabiawell_almekhwah, :doqahwell_qlwah, :doqatabdulhamedwell, :elepwell_alhjrah, :alrmedahwell, :product_total, :distribution, :networks, :almekhwah, :qlwah, :doqatabdulhamed, :alhjrah, :networks_total, :almnahel, :ghamidalznad, :nsbah, :almswdah, :nawan, :shmalalmekhwah, :nera, :mmna, :bneatta, :algreen, :alrmedah, :almnahl_total, :distribution_total, :created_at, :updated_at
+json.url tohamhalshamel_url(tohamhalshamel, format: :json)

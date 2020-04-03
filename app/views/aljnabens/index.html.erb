@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Aljnabens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Date</th>
+      <th>Product</th>
+      <th>Purification station</th>
+      <th>Alrahwah well</th>
+      <th>Quantity sent from desalination</th>
+      <th>Product total</th>
+      <th>Distribution</th>
+      <th>Networks</th>
+      <th>Abdaan</th>
+      <th>Alfrya</th>
+      <th>Alqame</th>
+      <th>Shra</th>
+      <th>Alrahwah</th>
+      <th>Networks total</th>
+      <th>Almnahel</th>
+      <th>Aljbail aljnaben</th>
+      <th>Distribution total</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aljnabens.each do |aljnaben| %>
+      <tr>
+        <td><%= aljnaben.user_id %></td>
+        <td><%= aljnaben.date %></td>
+        <td><%= aljnaben.product %></td>
+        <td><%= aljnaben.purification_station %></td>
+        <td><%= aljnaben.alrahwah_Well %></td>
+        <td><%= aljnaben.quantity_sent_from_desalination %></td>
+        <td><%= aljnaben.product_total %></td>
+        <td><%= aljnaben.distribution %></td>
+        <td><%= aljnaben.networks %></td>
+        <td><%= aljnaben.abdaan %></td>
+        <td><%= aljnaben.alfrya %></td>
+        <td><%= aljnaben.alqame %></td>
+        <td><%= aljnaben.shra %></td>
+        <td><%= aljnaben.alrahwah %></td>
+        <td><%= aljnaben.networks_total %></td>
+        <td><%= aljnaben.almnahel %></td>
+        <td><%= aljnaben.aljbail_aljnaben %></td>
+        <td><%= aljnaben.distribution_total %></td>
+        <td><%= link_to 'Show', aljnaben %></td>
+        <td><%= link_to 'Edit', edit_aljnaben_path(aljnaben) %></td>
+        <td><%= link_to 'Destroy', aljnaben, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aljnaben', new_aljnaben_path %>

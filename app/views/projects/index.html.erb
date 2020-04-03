@@ -1,8 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Projects</h1>
-
-<table>
+<% content_for :header do %>
+<section class="hero is-warning is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Projects
+      </h1>
+    </div>
+  </div>
+</section>
+<% end %>
+<table class="table is-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -17,7 +26,7 @@
       <tr>
         <td><%= project.name %></td>
         <td><%= project.user_id %></td>
-        <td><%= project.assignee_id %></td>
+        <td><%= (User.find(project.assignee_id)).name%></td>
         <td><%= link_to 'Show', project %></td>
         <% if project_admin(project) %>
           <td><%= link_to 'Edit', edit_project_path(project) %></td>

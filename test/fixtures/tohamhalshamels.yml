@@ -1,0 +1,63 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  date: 2020-04-03
+  product: MyString
+  alahsabiawell_almekhwah: 1.5
+  doqahwell_qlwah: 1.5
+  doqatabdulhamedwell: 1.5
+  elepwell_alhjrah: 1.5
+  alrmedahwell: 1.5
+  product_total: 1.5
+  distribution: MyString
+  networks: MyString
+  almekhwah: 1.5
+  qlwah: 1.5
+  doqatabdulhamed: 1.5
+  alhjrah: 1.5
+  networks_total: 1.5
+  almnahel: MyString
+  ghamidalznad: 1.5
+  nsbah: 1.5
+  almswdah: 1.5
+  nawan: 1.5
+  shmalalmekhwah: 1.5
+  nera: 1.5
+  mmna: 1.5
+  bneatta: 1.5
+  algreen: 1.5
+  alrmedah: 1.5
+  almnahl_total: 1.5
+  distribution_total: 1.5
+
+two:
+  user: two
+  date: 2020-04-03
+  product: MyString
+  alahsabiawell_almekhwah: 1.5
+  doqahwell_qlwah: 1.5
+  doqatabdulhamedwell: 1.5
+  elepwell_alhjrah: 1.5
+  alrmedahwell: 1.5
+  product_total: 1.5
+  distribution: MyString
+  networks: MyString
+  almekhwah: 1.5
+  qlwah: 1.5
+  doqatabdulhamed: 1.5
+  alhjrah: 1.5
+  networks_total: 1.5
+  almnahel: MyString
+  ghamidalznad: 1.5
+  nsbah: 1.5
+  almswdah: 1.5
+  nawan: 1.5
+  shmalalmekhwah: 1.5
+  nera: 1.5
+  mmna: 1.5
+  bneatta: 1.5
+  algreen: 1.5
+  alrmedah: 1.5
+  almnahl_total: 1.5
+  distribution_total: 1.5

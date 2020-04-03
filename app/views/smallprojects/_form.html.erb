@@ -1,0 +1,97 @@
+<%= form_with(model: smallproject, local: true) do |form| %>
+  <% if smallproject.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(smallproject.errors.count, "error") %> prohibited this smallproject from being saved:</h2>
+
+      <ul>
+        <% smallproject.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :smallproject %>
+    <%= form.text_field :smallproject %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_wo_thrad_btat %>
+    <%= form.text_field :total_wo_thrad_btat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_thrad %>
+    <%= form.text_field :product_thrad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_btat %>
+    <%= form.text_field :product_btat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_total %>
+    <%= form.text_field :product_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :detailed_production %>
+    <%= form.text_field :detailed_production %>
+  </div>
+
+  <div class="field">
+    <%= form.label :albaha %>
+    <%= form.text_field :albaha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bljorashy %>
+    <%= form.text_field :bljorashy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alqora %>
+    <%= form.text_field :alqora %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almandaq %>
+    <%= form.text_field :almandaq %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alaqeq %>
+    <%= form.text_field :alaqeq %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almekhwah %>
+    <%= form.text_field :almekhwah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qolwah %>
+    <%= form.text_field :qolwah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alhgrah %>
+    <%= form.text_field :alhgrah %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

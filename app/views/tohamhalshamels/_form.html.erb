@@ -1,0 +1,162 @@
+<%= form_with(model: tohamhalshamel, local: true) do |form| %>
+  <% if tohamhalshamel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tohamhalshamel.errors.count, "error") %> prohibited this tohamhalshamel from being saved:</h2>
+
+      <ul>
+        <% tohamhalshamel.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product %>
+    <%= form.text_field :product %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alahsabiawell_almekhwah %>
+    <%= form.text_field :alahsabiawell_almekhwah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :doqahwell_qlwah %>
+    <%= form.text_field :doqahwell_qlwah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :doqatabdulhamedwell %>
+    <%= form.text_field :doqatabdulhamedwell %>
+  </div>
+
+  <div class="field">
+    <%= form.label :elepwell_alhjrah %>
+    <%= form.text_field :elepwell_alhjrah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alrmedahwell %>
+    <%= form.text_field :alrmedahwell %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_total %>
+    <%= form.text_field :product_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distribution %>
+    <%= form.text_field :distribution %>
+  </div>
+
+  <div class="field">
+    <%= form.label :networks %>
+    <%= form.text_field :networks %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almekhwah %>
+    <%= form.text_field :almekhwah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qlwah %>
+    <%= form.text_field :qlwah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :doqatabdulhamed %>
+    <%= form.text_field :doqatabdulhamed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alhjrah %>
+    <%= form.text_field :alhjrah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :networks_total %>
+    <%= form.text_field :networks_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almnahel %>
+    <%= form.text_field :almnahel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ghamidalznad %>
+    <%= form.text_field :ghamidalznad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nsbah %>
+    <%= form.text_field :nsbah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almswdah %>
+    <%= form.text_field :almswdah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nawan %>
+    <%= form.text_field :nawan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shmalalmekhwah %>
+    <%= form.text_field :shmalalmekhwah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nera %>
+    <%= form.text_field :nera %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mmna %>
+    <%= form.text_field :mmna %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bneatta %>
+    <%= form.text_field :bneatta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :algreen %>
+    <%= form.text_field :algreen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alrmedah %>
+    <%= form.text_field :alrmedah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almnahl_total %>
+    <%= form.text_field :almnahl_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distribution_total %>
+    <%= form.text_field :distribution_total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
