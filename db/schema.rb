@@ -140,16 +140,6 @@ ActiveRecord::Schema.define(version: 2020_04_03_210151) do
     t.index ["user_id"], name: "index_aradahs_on_user_id"
   end
 
-  create_table "districts", force: :cascade do |t|
-    t.string "name"
-    t.bigint "user_id", null: false
-    t.bigint "project_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["project_id"], name: "index_districts_on_project_id"
-    t.index ["user_id"], name: "index_districts_on_user_id"
-  end
-
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.bigint "user_id", null: false
@@ -239,26 +229,11 @@ ActiveRecord::Schema.define(version: 2020_04_03_210151) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "water_liter_delivereds", force: :cascade do |t|
-    t.float "quantity"
-    t.date "date"
-    t.bigint "user_id", null: false
-    t.bigint "district_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["district_id"], name: "index_water_liter_delivereds_on_district_id"
-    t.index ["user_id"], name: "index_water_liter_delivereds_on_user_id"
-  end
-
   add_foreign_key "alashiab_alsoqia", "users"
   add_foreign_key "aljnabens", "users"
   add_foreign_key "aradahs", "users"
-  add_foreign_key "districts", "projects"
-  add_foreign_key "districts", "users"
   add_foreign_key "projects", "users"
   add_foreign_key "projects", "users", column: "assignee_id"
   add_foreign_key "smallprojects", "users"
   add_foreign_key "tohamhalshamels", "users"
-  add_foreign_key "water_liter_delivereds", "districts"
-  add_foreign_key "water_liter_delivereds", "users"
 end

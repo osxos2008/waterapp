@@ -1,212 +1,158 @@
-<%= form_with(model: alashiab_alsoqium, local: true) do |form| %>
-  <% if alashiab_alsoqium.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(alashiab_alsoqium.errors.count, "error") %> prohibited this alashiab_alsoqium from being saved:</h2>
+<% if current_user.admin? || current_user.project==3 %>
+  <%= form_with(model: alashiab_alsoqium, local: true, html: { 'x-data': '{ a:0,a1:0,a2:0,a3:0,a4:0,a5:0,a6:0,a7:0,a8:0,a9:0,a10:0,a11:0,a12:0,a13:0,a14:0,a15:0,a16:0,a17:0,a18:0,a19:0,a20:0,a21:0,a22:0,a23:0,a24:0,a25:0,a26:0,a27:0,a28:0,a29:0,a30:0,a31:0,a32:0,a33:0,a34:0,a35:0}' }) do |form| %>
+    <% if alashiab_alsoqium.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(alashiab_alsoqium.errors.count, "error") %> prohibited this alashiab_alsoqium from being saved:</h2>
 
-      <ul>
-        <% alashiab_alsoqium.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
+        <ul>
+          <% alashiab_alsoqium.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <div class="title is-5 text-align-center">مشروع السقيا والأشياب</div>
+
+  <table class="table is-striped is-bordered", style="width:50%;margin-left:auto;margin-right:auto;">
+    <thead>
+    <tr>
+      <th style="text-align:center">جميع الناقلات</th>
+      <th style="text-align:center">السقيا</th>
+      <th style="text-align:center">الشيب</th>
+      <th>#</th>
+    </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+          <td><%= form.text_field :almzre_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a1 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :almzre_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a18 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">آل مزرع</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :bljorashy_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a2 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :bljorashy_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a19 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">بلجرشي</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :bnekbeer_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a3 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :bnekbeer_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a20 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">بني كبير</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :almosa_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a4 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :almosa_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a21 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الموسى</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :aljnaben_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a5 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :aljnaben_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a22 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الجنابين</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :alaqeq_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a6 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :alaqeq_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a23 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">العقيق</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :lef_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a7 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :lef_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a24 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">ليف</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :bnehasan_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a8 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :bnehasan_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a25 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">بني حسن</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :alhalah_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a9 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :alhlah_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a26 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الحلاه</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :dos_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a10 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :dos_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a27 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">دوس</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :blkhzmr_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a11 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :blkhzmr_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a28 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">بلخزمر</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :bneadwan_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a12 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :bneadwan_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a29 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">بني عدوان</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :althrawen_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a13 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :althrawen_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a30 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الثراوين</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :alqsmh_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a14 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :alqsmh_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a31 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">القسمة</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :nbhan_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a15 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :nbhan_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a32 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">نبهان</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :nkhal_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a16 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :nkhal_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a33 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">نخال</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :kra_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a17 = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :kra_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a34 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">كرا</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :ghamidalznad_naqlat, class: 'input  is-small bg-none', 'x-on:input': 'a = parseFloat($event.target.value)' %></td>
+          <td><%= form.text_field :ghamidalznad_soqia, class: 'input  is-small bg-none', 'x-on:input': 'a35 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">غامد الزناد</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :total_naqlat, class: 'input  is-small bg-none', 'x-model': 'a+a1+a2+a3+a4+a5+a6+a7+a8+a9+a10+a11+a12+a13+a14+a15+a16+a17', disabled: true %></td>
+          <td><%= form.text_field :tota_soqia, class: 'input  is-small bg-none', 'x-model': 'a18+a19+a20+a21+a22+a23+a24+a25+a26+a27+a28+a29+a30+a31+a32+a33+a34+a35', disabled: true %></td>
+          <td style="text-align:center">الإجمالي</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td colspan="2", style="text-align:center"><%= form.date_select :date, class: 'input  is-small bg-none'%></td>
+          <td style="text-align:center">التاريخ</td>
+          <td>#</td>
+        </tr>
+    </tbody>
+  </table>
+        <div class="is-grouped">
+            <div class="control has-text-centered">
+              <%= form.button :submit, class: 'button is-info' %>
+              <%= link_to 'Cancel', new_alashiab_alsoqium_path, class:'button is-light' %>
+            </div>
+        </div>
   <% end %>
-
-<div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :almzre_soqia %>
-    <%= form.text_field :almzre_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :almzre_naqlat %>
-    <%= form.text_field :almzre_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bljorashy_soqia %>
-    <%= form.text_field :bljorashy_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bljorashy_naqlat %>
-    <%= form.text_field :bljorashy_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bnekbeer_soqia %>
-    <%= form.text_field :bnekbeer_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bnekbeer_naqlat %>
-    <%= form.text_field :bnekbeer_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :almosa_soqia %>
-    <%= form.text_field :almosa_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :almosa_naqlat %>
-    <%= form.text_field :almosa_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :aljnaben_soqia %>
-    <%= form.text_field :aljnaben_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :aljnaben_naqlat %>
-    <%= form.text_field :aljnaben_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :alaqeq_soqia %>
-    <%= form.text_field :alaqeq_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :alaqeq_naqlat %>
-    <%= form.text_field :alaqeq_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :lef_soqia %>
-    <%= form.text_field :lef_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :lef_naqlat %>
-    <%= form.text_field :lef_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bnehasan_soqia %>
-    <%= form.text_field :bnehasan_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bnehasan_naqlat %>
-    <%= form.text_field :bnehasan_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :alhlah_soqia %>
-    <%= form.text_field :alhlah_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :alhalah_naqlat %>
-    <%= form.text_field :alhalah_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :dos_soqia %>
-    <%= form.text_field :dos_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :dos_naqlat %>
-    <%= form.text_field :dos_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :blkhzmr_soqia %>
-    <%= form.text_field :blkhzmr_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :blkhzmr_naqlat %>
-    <%= form.text_field :blkhzmr_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bneadwan_soqia %>
-    <%= form.text_field :bneadwan_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bneadwan_naqlat %>
-    <%= form.text_field :bneadwan_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :althrawen_soqia %>
-    <%= form.text_field :althrawen_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :althrawen_naqlat %>
-    <%= form.text_field :althrawen_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :alqsmh_soqia %>
-    <%= form.text_field :alqsmh_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :alqsmh_naqlat %>
-    <%= form.text_field :alqsmh_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :nbhan_soqia %>
-    <%= form.text_field :nbhan_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :nbhan_naqlat %>
-    <%= form.text_field :nbhan_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :nkhal_soqia %>
-    <%= form.text_field :nkhal_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :nkhal_naqlat %>
-    <%= form.text_field :nkhal_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :kra_soqia %>
-    <%= form.text_field :kra_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :kra_naqlat %>
-    <%= form.text_field :kra_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :ghamidalznad_soqia %>
-    <%= form.text_field :ghamidalznad_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :ghamidalznad_naqlat %>
-    <%= form.text_field :ghamidalznad_naqlat %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tota_soqia %>
-    <%= form.text_field :tota_soqia %>
-  </div>
-
-  <div class="field">
-    <%= form.label :total_naqlat %>
-    <%= form.text_field :total_naqlat %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+<%else%>
+<h1><%= "Contant to admin"%>
+<%end%>

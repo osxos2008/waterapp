@@ -1,262 +1,304 @@
-<%= form_with(model: aradah, local: true) do |form| %>
-  <% if aradah.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(aradah.errors.count, "error") %> prohibited this aradah from being saved:</h2>
+<% if current_user.admin? || current_user.project==4 %>
+  <%= form_with(model: aradah, local: true, html: { 'x-data': '{ a:0,a1:0,a2:0,a3:0,a4:0,a5:0,a6:0,a7:0,a8:0,a9:0,a10:0,a11:0,a12:0,a13:0,a14:0,a15:0,a16:0,a17:0,a18:0,a19:0,a20:0,a21:0,a22:0,a23:0,a24:0,a25:0,a26:0,a27:0,a28:0,a29:0,a30:0,a31:0}' }) do |form| %>
+    <% if aradah.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(aradah.errors.count, "error") %> prohibited this aradah from being saved:</h2>
 
-      <ul>
-        <% aradah.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
+        <ul>
+          <% aradah.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <div class="title is-5 text-align-center">مشروع عردة</div>
+
+  <table class="table is-striped is-bordered", style="width:50%;margin-left:auto;margin-right:auto;">
+    <thead>
+    <tr>
+      <th style="text-align:center">الكمية</th>
+      <th style="text-align:center">البند</th>
+      <th>#</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="bg-light", colspan="3", style="text-align:center">الإنتاج</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :wells, class: 'input  is-small bg-none', 'x-on:input': 'a = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">إنتاج الآبار</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :from_thrawen_tank, class: 'input  is-small bg-none', 'x-on:input': 'a1 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الوارد من التحلية لخزان الثراوين</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :product_total, class: 'input  is-small bg-none', 'x-model': 'a + a1', disabled: true %></td>
+          <td style="text-align:center">إجمالي الإنتاج</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td class="bg-light", colspan="3", style="text-align:center">التوزيع</td>
+        </tr>
+        <tr>
+          <td class="bg-light", colspan="3", style="text-align:center">الشبكات</td>
+        </tr>
+        <tr>
+          <td class="bg-light", colspan="2", style="text-align:center">شبكات القرى</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :qnet_alqsmh, class: 'input  is-small bg-none', 'x-on:input': 'a2 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">القسمة</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :qnet_althrawen, class: 'input  is-small bg-none', 'x-on:input': 'a3 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الثراوين</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :qnet_althrawen_alatawlah, class: 'input  is-small bg-none', 'x-on:input': 'a4 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الثراوين(شبكة الأطاولة)</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :qnet_bneedwan1, class: 'input  is-small bg-none', 'x-on:input': 'a5 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">بني عدوان 1</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :qnet_bneedwan2, class: 'input  is-small bg-none', 'x-on:input': 'a6 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">بني عدوان 2</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :qnet_bedah, class: 'input  is-small bg-none', 'x-on:input': 'a7 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">بيدة</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :qnet_mashoqah, class: 'input  is-small bg-none', 'x-on:input': 'a8 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">معشوقة</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :mrawah, class: 'input  is-small bg-none', 'x-on:input': 'a9 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">مراوة</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :qnet_total, class: 'input  is-small bg-none', 'x-model': 'a2+a3+a4+a5+a6+a7+a8+a9', disabled: true %></td>
+          <td style="text-align:center">إجمالي توزيع القرى</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td class="bg-light", colspan="2", style="text-align:center">شبكات بني حسن</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :bnenet_blkhzmr, class: 'input  is-small bg-none', 'x-on:input': 'a10 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">بلخزمر</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :bnenet_bnehasan, class: 'input  is-small bg-none', 'x-on:input': 'a11 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">بني حسن</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :bnenet_total, class: 'input  is-small bg-none', 'x-model': 'a10+a11', disabled: true %></td>
+          <td style="text-align:center">إجمالي توزيع بني حسن</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td class="bg-light", colspan="2", style="text-align:center">شبكات المندق</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :mnet_alhalah, class: 'input  is-small bg-none', 'x-on:input': 'a12 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الحلاة</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :mnet_alkhlb, class: 'input  is-small bg-none', 'x-on:input': 'a13 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الخلب</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :mnet_dos, class: 'input  is-small bg-none', 'x-on:input': 'a14 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">دوس</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :mnet_alkahla1, class: 'input  is-small bg-none', 'x-on:input': 'a15 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الكاحلة1</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :mnet_alkahla2, class: 'input  is-small bg-none', 'x-on:input': 'a16 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الكاحلة2</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :mnet_sehan, class: 'input  is-small bg-none', 'x-on:input': 'a17 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">سيحان</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :mnet_blhkm, class: 'input  is-small bg-none', 'x-on:input': 'a18 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">بلحكم</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :mnet_aljawfaa, class: 'input  is-small bg-none', 'x-on:input': 'a19 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الجوفاء</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :mnet_total, class: 'input  is-small bg-none', 'x-model': 'a12+a13+a14+a15+a16+a17+a18+a19', disabled: true %></td>
+          <td style="text-align:center">إجمالي توزيع المندق</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td class="bg-light", colspan="2", style="text-align:center">شبكات الباحة</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :bnet_almosa, class: 'input  is-small bg-none', 'x-on:input': 'a20 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">آل موسى</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :bnet_qrnthbe, class: 'input  is-small bg-none', 'x-on:input': 'a21 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">قرن ظبي</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :bnet_total, class: 'input  is-small bg-none', 'x-model': 'a20+a21', disabled: true %></td>
+          <td style="text-align:center">إجمالي توزيع الباحة</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :network_total, class: 'input  is-small bg-none', 'x-model': 'a2+a3+a4+a5+a6+a7+a8+a9+a10+a11+a12+a13+a14+a15+a16+a17+a18+a19+a20+a21', disabled: true %></td>
+          <td style="text-align:center">إجمالي الشبكات </td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td class="bg-light", colspan="3", style="text-align:center">المناهل</td>
+        </tr>
+        <tr>
+          <td class="bg-light", colspan="2", style="text-align:center">أشياب القرى</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :qshep_nkhal, class: 'input  is-small bg-none', 'x-on:input': 'a22 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">نخال</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :qshep_alqsmh, class: 'input  is-small bg-none', 'x-on:input': 'a23 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">القسمة</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :qshep_althrawen, class: 'input  is-small bg-none', 'x-on:input': 'a24 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الثراوين</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :qshep_bneodwan, class: 'input  is-small bg-none', 'x-on:input': 'a25 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">بني عدوان</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :qshep_mashoqah, class: 'input  is-small bg-none', 'x-on:input': 'a26 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">معشوقة</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :qshep_total, class: 'input  is-small bg-none', 'x-model': 'a22+a23+a24+a25+a26', disabled: true %></td>
+          <td style="text-align:center">إجمالي توزيع مناهل القرى</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td class="bg-light", colspan="2", style="text-align:center">أشياب بني حسن</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :bneshep_blkhzmr, class: 'input  is-small bg-none', 'x-on:input': 'a27 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">بلخزمر</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :bneshep_bnehasan, class: 'input  is-small bg-none', 'x-on:input': 'a28 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">بني حسن</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :bneshep_total, class: 'input  is-small bg-none', 'x-model': 'a27+a28', disabled: true %></td>
+          <td style="text-align:center">إجمالي توزيع مناهل بني حسن</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td class="bg-light", colspan="2", style="text-align:center">أشياب المندق</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :mshep_alhalah, class: 'input  is-small bg-none', 'x-on:input': 'a29 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الحلاة</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :mshep_dos, class: 'input  is-small bg-none', 'x-on:input': 'a30 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">دوس</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :mshep_total, class: 'input  is-small bg-none', 'x-model': 'a29+a30', disabled: true %></td>
+          <td style="text-align:center">إجمالي توزيع مناهل المندق</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td class="bg-light", colspan="2", style="text-align:center">أشياب الباحة</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :bshep_almosa, class: 'input  is-small bg-none', 'x-on:input': 'a31 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الموسى</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :mnahel_total, class: 'input  is-small bg-none', 'x-model': 'a22+a23+a24+a25+a26+a27+a28+a29+a30+a31', disabled: true %></td>
+          <td style="text-align:center">إجمالي توزيع المناهل </td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :distripution_total, class: 'input  is-small bg-none', 'x-model': 'a2+a3+a4+a5+a6+a7+a8+a9+a10+a11+a12+a13+a14+a15+a16+a17+a18+a19+a20+a21+a22+a23+a24+a25+a26+a27+a28+a29+a30+a31', disabled: true %></td>
+          <td style="text-align:center">إجمالي التوزيع</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td><%= form.date_field :date, class: 'input  is-small bg-none is-center' %></td>
+          <td style="text-align:center">التاريخ</td>
+          <td>#</td>
+        </tr>
+
+
+    </tbody>
+  </table>
+  <div class="is-grouped">
+            <div class="control has-text-centered">
+              <%= form.button :submit, class: 'button is-info' %>
+              <%= link_to 'Cancel', new_aradah_path, class:'button is-light' %>
+            </div>
+  </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :product %>
-    <%= form.text_field :product %>
-  </div>
-
-  <div class="field">
-    <%= form.label :wells %>
-    <%= form.text_field :wells %>
-  </div>
-
-  <div class="field">
-    <%= form.label :from_thrawen_tank %>
-    <%= form.text_field :from_thrawen_tank %>
-  </div>
-
-  <div class="field">
-    <%= form.label :product_total %>
-    <%= form.text_field :product_total %>
-  </div>
-
-  <div class="field">
-    <%= form.label :distribution %>
-    <%= form.text_field :distribution %>
-  </div>
-
-  <div class="field">
-    <%= form.label :networks %>
-    <%= form.text_field :networks %>
-  </div>
-
-  <div class="field">
-    <%= form.label :qnet_alqsmh %>
-    <%= form.text_field :qnet_alqsmh %>
-  </div>
-
-  <div class="field">
-    <%= form.label :qnet_althrawen %>
-    <%= form.text_field :qnet_althrawen %>
-  </div>
-
-  <div class="field">
-    <%= form.label :qnet_althrawen_alatawlah %>
-    <%= form.text_field :qnet_althrawen_alatawlah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :qnet_bneedwan1 %>
-    <%= form.text_field :qnet_bneedwan1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :qnet_bneedwan2 %>
-    <%= form.text_field :qnet_bneedwan2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :qnet_bedah %>
-    <%= form.text_field :qnet_bedah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :qnet_mashoqah %>
-    <%= form.text_field :qnet_mashoqah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mrawah %>
-    <%= form.text_field :mrawah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :qnet_total %>
-    <%= form.text_field :qnet_total %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bnenet_blkhzmr %>
-    <%= form.text_field :bnenet_blkhzmr %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bnenet_bnehasan %>
-    <%= form.text_field :bnenet_bnehasan %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bnenet_total %>
-    <%= form.text_field :bnenet_total %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mnet_alhalah %>
-    <%= form.text_field :mnet_alhalah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mnet_alkhlb %>
-    <%= form.text_field :mnet_alkhlb %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mnet_dos %>
-    <%= form.text_field :mnet_dos %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mnet_alkahla1 %>
-    <%= form.text_field :mnet_alkahla1 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mnet_alkahla2 %>
-    <%= form.text_field :mnet_alkahla2 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mnet_sehan %>
-    <%= form.text_field :mnet_sehan %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mnet_blhkm %>
-    <%= form.text_field :mnet_blhkm %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mnet_aljawfaa %>
-    <%= form.text_field :mnet_aljawfaa %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mnet_total %>
-    <%= form.text_field :mnet_total %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bnet_almosa %>
-    <%= form.text_field :bnet_almosa %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bnet_qrnthbe %>
-    <%= form.text_field :bnet_qrnthbe %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bnet_total %>
-    <%= form.text_field :bnet_total %>
-  </div>
-
-  <div class="field">
-    <%= form.label :network_total %>
-    <%= form.text_field :network_total %>
-  </div>
-
-  <div class="field">
-    <%= form.label :almnahel %>
-    <%= form.text_field :almnahel %>
-  </div>
-
-  <div class="field">
-    <%= form.label :qshep_nkhal %>
-    <%= form.text_field :qshep_nkhal %>
-  </div>
-
-  <div class="field">
-    <%= form.label :qshep_alqsmh %>
-    <%= form.text_field :qshep_alqsmh %>
-  </div>
-
-  <div class="field">
-    <%= form.label :qshep_althrawen %>
-    <%= form.text_field :qshep_althrawen %>
-  </div>
-
-  <div class="field">
-    <%= form.label :qshep_bneodwan %>
-    <%= form.text_field :qshep_bneodwan %>
-  </div>
-
-  <div class="field">
-    <%= form.label :qshep_mashoqah %>
-    <%= form.text_field :qshep_mashoqah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :qshep_total %>
-    <%= form.text_field :qshep_total %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bneshep_blkhzmr %>
-    <%= form.text_field :bneshep_blkhzmr %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bneshep_bnehasan %>
-    <%= form.text_field :bneshep_bnehasan %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bneshep_total %>
-    <%= form.text_field :bneshep_total %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mshep_alhalah %>
-    <%= form.text_field :mshep_alhalah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mshep_dos %>
-    <%= form.text_field :mshep_dos %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mshep_total %>
-    <%= form.text_field :mshep_total %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bshep_almosa %>
-    <%= form.text_field :bshep_almosa %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mnahel_total %>
-    <%= form.text_field :mnahel_total %>
-  </div>
-
-  <div class="field">
-    <%= form.label :distripution_total %>
-    <%= form.text_field :distripution_total %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+<%else%>
+<h1><%= "Contant to admin"%>
+<%end%>

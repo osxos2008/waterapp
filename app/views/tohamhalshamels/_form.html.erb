@@ -1,162 +1,172 @@
-<%= form_with(model: tohamhalshamel, local: true) do |form| %>
-  <% if tohamhalshamel.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(tohamhalshamel.errors.count, "error") %> prohibited this tohamhalshamel from being saved:</h2>
+  <% if current_user.admin? || current_user.project==5 %> 
+  <%= form_with(model: tohamhalshamel, local: true, html: { 'x-data': '{ a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0, i: 0, j: 0, k: 0, l: 0, m: 0, n: 0, o: 0, p: 0, q: 0, r: 0, s: 0 }' }) do |form| %>
+    <% if tohamhalshamel.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(tohamhalshamel.errors.count, "error") %> prohibited this tohamhalshamel from being saved:</h2>
 
-      <ul>
-        <% tohamhalshamel.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
+        <ul>
+          <% tohamhalshamel.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <div class="title is-5 text-align-center">مشروع تهامة الشامل</div>
+
+  <table class="table is-striped is-bordered", style="width:50%;margin-left:auto;margin-right:auto;">
+    <thead>
+    <tr>
+      <th style="text-align:center">الكمية</th>
+      <th style="text-align:center">البند</th>
+      <th>#</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td class="bg-light", colspan="3", style="text-align:center">الإنتاج</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :alahsabiawell_almekhwah, class: 'input  is-small bg-none', 'x-on:input': 'a = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center"> آبار الأحسبية (المخواة)</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :doqahwell_qlwah, class: 'input  is-small bg-none', 'x-on:input': 'b = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">آبار دوقة (قلوة) </td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :doqatabdulhamedwell, class: 'input  is-small bg-none', 'x-on:input': 'c = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">آبار دوقة عبدالحميد</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :elepwell_alhjrah, class: 'input  is-small bg-none', 'x-on:input': 'd = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">آبار عليب (الحجرة)</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :alrmedahwell, class: 'input  is-small bg-none', 'x-on:input': 'e = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">آبار الرميضة</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :product_total, class: 'input  is-small bg-none', 'x-model': 'a + b + c + d + e', disabled: true %></td>
+          <td style="text-align:center">إجمالي الإنتاج</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td class="bg-light", colspan="3", style="text-align:center">التوزيع</td>
+        </tr>
+        <tr>
+          <td class="bg-light", colspan="3", style="text-align:center">الشبكات</td>
+        </tr>
+      
+        <tr>
+          <td><%= form.text_field :almekhwah, class: 'input  is-small bg-none', 'x-on:input': 'f = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">المخواة</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :qlwah, class: 'input  is-small bg-none', 'x-on:input': 'g = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">قلوة</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :doqatabdulhamed, class: 'input  is-small bg-none', 'x-on:input': 'h = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">دوقة عبدالحميد</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :alhjrah, class: 'input  is-small bg-none', 'x-on:input': 'i = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الحجرة</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :networks_total, class: 'input  is-small bg-none', 'x-model': 'f + g + h + i', disabled: true %></td>
+          <td style="text-align:center">إجمالي الشبكات</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td class="bg-light", colspan="3", style="text-align:center">المناهل</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :ghamidalznad, class: 'input  is-small bg-none', 'x-on:input': 'j = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">غامد الزناد</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :nsbah, class: 'input  is-small bg-none', 'x-on:input': 'k = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">نصبة</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :almswdah, class: 'input  is-small bg-none', 'x-on:input': 'l = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">المسدوة</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :nawan, class: 'input  is-small bg-none', 'x-on:input': 'm = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">ناوان</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :shmalalmekhwah, class: 'input  is-small bg-none', 'x-on:input': 'n = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">شمال المخواة</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :nera, class: 'input  is-small bg-none', 'x-on:input': 'o = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">نيرا</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :mmna, class: 'input  is-small bg-none', 'x-on:input': 'p = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">ممنا</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :bneatta, class: 'input  is-small bg-none', 'x-on:input': 'q = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">بني عطا</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :algreen, class: 'input  is-small bg-none', 'x-on:input': 'r = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الجرين</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :alrmedah, class: 'input  is-small bg-none', 'x-on:input': 's = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الرميضة</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :almnahl_total, class: 'input  is-small bg-none', 'x-model': 'j+k+l+m+n+o+p+q+r+s', disabled: true %></td>
+          <td style="text-align:center">إجمالي توزيع المناهل</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :distribution_total, class: 'input  is-small bg-none', 'x-model': 'f + g + h + i+j+k+l+m+n+o+p+q+r+s', disabled: true %></td>
+          <td style="text-align:center">إجمالي التوزيع</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td><%= form.date_field :date, class: 'input  is-small bg-none is-center' %></td>
+          <td style="text-align:center">التاريخ</td>
+          <td>#</td>
+        </tr>
+
+
+    </tbody>
+  </table>
+  <div class="is-grouped">
+            <div class="control has-text-centered">
+              <%= form.button :submit, class: 'button is-info' %>
+              <%= link_to 'Cancel', new_tohamhalshamel_path, class:'button is-light' %>
+            </div>
+  </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :product %>
-    <%= form.text_field :product %>
-  </div>
-
-  <div class="field">
-    <%= form.label :alahsabiawell_almekhwah %>
-    <%= form.text_field :alahsabiawell_almekhwah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :doqahwell_qlwah %>
-    <%= form.text_field :doqahwell_qlwah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :doqatabdulhamedwell %>
-    <%= form.text_field :doqatabdulhamedwell %>
-  </div>
-
-  <div class="field">
-    <%= form.label :elepwell_alhjrah %>
-    <%= form.text_field :elepwell_alhjrah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :alrmedahwell %>
-    <%= form.text_field :alrmedahwell %>
-  </div>
-
-  <div class="field">
-    <%= form.label :product_total %>
-    <%= form.text_field :product_total %>
-  </div>
-
-  <div class="field">
-    <%= form.label :distribution %>
-    <%= form.text_field :distribution %>
-  </div>
-
-  <div class="field">
-    <%= form.label :networks %>
-    <%= form.text_field :networks %>
-  </div>
-
-  <div class="field">
-    <%= form.label :almekhwah %>
-    <%= form.text_field :almekhwah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :qlwah %>
-    <%= form.text_field :qlwah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :doqatabdulhamed %>
-    <%= form.text_field :doqatabdulhamed %>
-  </div>
-
-  <div class="field">
-    <%= form.label :alhjrah %>
-    <%= form.text_field :alhjrah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :networks_total %>
-    <%= form.text_field :networks_total %>
-  </div>
-
-  <div class="field">
-    <%= form.label :almnahel %>
-    <%= form.text_field :almnahel %>
-  </div>
-
-  <div class="field">
-    <%= form.label :ghamidalznad %>
-    <%= form.text_field :ghamidalznad %>
-  </div>
-
-  <div class="field">
-    <%= form.label :nsbah %>
-    <%= form.text_field :nsbah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :almswdah %>
-    <%= form.text_field :almswdah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :nawan %>
-    <%= form.text_field :nawan %>
-  </div>
-
-  <div class="field">
-    <%= form.label :shmalalmekhwah %>
-    <%= form.text_field :shmalalmekhwah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :nera %>
-    <%= form.text_field :nera %>
-  </div>
-
-  <div class="field">
-    <%= form.label :mmna %>
-    <%= form.text_field :mmna %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bneatta %>
-    <%= form.text_field :bneatta %>
-  </div>
-
-  <div class="field">
-    <%= form.label :algreen %>
-    <%= form.text_field :algreen %>
-  </div>
-
-  <div class="field">
-    <%= form.label :alrmedah %>
-    <%= form.text_field :alrmedah %>
-  </div>
-
-  <div class="field">
-    <%= form.label :almnahl_total %>
-    <%= form.text_field :almnahl_total %>
-  </div>
-
-  <div class="field">
-    <%= form.label :distribution_total %>
-    <%= form.text_field :distribution_total %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+<%else%>
+<h1><%= "Contant to admin"%>
+<%end%>

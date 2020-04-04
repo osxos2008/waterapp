@@ -1,3 +1,864 @@
+Projects
+
+<table class="table is-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User</th>
+      <th>Assignee</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.name %></td>
+        <td><%= project.user_id %></td>
+        <td><%= (User.find(project.assignee_id)).name%></td>
+        <td><%= link_to 'Show', project %></td>
+        <% if project_admin(project) %>
+          <td><%= link_to 'Edit', edit_project_path(project) %></td>
+          <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Project', new_project_path %>
+
+
+
+
+
+
+
+
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :smallproject %>
+    <%= form.text_field :smallproject %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_wo_thrad_btat %>
+    <%= form.text_field :total_wo_thrad_btat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_thrad %>
+    <%= form.text_field :product_thrad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_btat %>
+    <%= form.text_field :product_btat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_total %>
+    <%= form.text_field :product_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :detailed_production %>
+    <%= form.text_field :detailed_production %>
+  </div>
+
+  <div class="field">
+    <%= form.label :albaha %>
+    <%= form.text_field :albaha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bljorashy %>
+    <%= form.text_field :bljorashy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alqora %>
+    <%= form.text_field :alqora %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almandaq %>
+    <%= form.text_field :almandaq %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alaqeq %>
+    <%= form.text_field :alaqeq %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almekhwah %>
+    <%= form.text_field :almekhwah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qolwah %>
+    <%= form.text_field :qolwah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alhgrah %>
+    <%= form.text_field :alhgrah %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product %>
+    <%= form.text_field :product %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wells %>
+    <%= form.text_field :wells %>
+  </div>
+
+  <div class="field">
+    <%= form.label :from_thrawen_tank %>
+    <%= form.text_field :from_thrawen_tank %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_total %>
+    <%= form.text_field :product_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distribution %>
+    <%= form.text_field :distribution %>
+  </div>
+
+  <div class="field">
+    <%= form.label :networks %>
+    <%= form.text_field :networks %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnet_alqsmh %>
+    <%= form.text_field :qnet_alqsmh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnet_althrawen %>
+    <%= form.text_field :qnet_althrawen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnet_althrawen_alatawlah %>
+    <%= form.text_field :qnet_althrawen_alatawlah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnet_bneedwan1 %>
+    <%= form.text_field :qnet_bneedwan1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnet_bneedwan2 %>
+    <%= form.text_field :qnet_bneedwan2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnet_bedah %>
+    <%= form.text_field :qnet_bedah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnet_mashoqah %>
+    <%= form.text_field :qnet_mashoqah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mrawah %>
+    <%= form.text_field :mrawah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qnet_total %>
+    <%= form.text_field :qnet_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnenet_blkhzmr %>
+    <%= form.text_field :bnenet_blkhzmr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnenet_bnehasan %>
+    <%= form.text_field :bnenet_bnehasan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnenet_total %>
+    <%= form.text_field :bnenet_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_alhalah %>
+    <%= form.text_field :mnet_alhalah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_alkhlb %>
+    <%= form.text_field :mnet_alkhlb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_dos %>
+    <%= form.text_field :mnet_dos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_alkahla1 %>
+    <%= form.text_field :mnet_alkahla1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_alkahla2 %>
+    <%= form.text_field :mnet_alkahla2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_sehan %>
+    <%= form.text_field :mnet_sehan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_blhkm %>
+    <%= form.text_field :mnet_blhkm %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_aljawfaa %>
+    <%= form.text_field :mnet_aljawfaa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnet_total %>
+    <%= form.text_field :mnet_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnet_almosa %>
+    <%= form.text_field :bnet_almosa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnet_qrnthbe %>
+    <%= form.text_field :bnet_qrnthbe %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnet_total %>
+    <%= form.text_field :bnet_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :network_total %>
+    <%= form.text_field :network_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almnahel %>
+    <%= form.text_field :almnahel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qshep_nkhal %>
+    <%= form.text_field :qshep_nkhal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qshep_alqsmh %>
+    <%= form.text_field :qshep_alqsmh %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qshep_althrawen %>
+    <%= form.text_field :qshep_althrawen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qshep_bneodwan %>
+    <%= form.text_field :qshep_bneodwan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qshep_mashoqah %>
+    <%= form.text_field :qshep_mashoqah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qshep_total %>
+    <%= form.text_field :qshep_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bneshep_blkhzmr %>
+    <%= form.text_field :bneshep_blkhzmr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bneshep_bnehasan %>
+    <%= form.text_field :bneshep_bnehasan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bneshep_total %>
+    <%= form.text_field :bneshep_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mshep_alhalah %>
+    <%= form.text_field :mshep_alhalah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mshep_dos %>
+    <%= form.text_field :mshep_dos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mshep_total %>
+    <%= form.text_field :mshep_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bshep_almosa %>
+    <%= form.text_field :bshep_almosa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mnahel_total %>
+    <%= form.text_field :mnahel_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distripution_total %>
+    <%= form.text_field :distripution_total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+
+
+
+###############3 الاشياب والسقيا
+
+<div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almzre_soqia %>
+    <%= form.text_field :almzre_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almzre_naqlat %>
+    <%= form.text_field :almzre_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bljorashy_soqia %>
+    <%= form.text_field :bljorashy_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bljorashy_naqlat %>
+    <%= form.text_field :bljorashy_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnekbeer_soqia %>
+    <%= form.text_field :bnekbeer_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnekbeer_naqlat %>
+    <%= form.text_field :bnekbeer_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almosa_soqia %>
+    <%= form.text_field :almosa_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almosa_naqlat %>
+    <%= form.text_field :almosa_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aljnaben_soqia %>
+    <%= form.text_field :aljnaben_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aljnaben_naqlat %>
+    <%= form.text_field :aljnaben_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alaqeq_soqia %>
+    <%= form.text_field :alaqeq_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alaqeq_naqlat %>
+    <%= form.text_field :alaqeq_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lef_soqia %>
+    <%= form.text_field :lef_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lef_naqlat %>
+    <%= form.text_field :lef_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnehasan_soqia %>
+    <%= form.text_field :bnehasan_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bnehasan_naqlat %>
+    <%= form.text_field :bnehasan_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alhlah_soqia %>
+    <%= form.text_field :alhlah_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alhalah_naqlat %>
+    <%= form.text_field :alhalah_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dos_soqia %>
+    <%= form.text_field :dos_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dos_naqlat %>
+    <%= form.text_field :dos_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blkhzmr_soqia %>
+    <%= form.text_field :blkhzmr_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blkhzmr_naqlat %>
+    <%= form.text_field :blkhzmr_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bneadwan_soqia %>
+    <%= form.text_field :bneadwan_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bneadwan_naqlat %>
+    <%= form.text_field :bneadwan_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :althrawen_soqia %>
+    <%= form.text_field :althrawen_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :althrawen_naqlat %>
+    <%= form.text_field :althrawen_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alqsmh_soqia %>
+    <%= form.text_field :alqsmh_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alqsmh_naqlat %>
+    <%= form.text_field :alqsmh_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nbhan_soqia %>
+    <%= form.text_field :nbhan_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nbhan_naqlat %>
+    <%= form.text_field :nbhan_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nkhal_soqia %>
+    <%= form.text_field :nkhal_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nkhal_naqlat %>
+    <%= form.text_field :nkhal_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kra_soqia %>
+    <%= form.text_field :kra_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kra_naqlat %>
+    <%= form.text_field :kra_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ghamidalznad_soqia %>
+    <%= form.text_field :ghamidalznad_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ghamidalznad_naqlat %>
+    <%= form.text_field :ghamidalznad_naqlat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tota_soqia %>
+    <%= form.text_field :tota_soqia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_naqlat %>
+    <%= form.text_field :total_naqlat %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+
+
+######################3
+
+
+
+
+
+
+
+
+
+##############33
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product %>
+    <%= form.text_field :product %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alahsabiawell_almekhwah %>
+    <%= form.text_field :alahsabiawell_almekhwah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :doqahwell_qlwah %>
+    <%= form.text_field :doqahwell_qlwah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :doqatabdulhamedwell %>
+    <%= form.text_field :doqatabdulhamedwell %>
+  </div>
+
+  <div class="field">
+    <%= form.label :elepwell_alhjrah %>
+    <%= form.text_field :elepwell_alhjrah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alrmedahwell %>
+    <%= form.text_field :alrmedahwell %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_total %>
+    <%= form.text_field :product_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distribution %>
+    <%= form.text_field :distribution %>
+  </div>
+
+  <div class="field">
+    <%= form.label :networks %>
+    <%= form.text_field :networks %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almekhwah %>
+    <%= form.text_field :almekhwah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qlwah %>
+    <%= form.text_field :qlwah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :doqatabdulhamed %>
+    <%= form.text_field :doqatabdulhamed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alhjrah %>
+    <%= form.text_field :alhjrah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :networks_total %>
+    <%= form.text_field :networks_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almnahel %>
+    <%= form.text_field :almnahel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ghamidalznad %>
+    <%= form.text_field :ghamidalznad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nsbah %>
+    <%= form.text_field :nsbah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almswdah %>
+    <%= form.text_field :almswdah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nawan %>
+    <%= form.text_field :nawan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shmalalmekhwah %>
+    <%= form.text_field :shmalalmekhwah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nera %>
+    <%= form.text_field :nera %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mmna %>
+    <%= form.text_field :mmna %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bneatta %>
+    <%= form.text_field :bneatta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :algreen %>
+    <%= form.text_field :algreen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alrmedah %>
+    <%= form.text_field :alrmedah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almnahl_total %>
+    <%= form.text_field :almnahl_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distribution_total %>
+    <%= form.text_field :distribution_total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+########### aljnaben form
+<div class="field">
+    <%= form.label :alfrya %>
+    <%= form.text_field :alfrya %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alqame %>
+    <%= form.text_field :alqame %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shra %>
+    <%= form.text_field :shra %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alrahwah %>
+    <%= form.text_field :alrahwah %>
+  </div>
+
+  <div class="field">
+    <%= form.label :networks_total %>
+    <%= form.text_field :networks_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :almnahel %>
+    <%= form.text_field :almnahel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :aljbail_aljnaben %>
+    <%= form.text_field :aljbail_aljnaben %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distribution_total %>
+    <%= form.text_field :distribution_total %>
+  </div>
+<div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product %>
+    <%= form.text_field :product %>
+  </div>
+
+  <div class="field">
+    <%= form.label :purification_station %>
+    <%= form.text_field :purification_station %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alrahwah_Well %>
+    <%= form.text_field :alrahwah_Well %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity_sent_from_desalination %>
+    <%= form.text_field :quantity_sent_from_desalination %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_total %>
+    <%= form.text_field :product_total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distribution %>
+    <%= form.text_field :distribution %>
+  </div>
+
+  <div class="field">
+    <%= form.label :networks %>
+    <%= form.text_field :networks %>
+  </div>
+
+  <div class="field">
+    <%= form.label :abdaan %>
+    <%= form.text_field :abdaan %>
+  </div>
+
+  #######################################
+
+
+
+
+
+
+
+
+
 ############### form of water_liter_delivered
 <%= form_for(water_liter_delivered) do |form| %>
   <% if water_liter_delivered.errors.any? %>

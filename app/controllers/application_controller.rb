@@ -5,11 +5,17 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     if resource.project == 1  
-      new_district_path
-    elsif resource.email == "admin@admin"
-      new_project_path
-    else
       new_aljnaben_path
+    elsif resource.project == 2
+      new_tohamhalshamel_path
+    elsif resource.project == 3
+      new_alashiab_alsoqium_path
+    elsif resource.project == 4
+      new_aradah_path
+    elsif resource.project == 5
+      new_smallproject_path
+    else
+      projects_path
     end
   end
 
@@ -19,6 +25,6 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[name mobile admin project])
-    devise_parameter_sanitizer.permit(:account_update, keys: %i[name mobile project])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[name mobile project admin])
   end
 end

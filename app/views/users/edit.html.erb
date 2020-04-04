@@ -1,76 +1,81 @@
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-4">
+  <% if current_user.admin? %>  
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-4">
 
-      <h2 class="title is-2">Edit <%#= resource_name.to_s.humanize %></h2>
-      <%= simple_form_for(@user) do |f| %>
-        <%= f.error_notification %>
+        <h2 class="title is-2">Edit <%#= resource_name.to_s.humanize %></h2>
+        <%= simple_form_for(@user) do |f| %>
+          <%= f.error_notification %>
 
-          <div class="field">
-            <div class="control">
-              <%= @user.id %>
+            <div class="field">
+              <div class="control">
+                User ID: <%= @user.id %>
+              </div>
             </div>
-          </div>
 
-          <div class="field">
-            <div class="control">
-              <%= @user.admin %>
+            <div class="field">
+              <div class="control">
+                Admin: <%= @user.admin %>
+                <%= f.input :admin %>
+              </div>
             </div>
-          </div>
 
-          <div class="field">
-            <div class="control">
-              <%= f.input :name, required: true, autofocus: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+            <div class="field">
+              <div class="control">
+                <%= f.input :name, required: true, autofocus: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+              </div>
             </div>
-          </div>
 
-          <div class="field">
-            <div class="control">
-              <%= f.input :email, required: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+            <div class="field">
+              <div class="control">
+                <%= f.input :email, required: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+              </div>
             </div>
-          </div>
 
-          <div class="field">
-            <div class="control">
-               <%= f.input :mobile, required: true, autofocus: true, input_html: { class:"input" }, wrapper: false, label_html: { class:"label" } %>
+            <div class="field">
+              <div class="control">
+                <%= f.input :mobile, required: false, autofocus: true, input_html: { class:"input" }, wrapper: false, label_html: { class:"label" } %>
+              </div>
             </div>
-          </div>
 
-          <div class="field">
-            <div class="control">
-               <%= f.input :project, required: true, autofocus: true, input_html: { class:"input" }, wrapper: false, label_html: { class:"label" } %>
+            <div class="field">
+              <div class="control">
+                <%= f.input :project, required: true, autofocus: true, input_html: { class:"input" }, wrapper: false, label_html: { class:"label" } %>
+              </div>
             </div>
-          </div>
 
-          <div class="field">
-            <div class="control">
-              <%#= f.input :mobile, required: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+            <div class="field">
+              <div class="control">
+                <%#= f.input :mobile, required: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+              </div>
             </div>
-          </div>
 
-          <div class="field">
-            <div class="control">
-            <%#= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+            <div class="field">
+              <div class="control">
+              <%#= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+              </div>
             </div>
-          </div>
 
-          <div class="field">
-            <div class="control">
-            <%#= f.input :password_confirmation, required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+            <div class="field">
+              <div class="control">
+              <%#= f.input :password_confirmation, required: false, input_html: { class: "input"}, wrapper: false, label_html: { class: "label" } %>
+              </div>
             </div>
-          </div>
 
-          
+            
 
-        <%= f.button :submit, "Update", class:"button is-warning" %>
+          <%= f.button :submit, "Update", class:"button is-warning" %>
 
-      <% end %>
+        <% end %>
 
-        <hr />
-      
+          <hr />
+        
 
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+<%else%>
+<h1><%= "Contant to admin"%>
+<%end%>

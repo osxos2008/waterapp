@@ -1,6 +1,6 @@
 class SmallprojectsController < ApplicationController
   before_action :set_smallproject, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!
 
   # GET /smallprojects
   # GET /smallprojects.json
@@ -29,7 +29,7 @@ class SmallprojectsController < ApplicationController
 
     respond_to do |format|
       if @smallproject.save
-        format.html { redirect_to @smallproject, notice: 'Smallproject was successfully created.' }
+        format.html { redirect_to new_smallproject_path, notice: 'Smallproject was successfully created.' }
         format.json { render :show, status: :created, location: @smallproject }
       else
         format.html { render :new }

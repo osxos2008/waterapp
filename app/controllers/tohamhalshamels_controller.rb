@@ -1,5 +1,6 @@
 class TohamhalshamelsController < ApplicationController
   before_action :set_tohamhalshamel, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /tohamhalshamels
   # GET /tohamhalshamels.json
@@ -28,7 +29,7 @@ class TohamhalshamelsController < ApplicationController
 
     respond_to do |format|
       if @tohamhalshamel.save
-        format.html { redirect_to @tohamhalshamel, notice: 'Tohamhalshamel was successfully created.' }
+        format.html { redirect_to new_tohamhalshamel_path, notice: 'Tohamhalshamel was successfully created.' }
         format.json { render :show, status: :created, location: @tohamhalshamel }
       else
         format.html { render :new }

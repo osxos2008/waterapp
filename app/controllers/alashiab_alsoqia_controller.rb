@@ -1,6 +1,6 @@
 class AlashiabAlsoqiaController < ApplicationController
   before_action :set_alashiab_alsoqium, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!
 
   # GET /alashiab_alsoqia
   # GET /alashiab_alsoqia.json

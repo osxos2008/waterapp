@@ -12,6 +12,7 @@
     <title>Hello Bulma!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.js" defer></script>
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
@@ -45,11 +46,14 @@
           <div class="navbar-item">
             <div class="field is-grouped">
             <% if user_signed_in? %>
-              <%= link_to 'New project', new_project_path, class: "navbar-item button is-dark" %>
-              <%= link_to 'New district', new_district_path, class: "navbar-item button is-dark" %>
-              <%= link_to 'New Water Dilivred', new_water_liter_delivered_path, class: "navbar-item button is-dark" %>
-              <%= link_to 'Show district', districts_path, class: "navbar-item" %>
-              <%= link_to 'Show Water Dilivred', water_liter_delivereds_path, class: "navbar-item" %>
+             <% if current_user.admin? %>
+              <%= link_to 'الجنابين', new_aljnaben_path, class: "navbar-item button is-dark" %>
+              <%= link_to 'تهامة الشامل', new_tohamhalshamel_path, class: "navbar-item button is-dark" %>
+              <%= link_to 'السقيا والأشياب', new_alashiab_alsoqium_path, class: "navbar-item button is-dark" %>
+              <%= link_to 'عردة', new_aradah_path, class: "navbar-item button is-dark" %>
+              <%= link_to 'المشاريع المصغرة', new_smallproject_path, class: "navbar-item button is-dark" %>
+              <%= link_to 'Users', users_path, class: "navbar-item" %>
+              <% end %>
               <div class="navbar-item has-dropdown is-hoverable">
                 <%= link_to 'Account', edit_user_registration_path, class: "navbar-link" %>
                 <div class="navbar-dropdown is-right">

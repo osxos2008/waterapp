@@ -1,6 +1,10 @@
+<% if current_user.admin? %>  
 <h1>Editing Aljnaben</h1>
 
 <%= render 'form', aljnaben: @aljnaben %>
 
 <%= link_to 'Show', @aljnaben %> |
 <%= link_to 'Back', aljnabens_path %>
+<%else%>
+<h1><%= "Contant to admin"%>
+<%end%>

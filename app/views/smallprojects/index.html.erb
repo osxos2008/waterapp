@@ -1,3 +1,4 @@
+<% if current_user.admin? %> 
 <p id="notice"><%= notice %></p>
 
 <h1>Smallprojects</h1>
@@ -55,3 +56,6 @@
 <br>
 
 <%= link_to 'New Smallproject', new_smallproject_path %>
+<%else%>
+<h1><%= "Contant to admin"%>
+<%end%>

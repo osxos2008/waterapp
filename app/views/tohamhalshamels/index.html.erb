@@ -1,3 +1,4 @@
+<% if current_user.admin? %> 
 <p id="notice"><%= notice %></p>
 
 <h1>Tohamhalshamels</h1>
@@ -81,3 +82,6 @@
 <br>
 
 <%= link_to 'New Tohamhalshamel', new_tohamhalshamel_path %>
+<%else%>
+<h1><%= "Contant to admin"%>
+<%end%>

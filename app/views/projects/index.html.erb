@@ -1,42 +1,55 @@
 <p id="notice"><%= notice %></p>
 
-<% content_for :header do %>
-<section class="hero is-warning is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
-        Projects
-      </h1>
+
+<% if current_user.admin? %>
+  <% content_for :header do %>
+  <section class="hero is-warning is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Projects
+        </h1>
+      </div>
     </div>
-  </div>
-</section>
-<% end %>
-<table class="table is-striped">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>User</th>
-      <th>Assignee</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  </section>
+  <% end %>
 
-  <tbody>
-    <% @projects.each do |project| %>
+  <table class="table is-striped">
+    <thead>
       <tr>
-        <td><%= project.name %></td>
-        <td><%= project.user_id %></td>
-        <td><%= (User.find(project.assignee_id)).name%></td>
-        <td><%= link_to 'Show', project %></td>
-        <% if project_admin(project) %>
-          <td><%= link_to 'Edit', edit_project_path(project) %></td>
-          <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+        <th>Project Name</th>
+        <th>Cntractor</th>
+        <th>Project number</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Project', new_project_path %>
+    </thead>
+    <tbody>
+        <tr>
+          <td><%= link_to 'الجنابين', aljnabens_path %></td>
+          <td>شركة الرويتع</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td><%= link_to 'تهامة الشامل', tohamhalshamels_path %></td>
+          <td>شركة البكري</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td><%= link_to 'الأشياب والسقيا', alashiab_alsoqia_path %></td>
+          <td>شركة إيلاف</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td><%= link_to 'عردة', aradahs_path %></td>
+          <td>شركة سايسب</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td><%= link_to 'المشاريع المصغرة', smallprojects_path %></td>
+          <td>مؤسسة الوجناء</td>
+          <td>5</td>
+        </tr>
+    </tbody>
+  </table>
+<% else %>
+  <h1> <%= "Please contact to the app manager" %> </h1>
+<% end %>
