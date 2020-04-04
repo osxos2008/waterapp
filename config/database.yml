@@ -75,11 +75,5 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
 production:
-  <<: *default
-  database: WaterApp_production
-  username: wateradmin
-  password: 11
+  url: <%= ENV['DATABASE_URL'] %>
