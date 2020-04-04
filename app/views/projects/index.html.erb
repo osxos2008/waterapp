@@ -51,5 +51,21 @@
     </tbody>
   </table>
 <% else %>
-  <h1> <%= "Please contact to the app manager" %> </h1>
+  <% target_project = Project.projects_map[current_user.project] %>
+  <table class="table is-striped">
+    <thead>
+      <tr>
+        <th>Project Name</th>
+        <th>Cntractor</th>
+        <th>Project number</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><%= link_to target_project[:company_name], aljnabens_path %></td>
+          <td><%= target_project[:name] %></td>
+          <td><%= target_project[:number] %></td>
+        </tr>
+    </tbody>
+  </table>
 <% end %>
