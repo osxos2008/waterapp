@@ -3,25 +3,25 @@
 
 <h1>Aljnabens</h1>
 
-<table>
+<table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
   <thead>
     <tr>
       <th>User</th>
       <th>Date</th>
-      <th>Product</th>
+      <th class="bg-light">Product</th>
       <th>Purification station</th>
       <th>Alrahwah well</th>
       <th>Quantity sent from desalination</th>
       <th>Product total</th>
-      <th>Distribution</th>
-      <th>Networks</th>
+      <th class="bg-light">Distribution</th>
+      <th class="bg-light">Networks</th>
       <th>Abdaan</th>
       <th>Alfrya</th>
       <th>Alqame</th>
       <th>Shra</th>
       <th>Alrahwah</th>
       <th>Networks total</th>
-      <th>Almnahel</th>
+      <th class="bg-light">Almnahel</th>
       <th>Aljbail aljnaben</th>
       <th>Distribution total</th>
       <th colspan="3"></th>
@@ -32,21 +32,21 @@
     <% @aljnabens.each do |aljnaben| %>
       <tr>
         <td><%= aljnaben.user_id %></td>
-        <td><%= aljnaben.date %></td>
-        <td><%= aljnaben.product %></td>
+        <td style="white-space: nowrap;"><%= aljnaben.date %></td>
+        <td class="bg-light"><%= aljnaben.product %></td>
         <td><%= aljnaben.purification_station %></td>
         <td><%= aljnaben.alrahwah_Well %></td>
         <td><%= aljnaben.quantity_sent_from_desalination %></td>
         <td><%= aljnaben.product_total %></td>
-        <td><%= aljnaben.distribution %></td>
-        <td><%= aljnaben.networks %></td>
+        <td class="bg-light"><%= aljnaben.distribution %></td>
+        <td class="bg-light"><%= aljnaben.networks %></td>
         <td><%= aljnaben.abdaan %></td>
         <td><%= aljnaben.alfrya %></td>
         <td><%= aljnaben.alqame %></td>
         <td><%= aljnaben.shra %></td>
         <td><%= aljnaben.alrahwah %></td>
         <td><%= aljnaben.networks_total %></td>
-        <td><%= aljnaben.almnahel %></td>
+        <td class="bg-light"><%= aljnaben.almnahel %></td>
         <td><%= aljnaben.aljbail_aljnaben %></td>
         <td><%= aljnaben.distribution_total %></td>
         <td><%= link_to 'Show', aljnaben %></td>

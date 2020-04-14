@@ -3,17 +3,17 @@
 
 <h1>Smallprojects</h1>
 
-<table>
+  <table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
   <thead>
     <tr>
       <th>User</th>
       <th>Date</th>
-      <th>Smallproject</th>
+      <th class="bg-light">Smallproject</th>
       <th>Total wo thrad btat</th>
       <th>Product thrad</th>
       <th>Product btat</th>
       <th>Product total</th>
-      <th>Detailed production</th>
+      <th class="bg-light">Detailed production</th>
       <th>Albaha</th>
       <th>Bljorashy</th>
       <th>Alqora</th>
@@ -30,13 +30,13 @@
     <% @smallprojects.each do |smallproject| %>
       <tr>
         <td><%= smallproject.user_id %></td>
-        <td><%= smallproject.date %></td>
-        <td><%= smallproject.smallproject %></td>
+        <td style="white-space: nowrap;"><%= smallproject.date %></td>
+        <td class="bg-light"><%= smallproject.smallproject %></td>
         <td><%= smallproject.total_wo_thrad_btat %></td>
         <td><%= smallproject.product_thrad %></td>
         <td><%= smallproject.product_btat %></td>
         <td><%= smallproject.product_total %></td>
-        <td><%= smallproject.detailed_production %></td>
+        <td class="bg-light"><%= smallproject.detailed_production %></td>
         <td><%= smallproject.albaha %></td>
         <td><%= smallproject.bljorashy %></td>
         <td><%= smallproject.alqora %></td>

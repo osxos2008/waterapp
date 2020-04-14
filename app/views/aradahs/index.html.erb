@@ -3,17 +3,17 @@
 
 <h1>Aradahs</h1>
 
-<table>
+<table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
   <thead>
     <tr>
       <th>User</th>
       <th>Date</th>
-      <th>Product</th>
+      <th class="bg-light">Product</th>
       <th>Wells</th>
       <th>From thrawen tank</th>
       <th>Product total</th>
-      <th>Distribution</th>
-      <th>Networks</th>
+      <th class="bg-light">Distribution</th>
+      <th class="bg-light">Networks</th>
       <th>Qnet alqsmh</th>
       <th>Qnet althrawen</th>
       <th>Qnet althrawen alatawlah</th>
@@ -22,10 +22,10 @@
       <th>Qnet bedah</th>
       <th>Qnet mashoqah</th>
       <th>Mrawah</th>
-      <th>Qnet total</th>
+      <th class="bg-light">Qnet total</th>
       <th>Bnenet blkhzmr</th>
       <th>Bnenet bnehasan</th>
-      <th>Bnenet total</th>
+      <th class="bg-light">Bnenet total</th>
       <th>Mnet alhalah</th>
       <th>Mnet alkhlb</th>
       <th>Mnet dos</th>
@@ -34,27 +34,27 @@
       <th>Mnet sehan</th>
       <th>Mnet blhkm</th>
       <th>Mnet aljawfaa</th>
-      <th>Mnet total</th>
+      <th class="bg-light">Mnet total</th>
       <th>Bnet almosa</th>
       <th>Bnet qrnthbe</th>
-      <th>Bnet total</th>
-      <th>Network total</th>
-      <th>Almnahel</th>
+      <th class="bg-light">Bnet total</th>
+      <th class="bg-light">Network total</th>
+      <th class="bg-light">Almnahel</th>
       <th>Qshep nkhal</th>
       <th>Qshep alqsmh</th>
       <th>Qshep althrawen</th>
       <th>Qshep bneodwan</th>
       <th>Qshep mashoqah</th>
-      <th>Qshep total</th>
+      <th class="bg-light">Qshep total</th>
       <th>Bneshep blkhzmr</th>
       <th>Bneshep bnehasan</th>
-      <th>Bneshep total</th>
+      <th class="bg-light">Bneshep total</th>
       <th>Mshep alhalah</th>
       <th>Mshep dos</th>
-      <th>Mshep total</th>
+      <th class="bg-light">Mshep total</th>
       <th>Bshep almosa</th>
-      <th>Mnahel total</th>
-      <th>Distripution total</th>
+      <th class="bg-light">Mnahel total</th>
+      <th class="bg-light">Distripution total</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -63,13 +63,13 @@
     <% @aradahs.each do |aradah| %>
       <tr>
         <td><%= aradah.user_id %></td>
-        <td><%= aradah.date %></td>
-        <td><%= aradah.product %></td>
+        <td style="white-space: nowrap;"><%= aradah.date %></td>
+        <td class="bg-light"><%= aradah.product %></td>
         <td><%= aradah.wells %></td>
         <td><%= aradah.from_thrawen_tank %></td>
         <td><%= aradah.product_total %></td>
-        <td><%= aradah.distribution %></td>
-        <td><%= aradah.networks %></td>
+        <td class="bg-light"><%= aradah.distribution %></td>
+        <td class="bg-light"><%= aradah.networks %></td>
         <td><%= aradah.qnet_alqsmh %></td>
         <td><%= aradah.qnet_althrawen %></td>
         <td><%= aradah.qnet_althrawen_alatawlah %></td>
@@ -78,10 +78,10 @@
         <td><%= aradah.qnet_bedah %></td>
         <td><%= aradah.qnet_mashoqah %></td>
         <td><%= aradah.mrawah %></td>
-        <td><%= aradah.qnet_total %></td>
+        <td class="bg-light"><%= aradah.qnet_total %></td>
         <td><%= aradah.bnenet_blkhzmr %></td>
         <td><%= aradah.bnenet_bnehasan %></td>
-        <td><%= aradah.bnenet_total %></td>
+        <td class="bg-light"><%= aradah.bnenet_total %></td>
         <td><%= aradah.mnet_alhalah %></td>
         <td><%= aradah.mnet_alkhlb %></td>
         <td><%= aradah.mnet_dos %></td>
@@ -90,27 +90,27 @@
         <td><%= aradah.mnet_sehan %></td>
         <td><%= aradah.mnet_blhkm %></td>
         <td><%= aradah.mnet_aljawfaa %></td>
-        <td><%= aradah.mnet_total %></td>
+        <td class="bg-light"><%= aradah.mnet_total %></td>
         <td><%= aradah.bnet_almosa %></td>
         <td><%= aradah.bnet_qrnthbe %></td>
-        <td><%= aradah.bnet_total %></td>
-        <td><%= aradah.network_total %></td>
-        <td><%= aradah.almnahel %></td>
+        <td class="bg-light"><%= aradah.bnet_total %></td>
+        <td class="bg-light"><%= aradah.network_total %></td>
+        <td class="bg-light"><%= aradah.almnahel %></td>
         <td><%= aradah.qshep_nkhal %></td>
         <td><%= aradah.qshep_alqsmh %></td>
         <td><%= aradah.qshep_althrawen %></td>
         <td><%= aradah.qshep_bneodwan %></td>
         <td><%= aradah.qshep_mashoqah %></td>
-        <td><%= aradah.qshep_total %></td>
+        <td class="bg-light"><%= aradah.qshep_total %></td>
         <td><%= aradah.bneshep_blkhzmr %></td>
         <td><%= aradah.bneshep_bnehasan %></td>
-        <td><%= aradah.bneshep_total %></td>
+        <td class="bg-light"><%= aradah.bneshep_total %></td>
         <td><%= aradah.mshep_alhalah %></td>
         <td><%= aradah.mshep_dos %></td>
-        <td><%= aradah.mshep_total %></td>
+        <td class="bg-light"><%= aradah.mshep_total %></td>
         <td><%= aradah.bshep_almosa %></td>
-        <td><%= aradah.mnahel_total %></td>
-        <td><%= aradah.distripution_total %></td>
+        <td class="bg-light"><%= aradah.mnahel_total %></td>
+        <td class="bg-light"><%= aradah.distripution_total %></td>
         <td><%= link_to 'Show', aradah %></td>
         <td><%= link_to 'Edit', edit_aradah_path(aradah) %></td>
         <td><%= link_to 'Destroy', aradah, method: :delete, data: { confirm: 'Are you sure?' } %></td>

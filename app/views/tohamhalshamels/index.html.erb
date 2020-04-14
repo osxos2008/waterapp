@@ -3,26 +3,26 @@
 
 <h1>Tohamhalshamels</h1>
 
-<table>
+<table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
   <thead>
     <tr>
       <th>User</th>
       <th>Date</th>
-      <th>Product</th>
+      <th class="bg-light">Product</th>
       <th>Alahsabiawell almekhwah</th>
       <th>Doqahwell qlwah</th>
       <th>Doqatabdulhamedwell</th>
       <th>Elepwell alhjrah</th>
       <th>Alrmedahwell</th>
       <th>Product total</th>
-      <th>Distribution</th>
-      <th>Networks</th>
+      <th class="bg-light">Distribution</th>
+      <th class="bg-light">Networks</th>
       <th>Almekhwah</th>
       <th>Qlwah</th>
       <th>Doqatabdulhamed</th>
       <th>Alhjrah</th>
       <th>Networks total</th>
-      <th>Almnahel</th>
+      <th class="bg-light">Almnahel</th>
       <th>Ghamidalznad</th>
       <th>Nsbah</th>
       <th>Almswdah</th>
@@ -43,22 +43,22 @@
     <% @tohamhalshamels.each do |tohamhalshamel| %>
       <tr>
         <td><%= tohamhalshamel.user_id %></td>
-        <td><%= tohamhalshamel.date %></td>
-        <td><%= tohamhalshamel.product %></td>
+        <td style="white-space: nowrap;"><%= tohamhalshamel.date %></td>
+        <td class="bg-light"><%= tohamhalshamel.product %></td>
         <td><%= tohamhalshamel.alahsabiawell_almekhwah %></td>
         <td><%= tohamhalshamel.doqahwell_qlwah %></td>
         <td><%= tohamhalshamel.doqatabdulhamedwell %></td>
         <td><%= tohamhalshamel.elepwell_alhjrah %></td>
         <td><%= tohamhalshamel.alrmedahwell %></td>
         <td><%= tohamhalshamel.product_total %></td>
-        <td><%= tohamhalshamel.distribution %></td>
-        <td><%= tohamhalshamel.networks %></td>
+        <td class="bg-light"><%= tohamhalshamel.distribution %></td>
+        <td class="bg-light"><%= tohamhalshamel.networks %></td>
         <td><%= tohamhalshamel.almekhwah %></td>
         <td><%= tohamhalshamel.qlwah %></td>
         <td><%= tohamhalshamel.doqatabdulhamed %></td>
         <td><%= tohamhalshamel.alhjrah %></td>
         <td><%= tohamhalshamel.networks_total %></td>
-        <td><%= tohamhalshamel.almnahel %></td>
+        <td class="bg-light"><%= tohamhalshamel.almnahel %></td>
         <td><%= tohamhalshamel.ghamidalznad %></td>
         <td><%= tohamhalshamel.nsbah %></td>
         <td><%= tohamhalshamel.almswdah %></td>
