@@ -50,48 +50,25 @@
         </tr>
     </tbody>
   </table>
-<% elsif current_user.project == 1 || 2 || 3 || 4 || 5%>
+<% elsif [1, 2, 3, 4, 5].include? current_user.project%>
+
   <% target_project = Project.projects_map[current_user.project] %>
+  
   <table class="table is-striped">
     <thead>
       <tr>
         <th>Company Name</th>
-        <th>Cntractor</th>
+        <th>Prject</th>
         <th>Project number</th>
       </tr>
     </thead>
     <tbody>
-        <% if current_user.project == 1 %>
         <tr>
-          <td><%= link_to target_project[:company_name], new_aljnaben_path %></td>
+          <td><%= link_to target_project[:company_name], target_project[:pathh] %></td>
           <td><%= target_project[:name] %></td>
           <td><%= target_project[:number] %></td>
         </tr>
-        <% elsif current_user.project == 2 %>
-        <tr>
-          <td><%= link_to target_project[:company_name], new_tohamhalshamel_path %></td>
-          <td><%= target_project[:name] %></td>
-          <td><%= target_project[:number] %></td>
-        </tr>
-        <% elsif current_user.project == 3 %>
-        <tr>
-          <td><%= link_to target_project[:company_name], new_alashiab_alsoqium_path %></td>
-          <td><%= target_project[:name] %></td>
-          <td><%= target_project[:number] %></td>
-        </tr>
-        <% elsif current_user.project == 4 %>
-        <tr>
-          <td><%= link_to target_project[:company_name], new_aradah_path %></td>
-          <td><%= target_project[:name] %></td>
-          <td><%= target_project[:number] %></td>
-        </tr>
-        <% else current_user.project == 5 %>
-        <tr>
-          <td><%= link_to target_project[:company_name], new_smallproject_path %></td>
-          <td><%= target_project[:name] %></td>
-          <td><%= target_project[:number] %></td>
-        </tr>
-        <% end %>
+        
         
     </tbody>
   </table>
