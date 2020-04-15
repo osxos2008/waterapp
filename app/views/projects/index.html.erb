@@ -53,7 +53,7 @@
 <% elsif [1, 2, 3, 4, 5].include? current_user.project%>
 
   <% target_project = Project.projects_map[current_user.project] %>
-  
+
   <table class="table is-striped">
     <thead>
       <tr>
@@ -64,7 +64,7 @@
     </thead>
     <tbody>
         <tr>
-          <td><%= link_to target_project[:company_name], target_project[:pathh] %></td>
+          <td><%= link_to target_project[:company_name], send(target_project[:path]) %></td>
           <td><%= target_project[:name] %></td>
           <td><%= target_project[:number] %></td>
         </tr>
