@@ -9,13 +9,13 @@ class Project < ApplicationRecord
         company_name: 'شركة الرويتع',
         name: 'الجنابين',
         number: 1,
-        Pathh: Rails.application.routes.url_helpers.new_aljnaben_path
+        path: Rails.application.routes.url_helpers.new_aljnaben_path
       },
       2 => {
         company_name: 'شركة البكري',
         name: 'تهامة الشامل',
         number: 2,
-        Pathh: Rails.application.routes.url_helpers.new_tohamhalshamel_path
+        pathh: Rails.application.routes.url_helpers.new_tohamhalshamel_path
       },
       3 => {
         company_name: 'شركة إيلاف',
