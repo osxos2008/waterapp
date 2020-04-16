@@ -5,6 +5,7 @@
   <table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
     <thead>
       <tr>
+        <th>Submitted at </th>
         <th>User</th>
         <th>Date</th>
         <th>المزرع (سقيا)</th>
@@ -52,6 +53,7 @@
     <tbody>
       <% @alashiab_alsoqia.each do |alashiab_alsoqium| %>
         <tr>
+          <td><%= alashiab_alsoqium.created_at %></td>
           <td><%= alashiab_alsoqium.user_id %></td>
           <td style="white-space: nowrap;"><%= alashiab_alsoqium.date %></td>
           <td><%= alashiab_alsoqium.almzre_soqia %></td>

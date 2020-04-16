@@ -6,6 +6,7 @@
 <table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
   <thead>
     <tr>
+      <th>Submitted at </th>
       <th>User</th>
       <th>Date</th>
       <th class="bg-light">الإنتاج</th>
@@ -62,6 +63,7 @@
   <tbody>
     <% @aradahs.each do |aradah| %>
       <tr>
+        <td><%= aradah.created_at %></td>
         <td><%= aradah.user_id %></td>
         <td style="white-space: nowrap;"><%= aradah.date %></td>
         <td class="bg-light"><%= aradah.product %></td>

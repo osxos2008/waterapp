@@ -6,6 +6,7 @@
   <table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
   <thead>
     <tr>
+      <th>Submitted at </th>
       <th>User</th>
       <th>Date</th>
       <th class="bg-light">المشاريع المصغرة</th>
@@ -29,6 +30,7 @@
   <tbody>
     <% @smallprojects.each do |smallproject| %>
       <tr>
+        <td><%= smallproject.created_at %></td>
         <td><%= smallproject.user_id %></td>
         <td style="white-space: nowrap;"><%= smallproject.date %></td>
         <td class="bg-light"><%= smallproject.smallproject %></td>
