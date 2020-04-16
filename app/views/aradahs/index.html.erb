@@ -8,53 +8,53 @@
     <tr>
       <th>User</th>
       <th>Date</th>
-      <th class="bg-light">Product</th>
-      <th>Wells</th>
-      <th>From thrawen tank</th>
-      <th>Product total</th>
-      <th class="bg-light">Distribution</th>
-      <th class="bg-light">Networks</th>
-      <th>Qnet alqsmh</th>
-      <th>Qnet althrawen</th>
-      <th>Qnet althrawen alatawlah</th>
-      <th>Qnet bneedwan1</th>
-      <th>Qnet bneedwan2</th>
-      <th>Qnet bedah</th>
-      <th>Qnet mashoqah</th>
-      <th>Mrawah</th>
-      <th class="bg-light">Qnet total</th>
-      <th>Bnenet blkhzmr</th>
-      <th>Bnenet bnehasan</th>
-      <th class="bg-light">Bnenet total</th>
-      <th>Mnet alhalah</th>
-      <th>Mnet alkhlb</th>
-      <th>Mnet dos</th>
-      <th>Mnet alkahla1</th>
-      <th>Mnet alkahla2</th>
-      <th>Mnet sehan</th>
-      <th>Mnet blhkm</th>
-      <th>Mnet aljawfaa</th>
-      <th class="bg-light">Mnet total</th>
-      <th>Bnet almosa</th>
-      <th>Bnet qrnthbe</th>
-      <th class="bg-light">Bnet total</th>
-      <th class="bg-light">Network total</th>
-      <th class="bg-light">Almnahel</th>
-      <th>Qshep nkhal</th>
-      <th>Qshep alqsmh</th>
-      <th>Qshep althrawen</th>
-      <th>Qshep bneodwan</th>
-      <th>Qshep mashoqah</th>
-      <th class="bg-light">Qshep total</th>
-      <th>Bneshep blkhzmr</th>
-      <th>Bneshep bnehasan</th>
-      <th class="bg-light">Bneshep total</th>
-      <th>Mshep alhalah</th>
-      <th>Mshep dos</th>
-      <th class="bg-light">Mshep total</th>
+      <th class="bg-light">الإنتاج</th>
+      <th>إنتاج آبار عردة</th>
+      <th>الوارد من التحلية لخزان الثراوين</th>
+      <th>إجمالي الإنتاج</th>
+      <th class="bg-light">التوزيع</th>
+      <th class="bg-light">الشبكات</th>
+      <th>القسمة</th>
+      <th>الثراوين</th>
+      <th>الثراوين الاطاولة</th>
+      <th>بني عدوان 1</th>
+      <th>بني عدوان 2</th>
+      <th>بيدة</th>
+      <th>معشوقة</th>
+      <th>مراوة</th>
+      <th class="bg-light">إجمالي توزيع القرى</th>
+      <th>بلخزمر</th>
+      <th>بني حسن</th>
+      <th class="bg-light">إجمالي توزيع بني حسن</th>
+      <th>الحلاة</th>
+      <th>الخلب</th>
+      <th>دوس</th>
+      <th>الكاحلة 1</th>
+      <th>الكاحلة 2</th>
+      <th>سيحان</th>
+      <th>بلحكم</th>
+      <th>الجوفاء</th>
+      <th class="bg-light">إجمالي توزيع المندق</th>
+      <th>الموسى</th>
+      <th>قرن ظبي</th>
+      <th class="bg-light">إجمالي توزيع الباحة</th>
+      <th class="bg-light">إجمالي توزيع الشبكات</th>
+      <th class="bg-light">المناهل</th>
+      <th>نخال</th>
+      <th>القسمة</th>
+      <th>الثراوين</th>
+      <th>بني عدوان</th>
+      <th>معشوقة</th>
+      <th class="bg-light">إجمالي مناهل القرى</th>
+      <th>بلخزمر</th>
+      <th>بني حسن</th>
+      <th class="bg-light">إجمالي مناهل بني حسن</th>
+      <th>الحلاة</th>
+      <th>دوس</th>
+      <th class="bg-light">إجمالي مناهل المندق</th>
       <th>Bshep almosa</th>
-      <th class="bg-light">Mnahel total</th>
-      <th class="bg-light">Distripution total</th>
+      <th class="bg-light">إجمالي توزيع المناهل</th>
+      <th class="bg-light">إجمالي التوزيع</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -113,7 +113,7 @@
         <td class="bg-light"><%= aradah.distripution_total %></td>
         <td><%= link_to 'Show', aradah %></td>
         <td><%= link_to 'Edit', edit_aradah_path(aradah) %></td>
-        <td><%= link_to 'Destroy', aradah, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', aradah, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -121,7 +121,7 @@
 
 <br>
 
-<%= link_to 'New Aradah', new_aradah_path %>
+<%= link_to 'إدخال بيانات جديدة', new_aradah_path %>
 <%else%>
-<h1><%= "Contant to admin"%>
+<h1><%= "Please contact the admin"%>
 <%end%>

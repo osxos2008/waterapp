@@ -8,20 +8,20 @@
     <tr>
       <th>User</th>
       <th>Date</th>
-      <th class="bg-light">Smallproject</th>
-      <th>Total wo thrad btat</th>
-      <th>Product thrad</th>
-      <th>Product btat</th>
-      <th>Product total</th>
-      <th class="bg-light">Detailed production</th>
-      <th>Albaha</th>
-      <th>Bljorashy</th>
-      <th>Alqora</th>
-      <th>Almandaq</th>
-      <th>Alaqeq</th>
-      <th>Almekhwah</th>
-      <th>Qolwah</th>
-      <th>Alhgrah</th>
+      <th class="bg-light">المشاريع المصغرة</th>
+      <th class="bg-light">إجمالي الإنتاج بدون ثراد وبطاط</th>
+      <th>إنتاج ثراد</th>
+      <th>إنتاج بطاط</th>
+      <th class="bg-light">إجمالي الإنتاج</th>
+      <th class="bg-light">الإنتاج التفصيلي بحسب المحافظات</th>
+      <th>الباحة</th>
+      <th>بلجرشي</th>
+      <th>القرى</th>
+      <th>المندق</th>
+      <th>العقيق</th>
+      <th>المخواة</th>
+      <th>قلوة</th>
+      <th>الحجرة</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -47,7 +47,7 @@
         <td><%= smallproject.alhgrah %></td>
         <td><%= link_to 'Show', smallproject %></td>
         <td><%= link_to 'Edit', edit_smallproject_path(smallproject) %></td>
-        <td><%= link_to 'Destroy', smallproject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', smallproject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -55,7 +55,7 @@
 
 <br>
 
-<%= link_to 'New Smallproject', new_smallproject_path %>
+<%= link_to 'إدخال بيانات جديدة', new_smallproject_path %>
 <%else%>
-<h1><%= "Contant to admin"%>
+<h1><%= "Please contact the admin"%>
 <%end%>

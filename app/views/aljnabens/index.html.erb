@@ -8,22 +8,22 @@
     <tr>
       <th>User</th>
       <th>Date</th>
-      <th class="bg-light">Product</th>
-      <th>Purification station</th>
-      <th>Alrahwah well</th>
-      <th>Quantity sent from desalination</th>
-      <th>Product total</th>
-      <th class="bg-light">Distribution</th>
-      <th class="bg-light">Networks</th>
-      <th>Abdaan</th>
-      <th>Alfrya</th>
-      <th>Alqame</th>
-      <th>Shra</th>
-      <th>Alrahwah</th>
-      <th>Networks total</th>
-      <th class="bg-light">Almnahel</th>
-      <th>Aljbail aljnaben</th>
-      <th>Distribution total</th>
+      <th class="bg-light">الإنتاج</th>
+      <th>إنتاج محطة التنقية</th>
+      <th>بئر الرهوه</th>
+      <th>كمية المياه المرسلة من التحلية</th>
+      <th>إجمالي الإنتاج</th>
+      <th class="bg-light">التوزيع</th>
+      <th class="bg-light">الشبكات</th>
+      <th>عبدان</th>
+      <th>الفريا</th>
+      <th>القمع</th>
+      <th>شرى</th>
+      <th>الرهوه</th>
+      <th>إجمالي الشبكات</th>
+      <th class="bg-light">المناهل</th>
+      <th>شيب الجبيل</th>
+      <th>إجمالي التوزيع</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -51,7 +51,7 @@
         <td><%= aljnaben.distribution_total %></td>
         <td><%= link_to 'Show', aljnaben %></td>
         <td><%= link_to 'Edit', edit_aljnaben_path(aljnaben) %></td>
-        <td><%= link_to 'Destroy', aljnaben, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', aljnaben, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -59,7 +59,7 @@
 
 <br>
 
-<%= link_to 'New Aljnaben', new_aljnaben_path %>
+<%= link_to 'إدخال بيانات جديدة', new_aljnaben_path %>
 <%else%>
-<h1><%= "Contant to admin"%>
+<h1><%= "Please contact the admin"%>
 <%end%>

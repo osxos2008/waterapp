@@ -8,33 +8,33 @@
     <tr>
       <th>User</th>
       <th>Date</th>
-      <th class="bg-light">Product</th>
-      <th>Alahsabiawell almekhwah</th>
-      <th>Doqahwell qlwah</th>
-      <th>Doqatabdulhamedwell</th>
-      <th>Elepwell alhjrah</th>
-      <th>Alrmedahwell</th>
-      <th>Product total</th>
-      <th class="bg-light">Distribution</th>
-      <th class="bg-light">Networks</th>
-      <th>Almekhwah</th>
-      <th>Qlwah</th>
-      <th>Doqatabdulhamed</th>
-      <th>Alhjrah</th>
-      <th>Networks total</th>
-      <th class="bg-light">Almnahel</th>
-      <th>Ghamidalznad</th>
-      <th>Nsbah</th>
-      <th>Almswdah</th>
-      <th>Nawan</th>
-      <th>Shmalalmekhwah</th>
-      <th>Nera</th>
-      <th>Mmna</th>
-      <th>Bneatta</th>
-      <th>Algreen</th>
-      <th>Alrmedah</th>
-      <th>Almnahl total</th>
-      <th>Distribution total</th>
+      <th class="bg-light">الإنتاج</th>
+      <th>آبار الأحسبة</th>
+      <th>آبار دوقة</th>
+      <th>آبار دوقة آل عبدالحميد</th>
+      <th>آبار عليب</th>
+      <th>آبار الرميضة</th>
+      <th class="bg-light">إجمالي الإنتاج</th>
+      <th class="bg-light">التوزيع</th>
+      <th class="bg-light">الشبكات</th>
+      <th>المخواة</th>
+      <th>قلوة</th>
+      <th>دوقة آل عبدالحميد</th>
+      <th>الحجرة</th>
+      <th class="bg-light">إجمالي توزيع الشبكات</th>
+      <th class="bg-light">المناهل</th>
+      <th>غامد الزناد</th>
+      <th>نصبة</th>
+      <th>المسودة</th>
+      <th>ناوان</th>
+      <th>شمال المخواة</th>
+      <th>نيرا</th>
+      <th>ممنا</th>
+      <th>بني عطا</th>
+      <th>الجرين</th>
+      <th>الرميضة</th>
+      <th class="bg-light">إجمالي توزيع المناهل</th>
+      <th class="bg-light">إجمالي التوزيع</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -73,7 +73,7 @@
         <td><%= tohamhalshamel.distribution_total %></td>
         <td><%= link_to 'Show', tohamhalshamel %></td>
         <td><%= link_to 'Edit', edit_tohamhalshamel_path(tohamhalshamel) %></td>
-        <td><%= link_to 'Destroy', tohamhalshamel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', tohamhalshamel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -81,7 +81,7 @@
 
 <br>
 
-<%= link_to 'New Tohamhalshamel', new_tohamhalshamel_path %>
+<%= link_to 'إدخال بيانات جديدة', new_tohamhalshamel_path %>
 <%else%>
-<h1><%= "Contant to admin"%>
+<h1><%= "Please contact the admin"%>
 <%end%>
