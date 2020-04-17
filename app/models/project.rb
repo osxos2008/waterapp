@@ -33,6 +33,12 @@ class Project < ApplicationRecord
         name: 'المشاريع المصغرة',
         number: 5,
         path: :new_smallproject_path
+      },
+      6 => {
+        company_name: 'شركة الرويتع',
+        name: 'العقيق وثراد',
+        number: 6,
+        path: :new_aqiq_path
       }
     }
   end

@@ -1,0 +1,209 @@
+<% if current_user.admin? %> 
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @aqiq.date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @aqiq.user_id %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @aqiq.product %>
+</p>
+
+<p>
+  <strong>Aqiq produce:</strong>
+  <%= @aqiq.aqiq_produce %>
+</p>
+
+<p>
+  <strong>Thrad produce:</strong>
+  <%= @aqiq.thrad_produce %>
+</p>
+
+<p>
+  <strong>From althlya to almzree:</strong>
+  <%= @aqiq.from_althlya_to_almzree %>
+</p>
+
+<p>
+  <strong>From althlya to baljurashy:</strong>
+  <%= @aqiq.from_althlya_to_baljurashy %>
+</p>
+
+<p>
+  <strong>From althlya to shahba:</strong>
+  <%= @aqiq.from_althlya_to_shahba %>
+</p>
+
+<p>
+  <strong>From althlya to aradah:</strong>
+  <%= @aqiq.from_althlya_to_aradah %>
+</p>
+
+<p>
+  <strong>From althlya to abdan:</strong>
+  <%= @aqiq.from_althlya_to_abdan %>
+</p>
+
+<p>
+  <strong>Total produce:</strong>
+  <%= @aqiq.total_produce %>
+</p>
+
+<p>
+  <strong>Distribution:</strong>
+  <%= @aqiq.distribution %>
+</p>
+
+<p>
+  <strong>Albaha shahba1:</strong>
+  <%= @aqiq.albaha_shahba1 %>
+</p>
+
+<p>
+  <strong>Albaha shahba2:</strong>
+  <%= @aqiq.albaha_shahba2 %>
+</p>
+
+<p>
+  <strong>Almzree:</strong>
+  <%= @aqiq.almzree %>
+</p>
+
+<p>
+  <strong>Bany dhabyan:</strong>
+  <%= @aqiq.bany_dhabyan %>
+</p>
+
+<p>
+  <strong>Almusa:</strong>
+  <%= @aqiq.almusa %>
+</p>
+
+<p>
+  <strong>Total albaha distribution:</strong>
+  <%= @aqiq.total_albaha_distribution %>
+</p>
+
+<p>
+  <strong>Baljurashy:</strong>
+  <%= @aqiq.baljurashy %>
+</p>
+
+<p>
+  <strong>Bany kaber:</strong>
+  <%= @aqiq.bany_kaber %>
+</p>
+
+<p>
+  <strong>Alhbees:</strong>
+  <%= @aqiq.alhbees %>
+</p>
+
+<p>
+  <strong>Bany saeed:</strong>
+  <%= @aqiq.bany_saeed %>
+</p>
+
+<p>
+  <strong>Bany heda:</strong>
+  <%= @aqiq.bany_heda %>
+</p>
+
+<p>
+  <strong>Algabar alawla:</strong>
+  <%= @aqiq.algabar_alawla %>
+</p>
+
+<p>
+  <strong>Algabar alsufla:</strong>
+  <%= @aqiq.algabar_alsufla %>
+</p>
+
+<p>
+  <strong>Baljurashy total distribution:</strong>
+  <%= @aqiq.baljurashy_total_distribution %>
+</p>
+
+<p>
+  <strong>Blue:</strong>
+  <%= @aqiq.blue %>
+</p>
+
+<p>
+  <strong>Jarab:</strong>
+  <%= @aqiq.jarab %>
+</p>
+
+<p>
+  <strong>Alaunog:</strong>
+  <%= @aqiq.alaunog %>
+</p>
+
+<p>
+  <strong>Almshereef:</strong>
+  <%= @aqiq.almshereef %>
+</p>
+
+<p>
+  <strong>Alamer faisal tank:</strong>
+  <%= @aqiq.alamer_faisal_Tank %>
+</p>
+
+<p>
+  <strong>Aqiq total distribution:</strong>
+  <%= @aqiq.aqiq_total_distribution %>
+</p>
+
+<p>
+  <strong>Almnahel:</strong>
+  <%= @aqiq.almnahel %>
+</p>
+
+<p>
+  <strong>Almzree mnahel:</strong>
+  <%= @aqiq.almzree_mnahel %>
+</p>
+
+<p>
+  <strong>Baljurashy mnahel:</strong>
+  <%= @aqiq.baljurashy_mnahel %>
+</p>
+
+<p>
+  <strong>Bany kabeer mnahel:</strong>
+  <%= @aqiq.bany_kabeer_mnahel %>
+</p>
+
+<p>
+  <strong>Allehyan mnahel:</strong>
+  <%= @aqiq.allehyan_mnahel %>
+</p>
+
+<p>
+  <strong>Alsenaeeh mnahel:</strong>
+  <%= @aqiq.alsenaeeh_mnahel %>
+</p>
+
+<p>
+  <strong>Almnahel total:</strong>
+  <%= @aqiq.almnahel_total %>
+</p>
+
+<p>
+  <strong>Total distribution:</strong>
+  <%= @aqiq.total_distribution %>
+</p>
+
+<%= link_to 'Edit', edit_aqiq_path(@aqiq) %> |
+<%= link_to 'Back', aqiqs_path %>
+
+<%else%>
+<h1><%= "Please contact the admin"%>
+<%end%>

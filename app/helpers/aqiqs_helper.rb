@@ -1,0 +1,2 @@
+module AqiqsHelper
+end

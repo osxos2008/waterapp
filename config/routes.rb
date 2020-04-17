@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :aqiqs
   resources :aradahs
   resources :alashiab_alsoqia
   resources :tohamhalshamels

@@ -1,0 +1,113 @@
+<% if current_user.admin? %>
+<p id="notice"><%= notice %></p>
+
+<h1>Aqiqs</h1>
+
+
+<table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
+  <thead>
+    <tr>
+      <th class="bg-light">Submitted at </th>
+      <th>Date</th>
+      <th>User</th>
+      <th class="bg-light">الإنتاج</th>
+      <th>إنتاج العقيق</th>
+      <th>إنتاج ثراد</th>
+      <th>الوارد من التحلية إلى المزرع</th>
+      <th>الوارد من التحلية إلى بلجرشي</th>
+      <th>الوارد من التحلية إلى شهبة</th>
+      <th>الوارد من التحلية إلى عردة</th>
+      <th>الوارد من التحلية إلى عبدان</th>
+      <th class="bg-light">إجمالي الإنتاج</th>
+      <th class="bg-light">التوزيع</th>
+      <th>الباحة (شهبه1)</th>
+      <th>الباحة (شهبه2)</th>
+      <th>المزرع</th>
+      <th>بني ظبيان</th>
+      <th>الموسى</th>
+      <th class="bg-light">إجمالي توزيع شبكات الباحة</th>
+      <th>بلجرشي</th>
+      <th>بني كبير</th>
+      <th>الحبيس</th>
+      <th>بني سعيد</th>
+      <th>بني حدة</th>
+      <th>الغبر الأولى</th>
+      <th>الغبر السفلى</th>
+      <th class="bg-light">إجمالي توزيع شبكات بلجرشي</th>
+      <th>بلو</th>
+      <th>جرب</th>
+      <th>العنق</th>
+      <th>المشيريف</th>
+      <th>خزان الأمير فيصل</th>
+      <th class="bg-light">إجمالي توزيع شبكات العقيق</th>
+      <th class="bg-light">المناهل</th>
+      <th>مناهل المزرع</th>
+      <th>مناهل بلجرشي</th>
+      <th>مناهل بني كبير</th>
+      <th>مناهل الحيان</th>
+      <th>مناهل الصناعية</th>
+      <th class="bg-light">إجمالي توزيع المناهل</th>
+      <th class="bg-light">إجمالي التوزيع</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aqiqs.each do |aqiq| %>
+      <tr>
+        <td class="bg-light"><%= aqiq.created_at %></td>
+        <td><%= aqiq.date %></td>
+        <td><%= aqiq.user_id %></td>
+        <td class="bg-light"><%= aqiq.product %></td>
+        <td><%= aqiq.aqiq_produce %></td>
+        <td><%= aqiq.thrad_produce %></td>
+        <td><%= aqiq.from_althlya_to_almzree %></td>
+        <td><%= aqiq.from_althlya_to_baljurashy %></td>
+        <td><%= aqiq.from_althlya_to_shahba %></td>
+        <td><%= aqiq.from_althlya_to_aradah %></td>
+        <td><%= aqiq.from_althlya_to_abdan %></td>
+        <td class="bg-light"><%= aqiq.total_produce %></td>
+        <td class="bg-light"><%= aqiq.distribution %></td>
+        <td><%= aqiq.albaha_shahba1 %></td>
+        <td><%= aqiq.albaha_shahba2 %></td>
+        <td><%= aqiq.almzree %></td>
+        <td><%= aqiq.bany_dhabyan %></td>
+        <td><%= aqiq.almusa %></td>
+        <td class="bg-light"><%= aqiq.total_albaha_distribution %></td>
+        <td><%= aqiq.baljurashy %></td>
+        <td><%= aqiq.bany_kaber %></td>
+        <td><%= aqiq.alhbees %></td>
+        <td><%= aqiq.bany_saeed %></td>
+        <td><%= aqiq.bany_heda %></td>
+        <td><%= aqiq.algabar_alawla %></td>
+        <td><%= aqiq.algabar_alsufla %></td>
+        <td class="bg-light"><%= aqiq.baljurashy_total_distribution %></td>
+        <td><%= aqiq.blue %></td>
+        <td><%= aqiq.jarab %></td>
+        <td><%= aqiq.alaunog %></td>
+        <td><%= aqiq.almshereef %></td>
+        <td><%= aqiq.alamer_faisal_Tank %></td>
+        <td class="bg-light"><%= aqiq.aqiq_total_distribution %></td>
+        <td class="bg-light"><%= aqiq.almnahel %></td>
+        <td><%= aqiq.almzree_mnahel %></td>
+        <td><%= aqiq.baljurashy_mnahel %></td>
+        <td><%= aqiq.bany_kabeer_mnahel %></td>
+        <td><%= aqiq.allehyan_mnahel %></td>
+        <td><%= aqiq.alsenaeeh_mnahel %></td>
+        <td class="bg-light"><%= aqiq.almnahel_total %></td>
+        <td class="bg-light"><%= aqiq.total_distribution %></td>
+        <td><%= link_to 'Show', aqiq %></td>
+        <td><%= link_to 'Edit', edit_aqiq_path(aqiq) %></td>
+        <td><%= link_to 'Delete', aqiq, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'إدخال بيانات جديدة', new_aqiq_path %>
+<%else%>
+<h1><%= "Please contact the admin"%>
+<%end%>
+
+

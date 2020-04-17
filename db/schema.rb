@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_03_210151) do
+ActiveRecord::Schema.define(version: 2020_04_16_204703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,6 +83,52 @@ ActiveRecord::Schema.define(version: 2020_04_03_210151) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_aljnabens_on_user_id"
+  end
+
+  create_table "aqiqs", force: :cascade do |t|
+    t.date "date"
+    t.bigint "user_id", null: false
+    t.string "product"
+    t.float "aqiq_produce"
+    t.float "thrad_produce"
+    t.float "from_althlya_to_almzree"
+    t.float "from_althlya_to_baljurashy"
+    t.float "from_althlya_to_shahba"
+    t.float "from_althlya_to_aradah"
+    t.float "from_althlya_to_abdan"
+    t.float "total_produce"
+    t.string "distribution"
+    t.float "albaha_shahba1"
+    t.float "albaha_shahba2"
+    t.float "almzree"
+    t.float "bany_dhabyan"
+    t.float "almusa"
+    t.float "total_albaha_distribution"
+    t.float "baljurashy"
+    t.float "bany_kaber"
+    t.float "alhbees"
+    t.float "bany_saeed"
+    t.float "bany_heda"
+    t.float "algabar_alawla"
+    t.float "algabar_alsufla"
+    t.float "baljurashy_total_distribution"
+    t.float "blue"
+    t.float "jarab"
+    t.float "alaunog"
+    t.float "almshereef"
+    t.float "alamer_faisal_Tank"
+    t.float "aqiq_total_distribution"
+    t.string "almnahel"
+    t.float "almzree_mnahel"
+    t.float "baljurashy_mnahel"
+    t.float "bany_kabeer_mnahel"
+    t.float "allehyan_mnahel"
+    t.float "alsenaeeh_mnahel"
+    t.float "almnahel_total"
+    t.float "total_distribution"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_aqiqs_on_user_id"
   end
 
   create_table "aradahs", force: :cascade do |t|
@@ -231,6 +277,7 @@ ActiveRecord::Schema.define(version: 2020_04_03_210151) do
 
   add_foreign_key "alashiab_alsoqia", "users"
   add_foreign_key "aljnabens", "users"
+  add_foreign_key "aqiqs", "users"
   add_foreign_key "aradahs", "users"
   add_foreign_key "projects", "users"
   add_foreign_key "projects", "users", column: "assignee_id"

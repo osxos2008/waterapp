@@ -48,9 +48,14 @@
           <td>مؤسسة الوجناء</td>
           <td>5</td>
         </tr>
+        <tr>
+          <td><%= link_to 'العقيق وثراد', aqiqs_path %></td>
+          <td>شركة الرويتع</td>
+          <td>6</td>
+        </tr>
     </tbody>
   </table>
-<% elsif [1, 2, 3, 4, 5].include? current_user.project%>
+<% elsif [1, 2, 3, 4, 5, 6].include? current_user.project%>
 
   <% target_project = Project.projects_map[current_user.project] %>
 

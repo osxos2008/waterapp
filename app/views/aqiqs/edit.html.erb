@@ -1,0 +1,10 @@
+<% if current_user.admin? %> 
+<h1>Editing Aqiq</h1>
+
+<%= render 'form', aqiq: @aqiq %>
+
+<%= link_to 'Show', @aqiq %> |
+<%= link_to 'Back', aqiqs_path %>
+<%else%>
+<h1><%= "Please contact the admin"%>
+<%end%>

@@ -8,5 +8,5 @@ class User < ApplicationRecord
   has_many :smallprojects
   has_many :tohamhalshamels
   has_many :aradahs
-  has_many :water_liter_delivereds
+  has_many :aqiqs
 end
