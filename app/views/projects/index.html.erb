@@ -14,12 +14,12 @@
   </section>
   <% end %>
 
-  <table class="table is-striped">
+  <table class="table is-striped is-hoverable is-bordered">
     <thead>
       <tr>
         <th>Project Name</th>
-        <th>Cntractor</th>
-        <th>Project number</th>
+        <th>Company Name</th>
+        <th>Project Number</th>
       </tr>
     </thead>
     <tbody>
@@ -59,11 +59,11 @@
 
   <% target_project = Project.projects_map[current_user.project] %>
 
-  <table class="table is-striped">
+  <table class="table is-striped is-hoverable is-bordered">
     <thead>
       <tr>
         <th>Company Name</th>
-        <th>Prject</th>
+        <th>Project</th>
         <th>Project number</th>
       </tr>
     </thead>
