@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2020-04-24
+  user: one
+  yabs_produce: 1.5
+  yabs_distribution: 1.5
+  batat_distribution: 1.5
+  yabs_tank: 1.5
+
+two:
+  date: 2020-04-24
+  user: two
+  yabs_produce: 1.5
+  yabs_distribution: 1.5
+  batat_distribution: 1.5
+  yabs_tank: 1.5

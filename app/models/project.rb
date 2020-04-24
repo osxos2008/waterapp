@@ -39,7 +39,14 @@ class Project < ApplicationRecord
         name: 'العقيق وثراد',
         number: 6,
         path: :new_aqiq_path
+      },
+      7 => {
+        company_name: 'شركة آل سلامة',
+        name: 'بطاط ويبس',
+        number: 7,
+        path: :new_yab_path
       }
+
     }
   end
 end

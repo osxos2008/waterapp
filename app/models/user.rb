@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :tohamhalshamels
   has_many :aradahs
   has_many :aqiqs
+  has_many :yabs
 end

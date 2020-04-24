@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_16_204703) do
+ActiveRecord::Schema.define(version: 2020_04_24_025828) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -275,6 +275,18 @@ ActiveRecord::Schema.define(version: 2020_04_16_204703) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "yabs", force: :cascade do |t|
+    t.date "date"
+    t.bigint "user_id", null: false
+    t.float "yabs_produce"
+    t.float "yabs_distribution"
+    t.float "batat_distribution"
+    t.float "yabs_tank"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_yabs_on_user_id"
+  end
+
   add_foreign_key "alashiab_alsoqia", "users"
   add_foreign_key "aljnabens", "users"
   add_foreign_key "aqiqs", "users"
@@ -283,4 +295,5 @@ ActiveRecord::Schema.define(version: 2020_04_16_204703) do
   add_foreign_key "projects", "users", column: "assignee_id"
   add_foreign_key "smallprojects", "users"
   add_foreign_key "tohamhalshamels", "users"
+  add_foreign_key "yabs", "users"
 end

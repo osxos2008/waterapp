@@ -1,0 +1,40 @@
+<% if current_user.admin? %> 
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @yab.date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @yab.user_id %>
+</p>
+
+<p>
+  <strong>Yabs produce:</strong>
+  <%= @yab.yabs_produce %>
+</p>
+
+<p>
+  <strong>Yabs distribution:</strong>
+  <%= @yab.yabs_distribution %>
+</p>
+
+<p>
+  <strong>Batat distribution:</strong>
+  <%= @yab.batat_distribution %>
+</p>
+
+<p>
+  <strong>Yabs tank:</strong>
+  <%= @yab.yabs_tank %>
+</p>
+
+<%= link_to 'Edit', edit_yab_path(@yab) %> |
+<%= link_to 'Back', yabs_path %>
+
+<%else%>
+<h1><%= "Please contact the admin"%>
+<%end%>
+

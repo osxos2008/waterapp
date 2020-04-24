@@ -14,6 +14,10 @@ class ApplicationController < ActionController::Base
       new_aradah_path
     elsif resource.project == 5
       new_smallproject_path
+    elsif resource.project == 6
+      new_aqiq_path
+    elsif resource.project == 7
+      new_yab_path
     else
       projects_path
     end

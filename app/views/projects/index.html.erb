@@ -53,9 +53,14 @@
           <td>شركة الرويتع</td>
           <td>6</td>
         </tr>
+        <tr>
+          <td><%= link_to 'بطاط ويبس', yabs_path %></td>
+          <td>شركة آل سلامة</td>
+          <td>7</td>
+        </tr>
     </tbody>
   </table>
-<% elsif [1, 2, 3, 4, 5, 6].include? current_user.project%>
+<% elsif [1, 2, 3, 4, 5, 6, 7].include? current_user.project%>
 
   <% target_project = Project.projects_map[current_user.project] %>
 
