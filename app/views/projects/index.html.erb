@@ -34,7 +34,7 @@
           <td>2</td>
         </tr>
         <tr>
-          <td><%= link_to 'الأشياب والسقيا', alashiab_alsoqia_path %></td>
+          <td><%= link_to 'السقيا والأشياب', alashiab_alsoqia_path %></td>
           <td>شركة إيلاف</td>
           <td>3</td>
         </tr>
@@ -58,9 +58,14 @@
           <td>شركة آل سلامة</td>
           <td>7</td>
         </tr>
+        <tr>
+          <td><%= link_to 'مناسيب خزانات مشروع العقيق وثراد', aqiq_thrad_tanks_path %></td>
+          <td>شركة الرويتع</td>
+          <td>8</td>
+        </tr>
     </tbody>
   </table>
-<% elsif [1, 2, 3, 4, 5, 6, 7].include? current_user.project%>
+<% elsif [1, 2, 3, 4, 5, 6, 7, 8].include? current_user.project%>
 
   <% target_project = Project.projects_map[current_user.project] %>
 
@@ -83,5 +88,5 @@
     </tbody>
   </table>
 <% else %>
-  <h1> Please contact with Admin to assign a project </h1>
+  <h1> Please contact the Admin to assign a project </h1>
 <% end %>
