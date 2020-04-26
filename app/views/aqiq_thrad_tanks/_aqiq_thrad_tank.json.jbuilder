@@ -1,0 +1,2 @@
+json.extract! aqiq_thrad_tank, :id, :date, :user_id, :aqiq_station1, :aqiq_station2, :aqiq_station3, :aqiq_station4, :shahbah_tank, :bani_kaber_tank, :bani_dhabyan_station_tank, :bani_dahabyan_tank, :bani_hedah_tank, :baljurashy_tank, :thrad_station1_tank, :susabad_station_tank, :mushereef_tank, :aunoq_tank, :jarab_tank, :blue_tank, :thrad_station2_tank, :thrad_station3_tank, :thrad_station4_tank, :almzree_tank, :thrad_station5_tank, :bani_saeed_tank, :aom_gayth_tank, :created_at, :updated_at
+json.url aqiq_thrad_tank_url(aqiq_thrad_tank, format: :json)

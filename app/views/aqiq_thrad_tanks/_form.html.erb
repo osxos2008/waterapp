@@ -1,0 +1,183 @@
+<% if current_user.admin? || current_user.project==1 %>
+  <%= form_with(model: aqiq_thrad_tank, local: true, html: { 'x-data': '{ a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0, i: 0, j:0 }' }) do |form| %>
+    <% if aqiq_thrad_tank.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(aqiq_thrad_tank.errors.count, "error") %> prohibited this aqiq_thrad_tank from being saved:</h2>
+
+        <ul>
+          <% aqiq_thrad_tank.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <section class="hero is-dark is-small">
+   <div class="hero-body">
+    <div class="container">
+    <div class="title is-5 text-align-center">مناسيب خزانات مشروع العقيق وثراد</div>
+    </div>
+   </div>
+  </section>
+
+  <table class="table is-striped is-bordered", style="width:50%;margin-left:auto;margin-right:auto;">
+    <thead>
+    <tr>
+      <th style="text-align:center">الكمية</th>
+      <th style="text-align:center">البند</th>
+      <th>#</th>
+    </tr>
+    </thead>
+    </tbody>
+
+    <tr>
+      <td><%= form.text_field :aqiq_station1, class: 'input  is-small bg-none', 'x-on:input': 'a = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة 1 العقيق</td>
+      <td>1</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :aqiq_station2, class: 'input  is-small bg-none', 'x-on:input': 'b = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة 2 العقيق</td>
+      <td>2</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :aqiq_station3, class: 'input  is-small bg-none', 'x-on:input': 'c = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة 3 العقيق</td>
+      <td>3</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :aqiq_station4, class: 'input  is-small bg-none', 'x-on:input': 'd = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة 4 العقيق</td>
+      <td>4</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :shahbah_tank, class: 'input  is-small bg-none', 'x-on:input': 'e = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">شهبة</td>
+      <td>5</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :bani_kaber_tank, class: 'input  is-small bg-none', 'x-on:input': 'f = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">بني كبير</td>
+      <td>6</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :bani_dhabyan_station_tank, class: 'input  is-small bg-none', 'x-on:input': 'g = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة بني ظبيان</td>
+      <td>7</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :bani_dahabyan_tank, class: 'input  is-small bg-none', 'x-on:input': 'h = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">بني ظبيان</td>
+      <td>8</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :bani_hedah_tank, class: 'input  is-small bg-none', 'x-on:input': 'i = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">بني حدة</td>
+      <td>9</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :baljurashy_tank, class: 'input  is-small bg-none', 'x-on:input': 'j = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">بلجرشي</td>
+      <td>10</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :thrad_station1_tank, class: 'input  is-small bg-none', 'x-on:input': 'k = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة تنقية ثراد </td>
+      <td>11</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :susabad_station_tank, class: 'input  is-small bg-none', 'x-on:input': 'l = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة سوس اباد</td>
+      <td>12</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :mushereef_tank, class: 'input  is-small bg-none', 'x-on:input': 'm = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">المشيريف</td>
+      <td>13</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :aunoq_tank, class: 'input  is-small bg-none', 'x-on:input': 'n = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">العنق</td>
+      <td>14</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :jarab_tank, class: 'input  is-small bg-none', 'x-on:input': 'o = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">جرب</td>
+      <td>15</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :blue_tank, class: 'input  is-small bg-none', 'x-on:input': 'p = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">بلو</td>
+      <td>16</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :thrad_station2_tank, class: 'input  is-small bg-none', 'x-on:input': 'q = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة 2 ثراد</td>
+      <td>17</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :thrad_station3_tank, class: 'input  is-small bg-none', 'x-on:input': 'r = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة 3 ثراد</td>
+      <td>18</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :thrad_station4_tank, class: 'input  is-small bg-none', 'x-on:input': 's = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة 4 ثراد</td>
+      <td>19</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :almzree_tank, class: 'input  is-small bg-none', 'x-on:input': 't = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">المزرع</td>
+      <td>20</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :thrad_station5_tank, class: 'input  is-small bg-none', 'x-on:input': 'u = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة 5 ثراد</td>
+      <td>21</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :bani_saeed_tank, class: 'input  is-small bg-none', 'x-on:input': 'v = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">بني سعيد</td>
+      <td>22</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :aom_gayth_tank, class: 'input  is-small bg-none', 'x-on:input': 'w = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">أم غيث</td>
+      <td>23</td>
+    </tr>
+
+  
+    </tbody>
+    </table>
+    <div class="is-grouped">
+              <div class="control has-text-centered">
+                <%= form.button :submit, class: 'button is-info' %>
+                <%= link_to 'Cancel', new_aqiq_thrad_tank_path, class:'button is-light' %>
+              </div>
+    </div>
+    <% end %>
+  <%else%>
+  <h1><%= "Please contact the admin"%>
+  <%end%>

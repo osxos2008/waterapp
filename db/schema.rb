@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_24_025828) do
+ActiveRecord::Schema.define(version: 2020_04_26_211933) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,6 +83,37 @@ ActiveRecord::Schema.define(version: 2020_04_24_025828) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_aljnabens_on_user_id"
+  end
+
+  create_table "aqiq_thrad_tanks", force: :cascade do |t|
+    t.date "date"
+    t.bigint "user_id", null: false
+    t.float "aqiq_station1"
+    t.float "aqiq_station2"
+    t.float "aqiq_station3"
+    t.float "aqiq_station4"
+    t.float "shahbah_tank"
+    t.float "bani_kaber_tank"
+    t.float "bani_dhabyan_station_tank"
+    t.float "bani_dahabyan_tank"
+    t.float "bani_hedah_tank"
+    t.float "baljurashy_tank"
+    t.float "thrad_station1_tank"
+    t.float "susabad_station_tank"
+    t.float "mushereef_tank"
+    t.float "aunoq_tank"
+    t.float "jarab_tank"
+    t.float "blue_tank"
+    t.float "thrad_station2_tank"
+    t.float "thrad_station3_tank"
+    t.float "thrad_station4_tank"
+    t.float "almzree_tank"
+    t.float "thrad_station5_tank"
+    t.float "bani_saeed_tank"
+    t.float "aom_gayth_tank"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_aqiq_thrad_tanks_on_user_id"
   end
 
   create_table "aqiqs", force: :cascade do |t|
@@ -289,6 +320,7 @@ ActiveRecord::Schema.define(version: 2020_04_24_025828) do
 
   add_foreign_key "alashiab_alsoqia", "users"
   add_foreign_key "aljnabens", "users"
+  add_foreign_key "aqiq_thrad_tanks", "users"
   add_foreign_key "aqiqs", "users"
   add_foreign_key "aradahs", "users"
   add_foreign_key "projects", "users"

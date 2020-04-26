@@ -10,4 +10,5 @@ class User < ApplicationRecord
   has_many :aradahs
   has_many :aqiqs
   has_many :yabs
+  has_many :aqiq_thrad_tanks
 end

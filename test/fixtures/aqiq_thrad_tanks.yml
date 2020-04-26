@@ -1,0 +1,55 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2020-04-27
+  user: one
+  aqiq_station1: 1.5
+  aqiq_station2: 1.5
+  aqiq_station3: 1.5
+  aqiq_station4: 1.5
+  shahbah_tank: 1.5
+  bani_kaber_tank: 1.5
+  bani_dhabyan_station_tank: 1.5
+  bani_dahabyan_tank: 1.5
+  bani_hedah_tank: 1.5
+  baljurashy_tank: 1.5
+  thrad_station1_tank: 1.5
+  susabad_station_tank: 1.5
+  mushereef_tank: 1.5
+  aunoq_tank: 1.5
+  jarab_tank: 1.5
+  blue_tank: 1.5
+  thrad_station2_tank: 1.5
+  thrad_station3_tank: 1.5
+  thrad_station4_tank: 1.5
+  almzree_tank: 1.5
+  thrad_station5_tank: 1.5
+  bani_saeed_tank: 1.5
+  aom_gayth_tank: 1.5
+
+two:
+  date: 2020-04-27
+  user: two
+  aqiq_station1: 1.5
+  aqiq_station2: 1.5
+  aqiq_station3: 1.5
+  aqiq_station4: 1.5
+  shahbah_tank: 1.5
+  bani_kaber_tank: 1.5
+  bani_dhabyan_station_tank: 1.5
+  bani_dahabyan_tank: 1.5
+  bani_hedah_tank: 1.5
+  baljurashy_tank: 1.5
+  thrad_station1_tank: 1.5
+  susabad_station_tank: 1.5
+  mushereef_tank: 1.5
+  aunoq_tank: 1.5
+  jarab_tank: 1.5
+  blue_tank: 1.5
+  thrad_station2_tank: 1.5
+  thrad_station3_tank: 1.5
+  thrad_station4_tank: 1.5
+  almzree_tank: 1.5
+  thrad_station5_tank: 1.5
+  bani_saeed_tank: 1.5
+  aom_gayth_tank: 1.5

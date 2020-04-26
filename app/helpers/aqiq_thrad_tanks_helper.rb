@@ -1,0 +1,2 @@
+module AqiqThradTanksHelper
+end

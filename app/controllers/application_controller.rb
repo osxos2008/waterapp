@@ -18,6 +18,8 @@ class ApplicationController < ActionController::Base
       new_aqiq_path
     elsif resource.project == 7
       new_yab_path
+    elsif resource.project == 8
+      new_aqiq_thrad_tank_path
     else
       projects_path
     end

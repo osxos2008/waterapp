@@ -45,6 +45,12 @@ class Project < ApplicationRecord
         name: 'بطاط ويبس',
         number: 7,
         path: :new_yab_path
+      },
+      8 => {
+        company_name: 'شركة الرويتع',
+        name: 'مناسيب مشروع العقيق وثراد',
+        number: 8,
+        path: :new_aqiq_thrad_tank_path
       }
 
     }

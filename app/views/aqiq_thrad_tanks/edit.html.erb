@@ -1,0 +1,11 @@
+<% if current_user.admin? %> 
+<h1>Editing Aqiq Thrad Tank</h1>
+
+<%= render 'form', aqiq_thrad_tank: @aqiq_thrad_tank %>
+
+<%= link_to 'Show', @aqiq_thrad_tank %> |
+<%= link_to 'Back', aqiq_thrad_tanks_path %>
+
+<%else%>
+<h1><%= "Please contact the admin"%>
+<%end%>

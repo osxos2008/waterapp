@@ -1,0 +1,134 @@
+<% if current_user.admin? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @aqiq_thrad_tank.date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @aqiq_thrad_tank.user_id %>
+</p>
+
+<p>
+  <strong>Aqiq station1:</strong>
+  <%= @aqiq_thrad_tank.aqiq_station1 %>
+</p>
+
+<p>
+  <strong>Aqiq station2:</strong>
+  <%= @aqiq_thrad_tank.aqiq_station2 %>
+</p>
+
+<p>
+  <strong>Aqiq station3:</strong>
+  <%= @aqiq_thrad_tank.aqiq_station3 %>
+</p>
+
+<p>
+  <strong>Aqiq station4:</strong>
+  <%= @aqiq_thrad_tank.aqiq_station4 %>
+</p>
+
+<p>
+  <strong>Shahbah tank:</strong>
+  <%= @aqiq_thrad_tank.shahbah_tank %>
+</p>
+
+<p>
+  <strong>Bani kaber tank:</strong>
+  <%= @aqiq_thrad_tank.bani_kaber_tank %>
+</p>
+
+<p>
+  <strong>Bani dhabyan station tank:</strong>
+  <%= @aqiq_thrad_tank.bani_dhabyan_station_tank %>
+</p>
+
+<p>
+  <strong>Bani dahabyan tank:</strong>
+  <%= @aqiq_thrad_tank.bani_dahabyan_tank %>
+</p>
+
+<p>
+  <strong>Bani hedah tank:</strong>
+  <%= @aqiq_thrad_tank.bani_hedah_tank %>
+</p>
+
+<p>
+  <strong>Baljurashy tank:</strong>
+  <%= @aqiq_thrad_tank.baljurashy_tank %>
+</p>
+
+<p>
+  <strong>Thrad station1 tank:</strong>
+  <%= @aqiq_thrad_tank.thrad_station1_tank %>
+</p>
+
+<p>
+  <strong>Susabad station tank:</strong>
+  <%= @aqiq_thrad_tank.susabad_station_tank %>
+</p>
+
+<p>
+  <strong>Mushereef tank:</strong>
+  <%= @aqiq_thrad_tank.mushereef_tank %>
+</p>
+
+<p>
+  <strong>Aunoq tank:</strong>
+  <%= @aqiq_thrad_tank.aunoq_tank %>
+</p>
+
+<p>
+  <strong>Jarab tank:</strong>
+  <%= @aqiq_thrad_tank.jarab_tank %>
+</p>
+
+<p>
+  <strong>Blue tank:</strong>
+  <%= @aqiq_thrad_tank.blue_tank %>
+</p>
+
+<p>
+  <strong>Thrad station2 tank:</strong>
+  <%= @aqiq_thrad_tank.thrad_station2_tank %>
+</p>
+
+<p>
+  <strong>Thrad station3 tank:</strong>
+  <%= @aqiq_thrad_tank.thrad_station3_tank %>
+</p>
+
+<p>
+  <strong>Thrad station4 tank:</strong>
+  <%= @aqiq_thrad_tank.thrad_station4_tank %>
+</p>
+
+<p>
+  <strong>Almzree tank:</strong>
+  <%= @aqiq_thrad_tank.almzree_tank %>
+</p>
+
+<p>
+  <strong>Thrad station5 tank:</strong>
+  <%= @aqiq_thrad_tank.thrad_station5_tank %>
+</p>
+
+<p>
+  <strong>Bani saeed tank:</strong>
+  <%= @aqiq_thrad_tank.bani_saeed_tank %>
+</p>
+
+<p>
+  <strong>Aom gayth tank:</strong>
+  <%= @aqiq_thrad_tank.aom_gayth_tank %>
+</p>
+
+<%= link_to 'Edit', edit_aqiq_thrad_tank_path(@aqiq_thrad_tank) %> |
+<%= link_to 'Back', aqiq_thrad_tanks_path %>
+
+<%else%>
+<h1><%= "Please contact the admin"%>
+<%end%>
