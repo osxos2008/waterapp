@@ -2,7 +2,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :projects
-  has_many :districts
   has_many :aljnabens
   has_many :alashiab_alsoqia
   has_many :smallprojects
@@ -11,4 +10,10 @@ class User < ApplicationRecord
   has_many :aqiqs
   has_many :yabs
   has_many :aqiq_thrad_tanks
+
+  before_save do
+    self.project  = project.compact
+  #noEmptyCities = permissions.reject { |c| c.empty? }
+  end
+
 end

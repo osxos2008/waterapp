@@ -1,4 +1,4 @@
- <% if current_user.admin? || current_user.project==5 %> 
+ <% if current_user.admin? || (current_user.project.include? 5) %> 
   <%= form_with(model: smallproject, local: true, html: { 'x-data': '{ a:0,a1:0,a2:0,a3:0,a4:0,a5:0,a6:0,a7:0,a8:0,a9:0,a10:0}' }) do |form| %>
     <% if smallproject.errors.any? %>
       <div id="error_explanation">

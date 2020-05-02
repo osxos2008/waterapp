@@ -4,21 +4,21 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def after_sign_in_path_for(resource)
-    if resource.project == 1  
+    if resource.project.include? 1  
       new_aljnaben_path
-    elsif resource.project == 2
+    elsif resource.project.include? 2
       new_tohamhalshamel_path
-    elsif resource.project == 3
+    elsif resource.project.include? 3
       new_alashiab_alsoqium_path
-    elsif resource.project == 4
+    elsif resource.project.include? 4
       new_aradah_path
-    elsif resource.project == 5
+    elsif resource.project.include? 5
       new_smallproject_path
-    elsif resource.project == 6
+    elsif resource.project.include? 6
       new_aqiq_path
-    elsif resource.project == 7
+    elsif resource.project.include? 7
       new_yab_path
-    elsif resource.project == 8
+    elsif resource.project.include? 8
       new_aqiq_thrad_tank_path
     else
       projects_path

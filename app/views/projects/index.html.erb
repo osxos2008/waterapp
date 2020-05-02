@@ -65,28 +65,29 @@
         </tr>
     </tbody>
   </table>
-<% elsif [1, 2, 3, 4, 5, 6, 7, 8].include? current_user.project%>
-
-  <% target_project = Project.projects_map[current_user.project] %>
-
-  <table class="table is-striped is-hoverable is-bordered">
-    <thead>
-      <tr>
-        <th>Company Name</th>
-        <th>Project</th>
-        <th>Project number</th>
-      </tr>
-    </thead>
-    <tbody>
+<% elsif [1, 2, 3, 4, 5, 6, 7, 8].include? current_user.project[0]%>
+  
+  
+    <table class="table is-striped is-hoverable is-bordered">
+      <thead>
+       <tr>
+          <th>Company Name</th>
+          <th>Project</th>
+          <th>Project number</th>
+       </tr>
+      </thead>
+      <tbody>
+        <% current_user.project.each do |x| %>
+        <% target_project = Project.projects_map[x] %>
         <tr>
-          <td><%= link_to target_project[:company_name], send(target_project[:path]) %></td>
-          <td><%= target_project[:name] %></td>
-          <td><%= target_project[:number] %></td>
-        </tr>
-        
-        
-    </tbody>
+            <td><%= target_project[:company_name]%></td>
+            <td><%= link_to target_project[:name], send(target_project[:path])  %></td>
+           <td><%= target_project[:number] %></td>
+        </tr> 
+        <% end %>   
+      </tbody>   
   </table>
+  
 <% else %>
   <h1> Please contact the Admin to assign a project </h1>
 <% end %>
