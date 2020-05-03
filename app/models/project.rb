@@ -51,6 +51,12 @@ class Project < ApplicationRecord
         name: 'مناسيب مشروع العقيق وثراد',
         number: 8,
         path: :new_aqiq_thrad_tank_path
+      },
+      9 => {
+        company_name: 'شركة الرويتع',
+        name: 'مناسيب مشروع الجنابين',
+        number: 9,
+        path: :new_aljnabeen_tank_path
       }
 
     }

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :aljnabeen_tanks
   resources :aqiq_thrad_tanks
   resources :yabs
   resources :aqiqs

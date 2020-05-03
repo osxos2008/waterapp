@@ -1,0 +1,54 @@
+<% if current_user.admin? %>  
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @aljnabeen_tank.date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @aljnabeen_tank.user_id %>
+</p>
+
+<p>
+  <strong>Almontag tank:</strong>
+  <%= @aljnabeen_tank.almontag_tank %>
+</p>
+
+<p>
+  <strong>Aljbeel tank:</strong>
+  <%= @aljnabeen_tank.aljbeel_Tank %>
+</p>
+
+<p>
+  <strong>Abdan tank:</strong>
+  <%= @aljnabeen_tank.abdan_tank %>
+</p>
+
+<p>
+  <strong>Alfryh tank:</strong>
+  <%= @aljnabeen_tank.alfryh_tank %>
+</p>
+
+<p>
+  <strong>Algema tank:</strong>
+  <%= @aljnabeen_tank.algema_tank %>
+</p>
+
+<p>
+  <strong>Shra tank:</strong>
+  <%= @aljnabeen_tank.shra_tank %>
+</p>
+
+<p>
+  <strong>Alrahwa tank:</strong>
+  <%= @aljnabeen_tank.alrahwa_tank %>
+</p>
+
+<%= link_to 'Edit', edit_aljnabeen_tank_path(@aljnabeen_tank) %> |
+<%= link_to 'Back', aljnabeen_tanks_path %>
+<%else%>
+<h1><%= "Please contact the admin"%>
+<%end%>
+

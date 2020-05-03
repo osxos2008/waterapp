@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_01_193719) do
+ActiveRecord::Schema.define(version: 2020_05_03_035855) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,21 @@ ActiveRecord::Schema.define(version: 2020_05_01_193719) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_alashiab_alsoqia_on_user_id"
+  end
+
+  create_table "aljnabeen_tanks", force: :cascade do |t|
+    t.date "date"
+    t.bigint "user_id", null: false
+    t.float "almontag_tank"
+    t.float "aljbeel_Tank"
+    t.float "abdan_tank"
+    t.float "alfryh_tank"
+    t.float "algema_tank"
+    t.float "shra_tank"
+    t.float "alrahwa_tank"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_aljnabeen_tanks_on_user_id"
   end
 
   create_table "aljnabens", force: :cascade do |t|
@@ -319,6 +334,7 @@ ActiveRecord::Schema.define(version: 2020_05_01_193719) do
   end
 
   add_foreign_key "alashiab_alsoqia", "users"
+  add_foreign_key "aljnabeen_tanks", "users"
   add_foreign_key "aljnabens", "users"
   add_foreign_key "aqiq_thrad_tanks", "users"
   add_foreign_key "aqiqs", "users"

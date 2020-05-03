@@ -1,0 +1,10 @@
+<% if current_user.admin? %>
+<h1>Editing Aljnabeen Tank</h1>
+
+<%= render 'form', aljnabeen_tank: @aljnabeen_tank %>
+
+<%= link_to 'Show', @aljnabeen_tank %> |
+<%= link_to 'Back', aljnabeen_tanks_path %>
+<%else%>
+<h1><%= "Please contact the admin"%>
+<%end%>

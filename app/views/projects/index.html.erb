@@ -63,9 +63,14 @@
           <td>شركة الرويتع</td>
           <td>8</td>
         </tr>
+        <tr>
+          <td><%= link_to 'مناسيب خزانات مشروع الجنابين', aljnabeen_tanks_path %></td>
+          <td>شركة الرويتع</td>
+          <td>9</td>
+        </tr>
     </tbody>
   </table>
-<% elsif [1, 2, 3, 4, 5, 6, 7, 8].include? current_user.project[0]%>
+<% elsif [1, 2, 3, 4, 5, 6, 7, 8, 9].include? current_user.project[0]%>
   
   
     <table class="table is-striped is-hoverable is-bordered">

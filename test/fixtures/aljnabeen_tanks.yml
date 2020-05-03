@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2020-05-03
+  user: one
+  almontag_tank: 1.5
+  aljbeel_Tank: 1.5
+  abdan_tank: 1.5
+  alfryh_tank: 1.5
+  algema_tank: 1.5
+  shra_tank: 1.5
+  alrahwa_tank: 1.5
+
+two:
+  date: 2020-05-03
+  user: two
+  almontag_tank: 1.5
+  aljbeel_Tank: 1.5
+  abdan_tank: 1.5
+  alfryh_tank: 1.5
+  algema_tank: 1.5
+  shra_tank: 1.5
+  alrahwa_tank: 1.5
