@@ -12,6 +12,9 @@ class Aradah < ApplicationRecord
     self.bneshep_total   = [bneshep_blkhzmr, bneshep_bnehasan].compact.sum 
     self.mshep_total   = [mshep_alhalah, mshep_dos].compact.sum 
     self.mnahel_total   = [qshep_total, bneshep_total, bneshep_total, bshep_almosa].compact.sum 
-    self.distripution_total   = [network_total, mnahel_total].compact.sum 
+    self.distripution_total   = [network_total, mnahel_total].compact.sum
+    # TODO: fill date attribute from created_at field.
   end
+
+  # TODO: create tahliah_totals method.
 end
