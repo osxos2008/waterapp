@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :yabs
   has_many :aqiq_thrad_tanks
   has_many :aljnabeen_tanks
+  has_many :aradah_tanks
 
   before_save do
     self.project  = project.compact

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_03_035855) do
+ActiveRecord::Schema.define(version: 2020_05_06_014424) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -177,6 +177,35 @@ ActiveRecord::Schema.define(version: 2020_05_03_035855) do
     t.index ["user_id"], name: "index_aqiqs_on_user_id"
   end
 
+  create_table "aradah_tanks", force: :cascade do |t|
+    t.date "date"
+    t.bigint "user_id", null: false
+    t.float "aradah_plant_tank"
+    t.float "naqal_plant1_tnak"
+    t.float "mashoqah_plant2_tank"
+    t.float "ras_manhal_plant3_tank"
+    t.float "alqesma_plant4_tank"
+    t.float "thraween_plant5_tank"
+    t.float "bani_adwan_tank"
+    t.float "mashoqa_tank"
+    t.float "bedah_tank"
+    t.float "al_musa_tank"
+    t.float "marawah_tank"
+    t.float "qaran_dabi_tank"
+    t.float "alhalah_tank"
+    t.float "balqazmar_tank"
+    t.float "bani_hasan_tank"
+    t.float "alqalab_tank"
+    t.float "daws_tank"
+    t.float "sayhan_tank"
+    t.float "alkahelah_tank"
+    t.float "balhakam_tank"
+    t.float "aljwfaa_tank"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_aradah_tanks_on_user_id"
+  end
+
   create_table "aradahs", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.date "date"
@@ -338,6 +367,7 @@ ActiveRecord::Schema.define(version: 2020_05_03_035855) do
   add_foreign_key "aljnabens", "users"
   add_foreign_key "aqiq_thrad_tanks", "users"
   add_foreign_key "aqiqs", "users"
+  add_foreign_key "aradah_tanks", "users"
   add_foreign_key "aradahs", "users"
   add_foreign_key "projects", "users"
   add_foreign_key "projects", "users", column: "assignee_id"

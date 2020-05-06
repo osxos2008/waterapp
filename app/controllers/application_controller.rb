@@ -20,6 +20,10 @@ class ApplicationController < ActionController::Base
       new_yab_path
     elsif resource.project.include? 8
       new_aqiq_thrad_tank_path
+    elsif resource.project.include? 9
+      new_aljnabeen_tank_path
+    elsif resource.project.include? 10
+      new_aradah_tank_path
     else
       projects_path
     end

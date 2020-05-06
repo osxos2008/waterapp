@@ -1,0 +1,172 @@
+<% if current_user.admin? || (current_user.project.include? 8) %>
+  <%= form_with(model: aradah_tank, local: true, html: { 'x-data': '{ a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0, i: 0, j:0 }' }) do |form| %>
+    <% if aradah_tank.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(aradah_tank.errors.count, "error") %> prohibited this aradah_tank from being saved:</h2>
+
+        <ul>
+          <% aradah_tank.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <section class="hero is-dark is-small">
+   <div class="hero-body">
+    <div class="container">
+    <div class="title is-5 text-align-center">مناسيب خزانات مشروع عردة</div>
+    </div>
+   </div>
+  </section>
+
+  <table class="table is-striped is-bordered", style="width:50%;margin-left:auto;margin-right:auto;">
+    <thead>
+    <tr>
+      <th style="text-align:center">المنسوب</th>
+      <th style="text-align:center">الخزان</th>
+      <th>#</th>
+    </tr>
+    </thead>
+    </tbody>
+
+
+    <tr>
+      <td><%= form.text_field :aradah_plant_tank, class: 'input  is-small bg-none', 'x-on:input': 'a = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة تنقية عردة</td>
+      <td>1</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :naqal_plant1_tnak, class: 'input  is-small bg-none', 'x-on:input': 'b = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة 1 نخال</td>
+      <td>2</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :mashoqah_plant2_tank, class: 'input  is-small bg-none', 'x-on:input': 'c = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة 2 معشوقة</td>
+      <td>3</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :ras_manhal_plant3_tank, class: 'input  is-small bg-none', 'x-on:input': 'd = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة 3 رأس منحل</td>
+      <td>4</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :alqesma_plant4_tank, class: 'input  is-small bg-none', 'x-on:input': 'e = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة 4 القسمة</td>
+      <td>5</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :thraween_plant5_tank, class: 'input  is-small bg-none', 'x-on:input': 'f = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">محطة 5 الثراوين</td>
+      <td>6</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :bani_adwan_tank, class: 'input  is-small bg-none', 'x-on:input': 'g = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">بني عدوان</td>
+      <td>7</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :mashoqa_tank, class: 'input  is-small bg-none', 'x-on:input': 'h = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">معشوقة</td>
+      <td>8</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :bedah_tank, class: 'input  is-small bg-none', 'x-on:input': 'i = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">بيدة</td>
+      <td>9</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :al_musa_tank, class: 'input  is-small bg-none', 'x-on:input': 'j = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">آل موسى</td>
+      <td>10</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :marawah_tank , class: 'input  is-small bg-none', 'x-on:input': 'k = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">مراوة</td>
+      <td>11</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :qaran_dabi_tank, class: 'input  is-small bg-none', 'x-on:input': 'l = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">قرن ظبي</td>
+      <td>12</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :alhalah_tank, class: 'input  is-small bg-none', 'x-on:input': 'm = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">الحلاه</td>
+      <td>13</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :balqazmar_tank, class: 'input  is-small bg-none', 'x-on:input': 'n = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">بلخزمر</td>
+      <td>14</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :bani_hasan_tank, class: 'input  is-small bg-none', 'x-on:input': 'o = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">بني حسن</td>
+      <td>15</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :alqalab_tank, class: 'input  is-small bg-none', 'x-on:input': 'p = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">الخلب</td>
+      <td>16</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :daws_tank, class: 'input  is-small bg-none', 'x-on:input': 'q = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">دوس</td>
+      <td>17</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :sayhan_tank, class: 'input  is-small bg-none', 'x-on:input': 'r = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">سيحان</td>
+      <td>18</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :alkahelah_tank, class: 'input  is-small bg-none', 'x-on:input': 's = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">الكاحلة</td>
+      <td>19</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :balhakam_tank, class: 'input  is-small bg-none', 'x-on:input': 't = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">بلحكم</td>
+      <td>20</td>
+    </tr>
+
+    <tr>
+      <td><%= form.text_field :aljwfaa_tank, class: 'input  is-small bg-none', 'x-on:input': 'u = parseFloat($event.target.value)' %></td>
+      <td style="text-align:center">الجوفاء</td>
+      <td>21</td>
+    </tr>
+
+  
+  </tbody>
+  </table>
+  <div class="is-grouped">
+            <div class="control has-text-centered">
+              <%= form.button :submit, class: 'button is-info' %>
+              <%= link_to 'Cancel', new_aradah_tank_path, class:'button is-light' %>
+            </div>
+  </div>
+  <% end %>
+<%else%>
+<h1><%= "Please contact the admin"%>
+<%end%>

@@ -1,0 +1,51 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2020-05-06
+  user: one
+  aradah_plant_tank: 1.5
+  naqal_plant1_tnak: 1.5
+  mashoqah_plant2_tank: 1.5
+  ras_manhal_plant3_tank: 1.5
+  alqesma_plant4_tank: 1.5
+  thraween_plant5_tank: 1.5
+  bani_adwan_tank: 1.5
+  mashoqa_tank: 1.5
+  bedah_tank: 1.5
+  al_musa_tank: 1.5
+  marawah_tank: 1.5
+  qaran_dabi_tank: 1.5
+  alhalah_tank: 1.5
+  balqazmar_tank: 1.5
+  bani_hasan_tank: 1.5
+  alqalab_tank: 1.5
+  daws_tank: 1.5
+  sayhan_tank: 1.5
+  alkahelah_tank: 1.5
+  balhakam_tank: 1.5
+  aljwfaa_tank: 1.5
+
+two:
+  date: 2020-05-06
+  user: two
+  aradah_plant_tank: 1.5
+  naqal_plant1_tnak: 1.5
+  mashoqah_plant2_tank: 1.5
+  ras_manhal_plant3_tank: 1.5
+  alqesma_plant4_tank: 1.5
+  thraween_plant5_tank: 1.5
+  bani_adwan_tank: 1.5
+  mashoqa_tank: 1.5
+  bedah_tank: 1.5
+  al_musa_tank: 1.5
+  marawah_tank: 1.5
+  qaran_dabi_tank: 1.5
+  alhalah_tank: 1.5
+  balqazmar_tank: 1.5
+  bani_hasan_tank: 1.5
+  alqalab_tank: 1.5
+  daws_tank: 1.5
+  sayhan_tank: 1.5
+  alkahelah_tank: 1.5
+  balhakam_tank: 1.5
+  aljwfaa_tank: 1.5

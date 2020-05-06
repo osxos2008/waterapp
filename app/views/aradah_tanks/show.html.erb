@@ -1,0 +1,125 @@
+<% if current_user.admin? %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @aradah_tank.date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @aradah_tank.user_id %>
+</p>
+
+<p>
+  <strong>Aradah plant tank:</strong>
+  <%= @aradah_tank.aradah_plant_tank %>
+</p>
+
+<p>
+  <strong>Naqal plant1 tnak:</strong>
+  <%= @aradah_tank.naqal_plant1_tnak %>
+</p>
+
+<p>
+  <strong>Mashoqah plant2 tank:</strong>
+  <%= @aradah_tank.mashoqah_plant2_tank %>
+</p>
+
+<p>
+  <strong>Ras manhal plant3 tank:</strong>
+  <%= @aradah_tank.ras_manhal_plant3_tank %>
+</p>
+
+<p>
+  <strong>Alqesma plant4 tank:</strong>
+  <%= @aradah_tank.alqesma_plant4_tank %>
+</p>
+
+<p>
+  <strong>Thraween plant5 tank:</strong>
+  <%= @aradah_tank.thraween_plant5_tank %>
+</p>
+
+<p>
+  <strong>Bani adwan tank:</strong>
+  <%= @aradah_tank.bani_adwan_tank %>
+</p>
+
+<p>
+  <strong>Mashoqa tank:</strong>
+  <%= @aradah_tank.mashoqa_tank %>
+</p>
+
+<p>
+  <strong>Bedah tank:</strong>
+  <%= @aradah_tank.bedah_tank %>
+</p>
+
+<p>
+  <strong>Al musa tank:</strong>
+  <%= @aradah_tank.al_musa_tank %>
+</p>
+
+<p>
+  <strong>Marawah tank:</strong>
+  <%= @aradah_tank.marawah_tank %>
+</p>
+
+<p>
+  <strong>Qaran dabi tank:</strong>
+  <%= @aradah_tank.qaran_dabi_tank %>
+</p>
+
+<p>
+  <strong>Alhalah tank:</strong>
+  <%= @aradah_tank.alhalah_tank %>
+</p>
+
+<p>
+  <strong>Balqazmar tank:</strong>
+  <%= @aradah_tank.balqazmar_tank %>
+</p>
+
+<p>
+  <strong>Bani hasan tank:</strong>
+  <%= @aradah_tank.bani_hasan_tank %>
+</p>
+
+<p>
+  <strong>Alqalab tank:</strong>
+  <%= @aradah_tank.alqalab_tank %>
+</p>
+
+<p>
+  <strong>Daws tank:</strong>
+  <%= @aradah_tank.daws_tank %>
+</p>
+
+<p>
+  <strong>Sayhan tank:</strong>
+  <%= @aradah_tank.sayhan_tank %>
+</p>
+
+<p>
+  <strong>Alkahelah tank:</strong>
+  <%= @aradah_tank.alkahelah_tank %>
+</p>
+
+<p>
+  <strong>Balhakam tank:</strong>
+  <%= @aradah_tank.balhakam_tank %>
+</p>
+
+<p>
+  <strong>Aljwfaa tank:</strong>
+  <%= @aradah_tank.aljwfaa_tank %>
+</p>
+
+<%= link_to 'Edit', edit_aradah_tank_path(@aradah_tank) %> |
+<%= link_to 'Back', aradah_tanks_path %>
+
+<%else%>
+<h1><%= "Please contact the admin"%>
+<%end%>
+
