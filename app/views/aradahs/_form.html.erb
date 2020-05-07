@@ -1,5 +1,5 @@
 <% if current_user.admin? || (current_user.project.include? 4) %>
-  <%= form_with(model: aradah, local: true, html: { 'x-data': '{ a:0,a1:0,a2:0,a3:0,a4:0,a5:0,a6:0,a7:0,a8:0,a9:0,a10:0,a11:0,a12:0,a13:0,a14:0,a15:0,a16:0,a17:0,a18:0,a19:0,a20:0,a21:0,a22:0,a23:0,a24:0,a25:0,a26:0,a27:0,a28:0,a29:0,a30:0,a31:0}' }) do |form| %>
+  <%= form_with(model: aradah, local: true, html: { 'x-data': '{ dsd:0,a:0,a1:0,a2:0,a3:0,a4:0,a5:0,a6:0,a7:0,a8:0,a9:0,a10:0,a11:0,a12:0,a13:0,a14:0,a15:0,a16:0,a17:0,a18:0,a19:0,a20:0,a21:0,a22:0,a23:0,a24:0,a25:0,a26:0,a27:0,a28:0,a29:0,a30:0,a31:0}' }) do |form| %>
     <% if aradah.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(aradah.errors.count, "error") %> prohibited this aradah from being saved:</h2>
@@ -37,12 +37,17 @@
           <td>1</td>
         </tr>
         <tr>
-          <td><%= form.text_field :from_thrawen_tank, class: 'input  is-small bg-none', 'x-on:input': 'a1 = parseFloat($event.target.value)' %></td>
-          <td style="text-align:center">الوارد من التحلية لخزان الثراوين</td>
+          <td><%= form.text_field :FormAltahliahToNaqal, class: 'input  is-small bg-none', 'x-on:input': 'dsd = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الوارد من التحلية لخزان نخال</td>
           <td>2</td>
         </tr>
         <tr>
-          <td><%= form.text_field :product_total, class: 'input  is-small bg-none', 'x-model': 'a + a1', disabled: true %></td>
+          <td><%= form.text_field :from_thrawen_tank, class: 'input  is-small bg-none', 'x-on:input': 'a1 = parseFloat($event.target.value)' %></td>
+          <td style="text-align:center">الوارد من التحلية لخزان الثراوين</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td><%= form.text_field :product_total, class: 'input  is-small bg-none', 'x-model': 'a + a1 + dsd', disabled: true %></td>
           <td style="text-align:center">إجمالي الإنتاج</td>
           <td>#</td>
         </tr>
