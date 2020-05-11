@@ -6,7 +6,7 @@
   <section class="hero is-dark is-small">
     <div class="hero-body">
       <div class="container">
-        <h1 class="title">
+        <h1 class="title" style="text-align:center">
           Projects
         </h1>
       </div>
@@ -14,85 +14,85 @@
   </section>
   <% end %>
 
-  <table class="table is-striped is-hoverable is-bordered">
-    <thead>
+  <table class="table table-striped">
+    <thead class="thead-dark">
       <tr>
-        <th>Project Name</th>
-        <th>Company Name</th>
-        <th>Project Number</th>
+        <th scope="col" style="text-align:center">Project Number</th>
+        <th scope="col" style="text-align:center">Project Name</th>
+        <th scope="col" style="text-align:center">Company Name</th>
       </tr>
     </thead>
     <tbody>
         <tr>
-          <td><%= link_to 'الجنابين', aljnabens_path %></td>
-          <td>شركة الرويتع</td>
-          <td>1</td>
+          <td style="text-align:center">1</td>
+          <td style="text-align:center"><%= link_to 'الجنابين', aljnabens_path %></td>
+          <td style="text-align:center">شركة الرويتع</td>
         </tr>
         <tr>
-          <td><%= link_to 'تهامة الشامل', tohamhalshamels_path %></td>
-          <td>شركة البكري</td>
-          <td>2</td>
+          <td style="text-align:center">2</td>
+          <td style="text-align:center"><%= link_to 'تهامة الشامل', tohamhalshamels_path %></td>
+          <td style="text-align:center">شركة البكري</td>
         </tr>
         <tr>
-          <td><%= link_to 'السقيا والأشياب', alashiab_alsoqia_path %></td>
-          <td>شركة إيلاف</td>
-          <td>3</td>
+          <td style="text-align:center">3</td>
+          <td style="text-align:center"><%= link_to 'السقيا والأشياب', alashiab_alsoqia_path %></td>
+          <td style="text-align:center">شركة إيلاف</td>
         </tr>
         <tr>
-          <td><%= link_to 'عردة', aradahs_path %></td>
-          <td>شركة سايسب</td>
-          <td>4</td>
+          <td style="text-align:center">4</td>
+          <td style="text-align:center"><%= link_to 'عردة', aradahs_path %></td>
+          <td style="text-align:center">شركة سايسب</td>
         </tr>
         <tr>
-          <td><%= link_to 'المشاريع المصغرة', smallprojects_path %></td>
-          <td>مؤسسة الوجناء</td>
-          <td>5</td>
+          <td style="text-align:center">5</td>
+          <td style="text-align:center"><%= link_to 'المشاريع المصغرة', smallprojects_path %></td>
+          <td style="text-align:center">مؤسسة الوجناء</td>
         </tr>
         <tr>
-          <td><%= link_to 'العقيق وثراد', aqiqs_path %></td>
-          <td>شركة الرويتع</td>
-          <td>6</td>
+          <td style="text-align:center">6</td>
+          <td style="text-align:center"><%= link_to 'العقيق وثراد', aqiqs_path %></td>
+          <td style="text-align:center">شركة الرويتع</td>
         </tr>
         <tr>
-          <td><%= link_to 'بطاط ويبس', yabs_path %></td>
-          <td>شركة آل سلامة</td>
-          <td>7</td>
+          <td style="text-align:center">7</td>
+          <td style="text-align:center"><%= link_to 'بطاط ويبس', yabs_path %></td>
+          <td style="text-align:center">شركة آل سلامة</td> 
         </tr>
         <tr>
-          <td><%= link_to 'مناسيب خزانات مشروع العقيق وثراد', aqiq_thrad_tanks_path %></td>
-          <td>شركة الرويتع</td>
-          <td>8</td>
+          <td style="text-align:center">8</td>
+          <td style="text-align:center"><%= link_to 'مناسيب خزانات مشروع العقيق وثراد', aqiq_thrad_tanks_path %></td>
+          <td style="text-align:center">شركة الرويتع</td>
         </tr>
         <tr>
-          <td><%= link_to 'مناسيب خزانات مشروع الجنابين', aljnabeen_tanks_path %></td>
-          <td>شركة الرويتع</td>
-          <td>9</td>
+          <td style="text-align:center">9</td>
+          <td style="text-align:center"><%= link_to 'مناسيب خزانات مشروع الجنابين', aljnabeen_tanks_path %></td>
+          <td style="text-align:center">شركة الرويتع</td>
         </tr>
         <tr>
-          <td><%= link_to 'مناسيب خزانات مشروع عردة', aradah_tanks_path %></td>
-          <td>شركة سايسب</td>
-          <td>10</td>
+          <td style="text-align:center">10</td>
+          <td style="text-align:center"><%= link_to 'مناسيب خزانات مشروع عردة', aradah_tanks_path %></td>
+          <td style="text-align:center">شركة سايسب</td>
         </tr>
     </tbody>
   </table>
 <% elsif [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].include? current_user.project[0]%>
   
   
-    <table class="table is-striped is-hoverable is-bordered">
-      <thead>
-       <tr>
-          <th>Company Name</th>
-          <th>Project</th>
-          <th>Project number</th>
-       </tr>
-      </thead>
-      <tbody>
+<table class="table">
+<thead class="thead-dark">
+  <tr>
+    <th scope="col" style="text-align:center">Project Number</th>
+    <th scope="col" style="text-align:center">Project Name</th>
+    <th scope="col" style="text-align:center">Company Name</th>
+  </tr>
+</thead>
+<tbody>
         <% current_user.project.each do |x| %>
         <% target_project = Project.projects_map[x] %>
         <tr>
-            <td><%= target_project[:company_name]%></td>
-            <td><%= link_to target_project[:name], send(target_project[:path])  %></td>
-           <td><%= target_project[:number] %></td>
+            <td style="text-align:center"><%= target_project[:company_name]%></td>
+            <td style="text-align:center"><%= link_to target_project[:name], send(target_project[:path])  %></td>
+           <td style="text-align:center"><%= target_project[:number] %></td>
         </tr> 
         <% end %>   
       </tbody>   
