@@ -74,6 +74,13 @@ class Project < ApplicationRecord
         path: :new_aradah_tank_path,
         model_class: AradahTank,
       },
+      11 => {
+        company_name: 'شركة البكري',
+        name: 'مناسيب مشروع تهامة الشامل',
+        number: 11,
+        path: :new_tohamhalshamel_tank_path,
+        model_class: TohamhalhsamelTank,
+      },
     }
   end
 

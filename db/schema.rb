@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_07_041626) do
+ActiveRecord::Schema.define(version: 2020_05_11_075119) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -294,6 +294,40 @@ ActiveRecord::Schema.define(version: 2020_05_07_041626) do
     t.index ["user_id"], name: "index_smallprojects_on_user_id"
   end
 
+  create_table "tohamhalshamel_tanks", force: :cascade do |t|
+    t.date "date"
+    t.bigint "user_id", null: false
+    t.float "almaqwa_plant_tank"
+    t.float "gamed_znad_tank1"
+    t.float "gamed_znad_tank2"
+    t.float "gamed_znad_tajmee3_tank3"
+    t.float "nasbah_plant_tank"
+    t.float "almswadah_tank"
+    t.float "nasbah_tank"
+    t.float "alahsabah_tank"
+    t.float "nawan_tank"
+    t.float "maqwah_tajme3_tank"
+    t.float "maqwah_north_plant_tank"
+    t.float "maqwah_north_tank"
+    t.float "mamna_plant_tank"
+    t.float "mamna_tank"
+    t.float "nera_plant1_tank"
+    t.float "nera_plant2_tank"
+    t.float "nera3_tank"
+    t.float "qelwah_plant_tank"
+    t.float "qelwah_tajme3_Tank"
+    t.float "dogah_plant_tank"
+    t.float "dogah_tank"
+    t.float "rmaydah_tank"
+    t.float "hajrah_tank"
+    t.float "bani_ata_plant_tank"
+    t.float "bani_ata_tank"
+    t.float "aljareen_tank"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_tohamhalshamel_tanks_on_user_id"
+  end
+
   create_table "tohamhalshamels", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.date "date"
@@ -373,6 +407,7 @@ ActiveRecord::Schema.define(version: 2020_05_07_041626) do
   add_foreign_key "projects", "users"
   add_foreign_key "projects", "users", column: "assignee_id"
   add_foreign_key "smallprojects", "users"
+  add_foreign_key "tohamhalshamel_tanks", "users"
   add_foreign_key "tohamhalshamels", "users"
   add_foreign_key "yabs", "users"
 end

@@ -1,0 +1,150 @@
+<% if current_user.admin? %>  
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @tohamhalshamel_tank.date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tohamhalshamel_tank.user_id %>
+</p>
+
+<p>
+  <strong>Almaqwa plant tank:</strong>
+  <%= @tohamhalshamel_tank.almaqwa_plant_tank %>
+</p>
+
+<p>
+  <strong>Gamed znad tank1:</strong>
+  <%= @tohamhalshamel_tank.gamed_znad_tank1 %>
+</p>
+
+<p>
+  <strong>Gamed znad tank2:</strong>
+  <%= @tohamhalshamel_tank.gamed_znad_tank2 %>
+</p>
+
+<p>
+  <strong>Gamed znad tajmee3 tank3:</strong>
+  <%= @tohamhalshamel_tank.gamed_znad_tajmee3_tank3 %>
+</p>
+
+<p>
+  <strong>Nasbah plant tank:</strong>
+  <%= @tohamhalshamel_tank.nasbah_plant_tank %>
+</p>
+
+<p>
+  <strong>Almswadah tank:</strong>
+  <%= @tohamhalshamel_tank.almswadah_tank %>
+</p>
+
+<p>
+  <strong>Nasbah tank:</strong>
+  <%= @tohamhalshamel_tank.nasbah_tank %>
+</p>
+
+<p>
+  <strong>Alahsabah tank:</strong>
+  <%= @tohamhalshamel_tank.alahsabah_tank %>
+</p>
+
+<p>
+  <strong>Nawan tank:</strong>
+  <%= @tohamhalshamel_tank.nawan_tank %>
+</p>
+
+<p>
+  <strong>Maqwah tajme3 tank:</strong>
+  <%= @tohamhalshamel_tank.maqwah_tajme3_tank %>
+</p>
+
+<p>
+  <strong>Maqwah north plant tank:</strong>
+  <%= @tohamhalshamel_tank.maqwah_north_plant_tank %>
+</p>
+
+<p>
+  <strong>Maqwah north tank:</strong>
+  <%= @tohamhalshamel_tank.maqwah_north_tank %>
+</p>
+
+<p>
+  <strong>Mamna plant tank:</strong>
+  <%= @tohamhalshamel_tank.mamna_plant_tank %>
+</p>
+
+<p>
+  <strong>Mamna tank:</strong>
+  <%= @tohamhalshamel_tank.mamna_tank %>
+</p>
+
+<p>
+  <strong>Nera plant1 tank:</strong>
+  <%= @tohamhalshamel_tank.nera_plant1_tank %>
+</p>
+
+<p>
+  <strong>Nera plant2 tank:</strong>
+  <%= @tohamhalshamel_tank.nera_plant2_tank %>
+</p>
+
+<p>
+  <strong>Nera3 tank:</strong>
+  <%= @tohamhalshamel_tank.nera3_tank %>
+</p>
+
+<p>
+  <strong>Qelwah plant tank:</strong>
+  <%= @tohamhalshamel_tank.qelwah_plant_tank %>
+</p>
+
+<p>
+  <strong>Qelwah tajme3 tank:</strong>
+  <%= @tohamhalshamel_tank.qelwah_tajme3_Tank %>
+</p>
+
+<p>
+  <strong>Dogah plant tank:</strong>
+  <%= @tohamhalshamel_tank.dogah_plant_tank %>
+</p>
+
+<p>
+  <strong>Dogah tank:</strong>
+  <%= @tohamhalshamel_tank.dogah_tank %>
+</p>
+
+<p>
+  <strong>Rmaydah tank:</strong>
+  <%= @tohamhalshamel_tank.rmaydah_tank %>
+</p>
+
+<p>
+  <strong>Hajrah tank:</strong>
+  <%= @tohamhalshamel_tank.hajrah_tank %>
+</p>
+
+<p>
+  <strong>Bani ata plant tank:</strong>
+  <%= @tohamhalshamel_tank.bani_ata_plant_tank %>
+</p>
+
+<p>
+  <strong>Bani ata tank:</strong>
+  <%= @tohamhalshamel_tank.bani_ata_tank %>
+</p>
+
+<p>
+  <strong>Aljareen tank:</strong>
+  <%= @tohamhalshamel_tank.aljareen_tank %>
+</p>
+
+<%= link_to 'Edit', edit_tohamhalshamel_tank_path(@tohamhalshamel_tank) %> |
+<%= link_to 'Back', tohamhalshamel_tanks_path %>
+
+<%else%>
+<h1><%= "Please contact the admin"%>
+<%end%>
+

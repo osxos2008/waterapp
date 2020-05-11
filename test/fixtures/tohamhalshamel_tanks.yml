@@ -1,0 +1,61 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2020-05-11
+  user: one
+  almaqwa_plant_tank: 1.5
+  gamed_znad_tank1: 1.5
+  gamed_znad_tank2: 1.5
+  gamed_znad_tajmee3_tank3: 1.5
+  nasbah_plant_tank: 1.5
+  almswadah_tank: 1.5
+  nasbah_tank: 1.5
+  alahsabah_tank: 1.5
+  nawan_tank: 1.5
+  maqwah_tajme3_tank: 1.5
+  maqwah_north_plant_tank: 1.5
+  maqwah_north_tank: 1.5
+  mamna_plant_tank: 1.5
+  mamna_tank: 1.5
+  nera_plant1_tank: 1.5
+  nera_plant2_tank: 1.5
+  nera3_tank: 1.5
+  qelwah_plant_tank: 1.5
+  qelwah_tajme3_Tank: 1.5
+  dogah_plant_tank: 1.5
+  dogah_tank: 1.5
+  rmaydah_tank: 1.5
+  hajrah_tank: 1.5
+  bani_ata_plant_tank: 1.5
+  bani_ata_tank: 1.5
+  aljareen_tank: 1.5
+
+two:
+  date: 2020-05-11
+  user: two
+  almaqwa_plant_tank: 1.5
+  gamed_znad_tank1: 1.5
+  gamed_znad_tank2: 1.5
+  gamed_znad_tajmee3_tank3: 1.5
+  nasbah_plant_tank: 1.5
+  almswadah_tank: 1.5
+  nasbah_tank: 1.5
+  alahsabah_tank: 1.5
+  nawan_tank: 1.5
+  maqwah_tajme3_tank: 1.5
+  maqwah_north_plant_tank: 1.5
+  maqwah_north_tank: 1.5
+  mamna_plant_tank: 1.5
+  mamna_tank: 1.5
+  nera_plant1_tank: 1.5
+  nera_plant2_tank: 1.5
+  nera3_tank: 1.5
+  qelwah_plant_tank: 1.5
+  qelwah_tajme3_Tank: 1.5
+  dogah_plant_tank: 1.5
+  dogah_tank: 1.5
+  rmaydah_tank: 1.5
+  hajrah_tank: 1.5
+  bani_ata_plant_tank: 1.5
+  bani_ata_tank: 1.5
+  aljareen_tank: 1.5
