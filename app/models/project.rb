@@ -83,7 +83,7 @@ class Project < ApplicationRecord
       },
     }
   end
-
+################################ tahliah total produce #############################################################################
   def self.tahliah_projects
     projects_map.slice(4, 6)
   end
@@ -93,4 +93,65 @@ class Project < ApplicationRecord
       project[:model_class].where(date: date || Date.today).map(&:tahliah_total).sum
     end.sum
   end
+################################ plant total produce ###############################################################################
+  def self.plant_projects
+    projects_map.slice(1, 6)
+  end
+
+  def self.plant_projects_totals(date: nil)
+    plant_projects.values.map do |project|
+      project[:model_class].where(date: date || Date.today).map(&:plant_total).sum
+    end.sum
+  end
+################################ well total produce ################################################################################
+def self.well_projects
+  projects_map.slice(2)
+end
+
+def self.well_projects_totals(date: nil)
+  well_projects.values.map do |project|
+    project[:model_class].where(date: date || Date.today).map(&:well_total).sum
+  end.sum
+end
+################################ small wells total produce #########################################################################
+def self.small_well_projects
+  projects_map.slice(1, 5)
+end
+
+def self.small_well_projects_totals(date: nil)
+  small_well_projects.values.map do |project|
+    project[:model_class].where(date: date || Date.today).map(&:small_well_total).sum
+  end.sum
+end
+################################ alashiab total ####################################################################################
+def self.alashiab_projects
+  projects_map.slice(3)
+end
+
+def self.alashiab_projects_totals(date: nil)
+  alashiab_projects.values.map do |project|
+    project[:model_class].where(date: date || Date.today).map(&:alashiabb_total).sum
+  end.sum
+end
+################################ total produce #####################################################################################
+def self.produce_from_all_projects
+  projects_map.slice(1, 2, 4, 5, 6, 7)
+end
+
+def self.produce_from_all_projects_totals(date: nil)
+  produce_from_all_projects.values.map do |project|
+    project[:model_class].where(date: date || Date.today).map(&:produces_total).sum
+  end.sum
+end
+################################ total distribution ################################################################################
+def self.distribution_from_all_projects
+  projects_map.slice(1, 2, 3, 4, 5, 6, 7)
+end
+
+def self.distribution_from_all_projects_totals(date: nil)
+  distribution_from_all_projects.values.map do |project|
+    project[:model_class].where(date: date || Date.today).map(&:distributions_total).sum
+  end.sum
+end
+
 end
