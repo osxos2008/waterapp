@@ -79,7 +79,7 @@ class Project < ApplicationRecord
         name: 'مناسيب مشروع تهامة الشامل',
         number: 11,
         path: :new_tohamhalshamel_tank_path,
-        model_class: TohamhalhsamelTank,
+        model_class: TohamhalshamelTank,
       },
     }
   end
