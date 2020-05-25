@@ -1,30 +1,30 @@
 <% if current_user.admin? %>  
 <p id="notice"><%= notice %></p>
 
-<h1>بيانات مشروع الجنابين</h1>
+<h1 class="center">بيانات مشروع الجنابين</h1>
 
-<table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
-  <thead>
-    <tr>
-      <th class="bg-light">Submitted At </th>
-      <th>User</th>
-      <th>Date</th>
-      <th class="bg-light">الإنتاج</th>
-      <th>إنتاج محطة التنقية</th>
-      <th>بئر الرهوه</th>
-      <th>كمية المياه المرسلة من التحلية</th>
-      <th>إجمالي الإنتاج</th>
-      <th class="bg-light">التوزيع</th>
-      <th class="bg-light">الشبكات</th>
-      <th>عبدان</th>
-      <th>الفريا</th>
-      <th>القمع</th>
-      <th>شرى</th>
-      <th>الرهوه</th>
-      <th>إجمالي الشبكات</th>
-      <th class="bg-light">المناهل</th>
-      <th>شيب الجبيل</th>
-      <th>إجمالي التوزيع</th>
+<table class="table table-bordered table-striped table-hover f7", style="display: block;overflow-x: auto;">
+  <thead class="">
+    <tr class="bg-info">
+      <th style="text-align:center">Submitted At</th>
+      <th style="text-align:center">User</th>
+      <th style="text-align:center">Date</th>
+      <th style="text-align:center">الإنتاج</th>
+      <th style="text-align:center">إنتاج محطة التنقية</th>
+      <th style="text-align:center">بئر الرهوه</th>
+      <th style="text-align:center">كمية المياه المرسلة من التحلية</th>
+      <th style="text-align:center">إجمالي الإنتاج</th>
+      <th style="text-align:center">التوزيع</th>
+      <th style="text-align:center">الشبكات</th>
+      <th style="text-align:center">عبدان</th>
+      <th style="text-align:center">الفريا</th>
+      <th style="text-align:center">القمع</th>
+      <th style="text-align:center">شرى</th>
+      <th style="text-align:center">الرهوه</th>
+      <th style="text-align:center">إجمالي الشبكات</th>
+      <th style="text-align:center">المناهل</th>
+      <th style="text-align:center">شيب الجبيل</th>
+      <th style="text-align:center">إجمالي التوزيع</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -32,25 +32,25 @@
   <tbody>
     <% @aljnabens.each do |aljnaben| %>
       <tr>
-        <td><%= aljnaben.created_at %></td>
-        <td><%= aljnaben.user_id %></td>
-        <td style="white-space: nowrap;"><%= aljnaben.date %></td>
-        <td class="bg-light"><%= aljnaben.product %></td>
-        <td><%= aljnaben.purification_station %></td>
-        <td><%= aljnaben.alrahwah_Well %></td>
-        <td><%= aljnaben.quantity_sent_from_desalination %></td>
-        <td><%= aljnaben.product_total %></td>
-        <td class="bg-light"><%= aljnaben.distribution %></td>
-        <td class="bg-light"><%= aljnaben.networks %></td>
-        <td><%= aljnaben.abdaan %></td>
-        <td><%= aljnaben.alfrya %></td>
-        <td><%= aljnaben.alqame %></td>
-        <td><%= aljnaben.shra %></td>
-        <td><%= aljnaben.alrahwah %></td>
-        <td><%= aljnaben.networks_total %></td>
-        <td class="bg-light"><%= aljnaben.almnahel %></td>
-        <td><%= aljnaben.aljbail_aljnaben %></td>
-        <td><%= aljnaben.distribution_total %></td>
+        <td class="bg-light", style="text-align:center"><%= aljnaben.created_at %></td>
+        <td class="bg-light", style="text-align:center"><%= aljnaben.user_id %></td>
+        <td class="bg-light", style="text-align:center"><%= aljnaben.date %></td>
+        <td class="bg-light", style="text-align:center"><%= aljnaben.product %></td>
+        <td style="text-align:center"><%= aljnaben.purification_station %></td>
+        <td style="text-align:center"><%= aljnaben.alrahwah_Well %></td>
+        <td style="text-align:center"><%= aljnaben.quantity_sent_from_desalination %></td>
+        <td style="text-align:center"><%= aljnaben.product_total %></td>
+        <td class="bg-light", style="text-align:center"><%= aljnaben.distribution %></td>
+        <td class="bg-light", style="text-align:center"><%= aljnaben.networks %></td>
+        <td style="text-align:center"><%= aljnaben.abdaan %></td>
+        <td style="text-align:center"><%= aljnaben.alfrya %></td>
+        <td style="text-align:center"><%= aljnaben.alqame %></td>
+        <td style="text-align:center"><%= aljnaben.shra %></td>
+        <td style="text-align:center"><%= aljnaben.alrahwah %></td>
+        <td style="text-align:center"><%= aljnaben.networks_total %></td>
+        <td class="bg-light" style="text-align:center"><%= aljnaben.almnahel %></td>
+        <td style="text-align:center"><%= aljnaben.aljbail_aljnaben %></td>
+        <td style="text-align:center"><%= aljnaben.distribution_total %></td>
         <td><%= link_to 'Show', aljnaben %></td>
         <td><%= link_to 'Edit', edit_aljnaben_path(aljnaben) %></td>
         <td><%= link_to 'Delete', aljnaben, method: :delete, data: { confirm: 'Are you sure?' } %></td>

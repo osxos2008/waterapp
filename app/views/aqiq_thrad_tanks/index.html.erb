@@ -1,37 +1,37 @@
 <% if current_user.admin? %>
 <p id="notice"><%= notice %></p>
 
-<h1>بيانات مناسيب خزانات مشروع العقيق وثراد</h1>
+<h1 class="center">بيانات مناسيب خزانات مشروع العقيق وثراد</h1>
 
-<table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
-  <thead>
-    <tr>
-      <th class="bg-light">Submitted At</th>
-      <th>Date</th>
-      <th>User</th>
-      <th>Aqiq station1</th>
-      <th>Aqiq station2</th>
-      <th>Aqiq station3</th>
-      <th>Aqiq station4</th>
-      <th>Shahbah tank</th>
-      <th>Bani kaber tank</th>
-      <th>Bani dhabyan station tank</th>
-      <th>Bani dahabyan tank</th>
-      <th>Bani hedah tank</th>
-      <th>Baljurashy tank</th>
-      <th>Thrad station1 tank</th>
-      <th>Susabad station tank</th>
-      <th>Mushereef tank</th>
-      <th>Aunoq tank</th>
-      <th>Jarab tank</th>
-      <th>Blue tank</th>
-      <th>Thrad station2 tank</th>
-      <th>Thrad station3 tank</th>
-      <th>Thrad station4 tank</th>
-      <th>Almzree tank</th>
-      <th>Thrad station5 tank</th>
-      <th>Bani saeed tank</th>
-      <th>Aom gayth tank</th>
+<table class="table table-bordered table-striped table-hover f7", style="display: block;overflow-x: auto;">
+  <thead class="">
+    <tr class="bg-info">
+      <th style="text-align:center">Submitted At</th>
+      <th style="text-align:center">Date</th>
+      <th style="text-align:center">User</th>
+      <th style="text-align:center">محطة عقيق 1</th>
+      <th style="text-align:center">محطة عقيق 2</th>
+      <th style="text-align:center">محطة عقيق 3</th>
+      <th style="text-align:center">محطة عقيق 4</th>
+      <th style="text-align:center">خزان شهبة</th>
+      <th style="text-align:center">خزان بني كبير</th>
+      <th style="text-align:center">خزان محطة بني ظبيان</th>
+      <th style="text-align:center">خزان بني ظبيان</th>
+      <th style="text-align:center">خزان بني حدة</th>
+      <th style="text-align:center">خزان بلجرشي</th>
+      <th style="text-align:center">محظة ثراد 1</th>
+      <th style="text-align:center">محطة سوس اباد</th>
+      <th style="text-align:center">خزان المشيريف</th>
+      <th style="text-align:center">خزان العنق</th>
+      <th style="text-align:center">خزان جرب</th>
+      <th style="text-align:center">خزان بلو</th>
+      <th style="text-align:center">محطة ثراد 2</th>
+      <th style="text-align:center">محطة ثراد 3</th>
+      <th style="text-align:center">محطة ثراد 4</th>
+      <th style="text-align:center">خزان المزرع</th>
+      <th style="text-align:center">محطة ثراد 5</th>
+      <th style="text-align:center">خزان بني سعيد</th>
+      <th style="text-align:center">خزان ام غيث</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -39,32 +39,32 @@
   <tbody>
     <% @aqiq_thrad_tanks.each do |aqiq_thrad_tank| %>
       <tr>
-        <td class="bg-light"><%= aqiq_thrad_tank.created_at %></td>
-        <td><%= aqiq_thrad_tank.date %></td>
-        <td><%= aqiq_thrad_tank.user_id %></td>
-        <td><%= aqiq_thrad_tank.aqiq_station1 %></td>
-        <td><%= aqiq_thrad_tank.aqiq_station2 %></td>
-        <td><%= aqiq_thrad_tank.aqiq_station3 %></td>
-        <td><%= aqiq_thrad_tank.aqiq_station4 %></td>
-        <td><%= aqiq_thrad_tank.shahbah_tank %></td>
-        <td><%= aqiq_thrad_tank.bani_kaber_tank %></td>
-        <td><%= aqiq_thrad_tank.bani_dhabyan_station_tank %></td>
-        <td><%= aqiq_thrad_tank.bani_dahabyan_tank %></td>
-        <td><%= aqiq_thrad_tank.bani_hedah_tank %></td>
-        <td><%= aqiq_thrad_tank.baljurashy_tank %></td>
-        <td><%= aqiq_thrad_tank.thrad_station1_tank %></td>
-        <td><%= aqiq_thrad_tank.susabad_station_tank %></td>
-        <td><%= aqiq_thrad_tank.mushereef_tank %></td>
-        <td><%= aqiq_thrad_tank.aunoq_tank %></td>
-        <td><%= aqiq_thrad_tank.jarab_tank %></td>
-        <td><%= aqiq_thrad_tank.blue_tank %></td>
-        <td><%= aqiq_thrad_tank.thrad_station2_tank %></td>
-        <td><%= aqiq_thrad_tank.thrad_station3_tank %></td>
-        <td><%= aqiq_thrad_tank.thrad_station4_tank %></td>
-        <td><%= aqiq_thrad_tank.almzree_tank %></td>
-        <td><%= aqiq_thrad_tank.thrad_station5_tank %></td>
-        <td><%= aqiq_thrad_tank.bani_saeed_tank %></td>
-        <td><%= aqiq_thrad_tank.aom_gayth_tank %></td>
+        <td class="bg-light", style="text-align:center"><%= aqiq_thrad_tank.created_at %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.date %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.user_id %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.aqiq_station1 %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.aqiq_station2 %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.aqiq_station3 %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.aqiq_station4 %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.shahbah_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.bani_kaber_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.bani_dhabyan_station_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.bani_dahabyan_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.bani_hedah_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.baljurashy_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.thrad_station1_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.susabad_station_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.mushereef_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.aunoq_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.jarab_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.blue_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.thrad_station2_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.thrad_station3_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.thrad_station4_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.almzree_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.thrad_station5_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.bani_saeed_tank %></td>
+        <td style="text-align:center"><%= aqiq_thrad_tank.aom_gayth_tank %></td>
         <td><%= link_to 'Show', aqiq_thrad_tank %></td>
         <td><%= link_to 'Edit', edit_aqiq_thrad_tank_path(aqiq_thrad_tank) %></td>
         <td><%= link_to 'Delete', aqiq_thrad_tank, method: :delete, data: { confirm: 'Are you sure?' } %></td>

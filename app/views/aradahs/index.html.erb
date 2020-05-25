@@ -1,62 +1,62 @@
 <% if current_user.admin? %> 
 <p id="notice"><%= notice %></p>
 
-<h1>بيانات مشروع عردة</h1>
+<h1 class="center">بيانات مشروع عردة</h1>
 
-<table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
-  <thead>
-    <tr>
-      <th>Submitted at </th>
-      <th>User</th>
-      <th>Date</th>
-      <th class="bg-light">الإنتاج</th>
-      <th>إنتاج آبار عردة</th>
-      <th>الوارد من التحلية لخزان نخال</th>
-      <th>الوارد من التحلية لخزان الثراوين</th>
-      <th>إجمالي الإنتاج</th>
-      <th class="bg-light">التوزيع</th>
-      <th class="bg-light">الشبكات</th>
-      <th>القسمة</th>
-      <th>الثراوين</th>
-      <th>الثراوين الاطاولة</th>
-      <th>بني عدوان 1</th>
-      <th>بني عدوان 2</th>
-      <th>بيدة</th>
-      <th>معشوقة</th>
-      <th>مراوة</th>
-      <th class="bg-light">إجمالي توزيع القرى</th>
-      <th>بلخزمر</th>
-      <th>بني حسن</th>
-      <th class="bg-light">إجمالي توزيع بني حسن</th>
-      <th>الحلاة</th>
-      <th>الخلب</th>
-      <th>دوس</th>
-      <th>الكاحلة 1</th>
-      <th>الكاحلة 2</th>
-      <th>سيحان</th>
-      <th>بلحكم</th>
-      <th>الجوفاء</th>
-      <th class="bg-light">إجمالي توزيع المندق</th>
-      <th>الموسى</th>
-      <th>قرن ظبي</th>
-      <th class="bg-light">إجمالي توزيع الباحة</th>
-      <th class="bg-light">إجمالي توزيع الشبكات</th>
-      <th class="bg-light">المناهل</th>
-      <th>نخال</th>
-      <th>القسمة</th>
-      <th>الثراوين</th>
-      <th>بني عدوان</th>
-      <th>معشوقة</th>
-      <th class="bg-light">إجمالي مناهل القرى</th>
-      <th>بلخزمر</th>
-      <th>بني حسن</th>
-      <th class="bg-light">إجمالي مناهل بني حسن</th>
-      <th>الحلاة</th>
-      <th>دوس</th>
-      <th class="bg-light">إجمالي مناهل المندق</th>
-      <th>Bshep almosa</th>
-      <th class="bg-light">إجمالي توزيع المناهل</th>
-      <th class="bg-light">إجمالي التوزيع</th>
+<table class="table table-bordered table-striped table-hover f7", style="display: block;overflow-x: auto;">
+  <thead class="">
+    <tr class="bg-info">
+      <th style="text-align:center">Submitted at </th>
+      <th style="text-align:center">User</th>
+      <th style="text-align:center">Date</th>
+      <th style="text-align:center">الإنتاج</th>
+      <th style="text-align:center">إنتاج آبار عردة</th>
+      <th style="text-align:center">الوارد من التحلية لخزان نخال</th>
+      <th style="text-align:center">الوارد من التحلية لخزان الثراوين</th>
+      <th style="text-align:center">إجمالي الإنتاج</th>
+      <th style="text-align:center">التوزيع</th>
+      <th style="text-align:center">الشبكات</th>
+      <th style="text-align:center">القسمة</th>
+      <th style="text-align:center">الثراوين</th>
+      <th style="text-align:center">الثراوين الاطاولة</th>
+      <th style="text-align:center">بني عدوان 1</th>
+      <th style="text-align:center">بني عدوان 2</th>
+      <th style="text-align:center">بيدة</th>
+      <th style="text-align:center">معشوقة</th>
+      <th style="text-align:center">مراوة</th>
+      <th style="text-align:center">إجمالي توزيع القرى</th>
+      <th style="text-align:center">بلخزمر</th>
+      <th style="text-align:center">بني حسن</th>
+      <th style="text-align:center">إجمالي توزيع بني حسن</th>
+      <th style="text-align:center">الحلاة</th>
+      <th style="text-align:center">الخلب</th>
+      <th style="text-align:center">دوس</th>
+      <th style="text-align:center">الكاحلة 1</th>
+      <th style="text-align:center">الكاحلة 2</th>
+      <th style="text-align:center">سيحان</th>
+      <th style="text-align:center">بلحكم</th>
+      <th style="text-align:center">الجوفاء</th>
+      <th style="text-align:center">إجمالي توزيع المندق</th>
+      <th style="text-align:center">الموسى</th>
+      <th style="text-align:center">قرن ظبي</th>
+      <th style="text-align:center">إجمالي توزيع الباحة</th>
+      <th style="text-align:center">إجمالي توزيع الشبكات</th>
+      <th style="text-align:center">المناهل</th>
+      <th style="text-align:center">نخال</th>
+      <th style="text-align:center">القسمة</th>
+      <th style="text-align:center">الثراوين</th>
+      <th style="text-align:center">بني عدوان</th>
+      <th style="text-align:center">معشوقة</th>
+      <th style="text-align:center">إجمالي مناهل القرى</th>
+      <th style="text-align:center">بلخزمر</th>
+      <th style="text-align:center">بني حسن</th>
+      <th style="text-align:center">إجمالي مناهل بني حسن</th>
+      <th style="text-align:center">الحلاة</th>
+      <th style="text-align:center">دوس</th>
+      <th style="text-align:center">إجمالي مناهل المندق</th>
+      <th style="text-align:center">شيب الموسى</th>
+      <th style="text-align:center">إجمالي توزيع المناهل</th>
+      <th style="text-align:center">إجمالي التوزيع</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -64,57 +64,57 @@
   <tbody>
     <% @aradahs.each do |aradah| %>
       <tr>
-        <td><%= aradah.created_at %></td>
-        <td><%= aradah.user_id %></td>
-        <td style="white-space: nowrap;"><%= aradah.date %></td>
-        <td class="bg-light"><%= aradah.product %></td>
-        <td><%= aradah.wells %></td>
-        <td><%= aradah.FormAltahliahToNaqal %></td>
-        <td><%= aradah.from_thrawen_tank %></td>
-        <td><%= aradah.product_total %></td>
-        <td class="bg-light"><%= aradah.distribution %></td>
-        <td class="bg-light"><%= aradah.networks %></td>
-        <td><%= aradah.qnet_alqsmh %></td>
-        <td><%= aradah.qnet_althrawen %></td>
-        <td><%= aradah.qnet_althrawen_alatawlah %></td>
-        <td><%= aradah.qnet_bneedwan1 %></td>
-        <td><%= aradah.qnet_bneedwan2 %></td>
-        <td><%= aradah.qnet_bedah %></td>
-        <td><%= aradah.qnet_mashoqah %></td>
-        <td><%= aradah.mrawah %></td>
-        <td class="bg-light"><%= aradah.qnet_total %></td>
-        <td><%= aradah.bnenet_blkhzmr %></td>
-        <td><%= aradah.bnenet_bnehasan %></td>
-        <td class="bg-light"><%= aradah.bnenet_total %></td>
-        <td><%= aradah.mnet_alhalah %></td>
-        <td><%= aradah.mnet_alkhlb %></td>
-        <td><%= aradah.mnet_dos %></td>
-        <td><%= aradah.mnet_alkahla1 %></td>
-        <td><%= aradah.mnet_alkahla2 %></td>
-        <td><%= aradah.mnet_sehan %></td>
-        <td><%= aradah.mnet_blhkm %></td>
-        <td><%= aradah.mnet_aljawfaa %></td>
-        <td class="bg-light"><%= aradah.mnet_total %></td>
-        <td><%= aradah.bnet_almosa %></td>
-        <td><%= aradah.bnet_qrnthbe %></td>
-        <td class="bg-light"><%= aradah.bnet_total %></td>
-        <td class="bg-light"><%= aradah.network_total %></td>
-        <td class="bg-light"><%= aradah.almnahel %></td>
-        <td><%= aradah.qshep_nkhal %></td>
-        <td><%= aradah.qshep_alqsmh %></td>
-        <td><%= aradah.qshep_althrawen %></td>
-        <td><%= aradah.qshep_bneodwan %></td>
-        <td><%= aradah.qshep_mashoqah %></td>
-        <td class="bg-light"><%= aradah.qshep_total %></td>
-        <td><%= aradah.bneshep_blkhzmr %></td>
-        <td><%= aradah.bneshep_bnehasan %></td>
-        <td class="bg-light"><%= aradah.bneshep_total %></td>
-        <td><%= aradah.mshep_alhalah %></td>
-        <td><%= aradah.mshep_dos %></td>
-        <td class="bg-light"><%= aradah.mshep_total %></td>
-        <td><%= aradah.bshep_almosa %></td>
-        <td class="bg-light"><%= aradah.mnahel_total %></td>
-        <td class="bg-light"><%= aradah.distripution_total %></td>
+        <td style="text-align:center"><%= aradah.created_at %></td>
+        <td style="text-align:center"><%= aradah.user_id %></td>
+        <td style="text-align:center"><%= aradah.date %></td>
+        <td class="bg-light" style="text-align:center"><%= aradah.product %></td>
+        <td style="text-align:center"><%= aradah.wells %></td>
+        <td style="text-align:center"><%= aradah.from_altahliah_to_naqal %></td>
+        <td style="text-align:center"><%= aradah.from_thrawen_tank %></td>
+        <td style="text-align:center"><%= aradah.product_total %></td>
+        <td class="bg-light" style="text-align:center"><%= aradah.distribution %></td>
+        <td class="bg-light" style="text-align:center"><%= aradah.networks %></td>
+        <td style="text-align:center"><%= aradah.qnet_alqsmh %></td>
+        <td style="text-align:center"><%= aradah.qnet_althrawen %></td>
+        <td style="text-align:center"><%= aradah.qnet_althrawen_alatawlah %></td>
+        <td style="text-align:center"><%= aradah.qnet_bneedwan1 %></td>
+        <td style="text-align:center"><%= aradah.qnet_bneedwan2 %></td>
+        <td style="text-align:center"><%= aradah.qnet_bedah %></td>
+        <td style="text-align:center"><%= aradah.qnet_mashoqah %></td>
+        <td style="text-align:center"><%= aradah.mrawah %></td>
+        <td class="bg-light" style="text-align:center"><%= aradah.qnet_total %></td>
+        <td style="text-align:center"><%= aradah.bnenet_blkhzmr %></td>
+        <td style="text-align:center"><%= aradah.bnenet_bnehasan %></td>
+        <td class="bg-light" style="text-align:center"><%= aradah.bnenet_total %></td>
+        <td style="text-align:center"><%= aradah.mnet_alhalah %></td>
+        <td style="text-align:center"><%= aradah.mnet_alkhlb %></td>
+        <td style="text-align:center"><%= aradah.mnet_dos %></td>
+        <td style="text-align:center"><%= aradah.mnet_alkahla1 %></td>
+        <td style="text-align:center"><%= aradah.mnet_alkahla2 %></td>
+        <td style="text-align:center"><%= aradah.mnet_sehan %></td>
+        <td style="text-align:center"><%= aradah.mnet_blhkm %></td>
+        <td style="text-align:center"><%= aradah.mnet_aljawfaa %></td>
+        <td class="bg-light" style="text-align:center"><%= aradah.mnet_total %></td>
+        <td style="text-align:center"><%= aradah.bnet_almosa %></td>
+        <td style="text-align:center"><%= aradah.bnet_qrnthbe %></td>
+        <td class="bg-light" style="text-align:center"><%= aradah.bnet_total %></td>
+        <td class="bg-light" style="text-align:center"><%= aradah.network_total %></td>
+        <td class="bg-light" style="text-align:center"><%= aradah.almnahel %></td>
+        <td style="text-align:center"><%= aradah.qshep_nkhal %></td>
+        <td style="text-align:center"><%= aradah.qshep_alqsmh %></td>
+        <td style="text-align:center"><%= aradah.qshep_althrawen %></td>
+        <td style="text-align:center"><%= aradah.qshep_bneodwan %></td>
+        <td style="text-align:center"><%= aradah.qshep_mashoqah %></td>
+        <td class="bg-light" style="text-align:center"><%= aradah.qshep_total %></td>
+        <td style="text-align:center"><%= aradah.bneshep_blkhzmr %></td>
+        <td style="text-align:center"><%= aradah.bneshep_bnehasan %></td>
+        <td class="bg-light" style="text-align:center"><%= aradah.bneshep_total %></td>
+        <td style="text-align:center"><%= aradah.mshep_alhalah %></td>
+        <td style="text-align:center"><%= aradah.mshep_dos %></td>
+        <td class="bg-light" style="text-align:center"><%= aradah.mshep_total %></td>
+        <td style="text-align:center"><%= aradah.bshep_almosa %></td>
+        <td class="bg-light" style="text-align:center"><%= aradah.mnahel_total %></td>
+        <td class="bg-light" style="text-align:center"><%= aradah.distripution_total %></td>
         <td><%= link_to 'Show', aradah %></td>
         <td><%= link_to 'Edit', edit_aradah_path(aradah) %></td>
         <td><%= link_to 'Delete', aradah, method: :delete, data: { confirm: 'Are you sure?' } %></td>

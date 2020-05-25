@@ -1,18 +1,18 @@
 <% if current_user.admin? %>
 <p id="notice"><%= notice %></p>
 
-<h1>بيانات يبس وبطاط</h1>
+<h1 class="center">بيانات يبس وبطاط</h1>
 
-<table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
-  <thead>
-    <tr>
-      <th class="bg-light">Submitted at </th>
-      <th>Date</th>
-      <th>User</th>
-      <th>Yabs produce</th>
-      <th>Yabs distribution</th>
-      <th>Batat distribution</th>
-      <th>Yabs tank</th>
+<table class="table table-bordered table-striped table-hover f7">
+  <thead class="">
+    <tr class="bg-info">
+      <th style="text-align:center">Submitted at </th>
+      <th style="text-align:center">Date</th>
+      <th style="text-align:center">User</th>
+      <th style="text-align:center">إنتاج يبس</th>
+      <th style="text-align:center">توزيع يبس</th>
+      <th style="text-align:center">توزيع بطاط</th>
+      <th style="text-align:center">منسوب يبس</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,13 +20,13 @@
   <tbody>
     <% @yabs.each do |yab| %>
       <tr>
-        <td class="bg-light"><%= yab.created_at %></td>
-        <td><%= yab.date %></td>
-        <td><%= yab.user_id %></td>
-        <td><%= yab.yabs_produce %></td>
-        <td><%= yab.yabs_distribution %></td>
-        <td><%= yab.batat_distribution %></td>
-        <td><%= yab.yabs_tank %></td>
+        <td class="bg-light", style="text-align:center"><%= yab.created_at %></td>
+        <td style="text-align:center"><%= yab.date %></td>
+        <td style="text-align:center"><%= yab.user_id %></td>
+        <td style="text-align:center"><%= yab.yabs_produce %></td>
+        <td style="text-align:center"><%= yab.yabs_distribution %></td>
+        <td style="text-align:center"><%= yab.batat_distribution %></td>
+        <td style="text-align:center"><%= yab.yabs_tank %></td>
         <td><%= link_to 'Show', yab %></td>
         <td><%= link_to 'Edit', edit_yab_path(yab) %></td>
         <td><%= link_to 'Delete', yab, method: :delete, data: { confirm: 'Are you sure?' } %></td>

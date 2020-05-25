@@ -1,21 +1,21 @@
 <% if current_user.admin? %>
 <p id="notice"><%= notice %></p>
 
-<h1>مناسيب خزانات الجنابين</h1>
+<h1 class="center">مناسيب خزانات الجنابين</h1>
 
-<table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
-  <thead>
-    <tr>
-      <th>Submitted At</th>
-      <th>Date</th>
-      <th>User</th>
-      <th>Almontag tank</th>
-      <th>Aljbeel tank</th>
-      <th>Abdan tank</th>
-      <th>Alfryh tank</th>
-      <th>Algema tank</th>
-      <th>Shra tank</th>
-      <th>Alrahwa tank</th>
+<table class="table table-bordered table-striped table-hover f7">
+  <thead class="">
+    <tr class="bg-info">
+      <th style="text-align:center">Submitted At</th>
+      <th style="text-align:center">Date</th>
+      <th style="text-align:center">User</th>
+      <th style="text-align:center">خزان المنتج</th>
+      <th style="text-align:center">خزان الجبيل</th>
+      <th style="text-align:center">خزان عبدان</th>
+      <th style="text-align:center">خزان الفريا</th>
+      <th style="text-align:center">خزان القمع</th>
+      <th style="text-align:center">خزان شرى</th>
+      <th style="text-align:center">خزان الرهوة</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,16 +23,16 @@
   <tbody>
     <% @aljnabeen_tanks.each do |aljnabeen_tank| %>
       <tr>
-        <td><%= aljnabeen_tank.created_at %></td>
-        <td><%= aljnabeen_tank.date %></td>
-        <td><%= aljnabeen_tank.user_id %></td>
-        <td><%= aljnabeen_tank.almontag_tank %></td>
-        <td><%= aljnabeen_tank.aljbeel_Tank %></td>
-        <td><%= aljnabeen_tank.abdan_tank %></td>
-        <td><%= aljnabeen_tank.alfryh_tank %></td>
-        <td><%= aljnabeen_tank.algema_tank %></td>
-        <td><%= aljnabeen_tank.shra_tank %></td>
-        <td><%= aljnabeen_tank.alrahwa_tank %></td>
+        <td style="text-align:center"><%= aljnabeen_tank.created_at %></td>
+        <td style="text-align:center"><%= aljnabeen_tank.date %></td>
+        <td style="text-align:center"><%= aljnabeen_tank.user_id %></td>
+        <td style="text-align:center"><%= aljnabeen_tank.almontag_tank %></td>
+        <td style="text-align:center"><%= aljnabeen_tank.aljbeel_Tank %></td>
+        <td style="text-align:center"><%= aljnabeen_tank.abdan_tank %></td>
+        <td style="text-align:center"><%= aljnabeen_tank.alfryh_tank %></td>
+        <td style="text-align:center"><%= aljnabeen_tank.algema_tank %></td>
+        <td style="text-align:center"><%= aljnabeen_tank.shra_tank %></td>
+        <td style="text-align:center"><%= aljnabeen_tank.alrahwa_tank %></td>
         <td><%= link_to 'Show', aljnabeen_tank %></td>
         <td><%= link_to 'Edit', edit_aljnabeen_tank_path(aljnabeen_tank) %></td>
         <td><%= link_to 'Delete', aljnabeen_tank, method: :delete, data: { confirm: 'Are you sure?' } %></td>

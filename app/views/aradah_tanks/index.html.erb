@@ -1,35 +1,35 @@
 <% if current_user.admin? %>
 <p id="notice"><%= notice %></p>
 
-<h1>خزانات مشروع عردة</h1>
+<h1 class="center">خزانات مشروع عردة</h1>
 
-<table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
-  <thead>
-    <tr>
-      <th class="bg-light">Submitted At</th>
-      <th>Date</th>
-      <th>User</th>
-      <th>Aradah plant tank</th>
-      <th>Naqal plant1 tnak</th>
-      <th>Mashoqah plant2 tank</th>
-      <th>Ras manhal plant3 tank</th>
-      <th>Alqesma plant4 tank</th>
-      <th>Thraween plant5 tank</th>
-      <th>Bani adwan tank</th>
-      <th>Mashoqa tank</th>
-      <th>Bedah tank</th>
-      <th>Al musa tank</th>
-      <th>Marawah tank</th>
-      <th>Qaran dabi tank</th>
-      <th>Alhalah tank</th>
-      <th>Balqazmar tank</th>
-      <th>Bani hasan tank</th>
-      <th>Alqalab tank</th>
-      <th>Daws tank</th>
-      <th>Sayhan tank</th>
-      <th>Alkahelah tank</th>
-      <th>Balhakam tank</th>
-      <th>Aljwfaa tank</th>
+<table class="table table-bordered table-striped table-hover f7", style="display: block;overflow-x: auto;">
+  <thead class="">
+    <tr class="bg-info">
+      <th style="text-align:center">Submitted At</th>
+      <th style="text-align:center">Date</th>
+      <th style="text-align:center">User</th>
+      <th style="text-align:center">خزان محطة عردة</th>
+      <th style="text-align:center">محطة نخال 1</th>
+      <th style="text-align:center">محطة معشوقة 2</th>
+      <th style="text-align:center">محطة راس منهل 3</th>
+      <th style="text-align:center">محطة القسمة 4</th>
+      <th style="text-align:center">محطة الثراوين 5</th>
+      <th style="text-align:center">خزان بني عدوان</th>
+      <th style="text-align:center">خزان معشوقة</th>
+      <th style="text-align:center">خزان بيدة</th>
+      <th style="text-align:center">خزان الموسى</th>
+      <th style="text-align:center">خزان مراوة</th>
+      <th style="text-align:center">خزان قرن ظبي</th>
+      <th style="text-align:center">خزان الحلاة</th>
+      <th style="text-align:center">خزان بلخزمر</th>
+      <th style="text-align:center">خزان بني حسن</th>
+      <th style="text-align:center">خزان الخلب</th>
+      <th style="text-align:center">خزان دوس</th>
+      <th style="text-align:center">خزان سيحان</th>
+      <th style="text-align:center">خزان الكاحلة</th>
+      <th style="text-align:center">خزان بلحكم</th>
+      <th style="text-align:center">خزان الجوفاء</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -37,30 +37,30 @@
   <tbody>
     <% @aradah_tanks.each do |aradah_tank| %>
       <tr>
-        <td class="bg-light"><%= aradah_tank.created_at %></td>
-        <td><%= aradah_tank.date %></td>
-        <td><%= aradah_tank.user_id %></td>
-        <td><%= aradah_tank.aradah_plant_tank %></td>
-        <td><%= aradah_tank.naqal_plant1_tnak %></td>
-        <td><%= aradah_tank.mashoqah_plant2_tank %></td>
-        <td><%= aradah_tank.ras_manhal_plant3_tank %></td>
-        <td><%= aradah_tank.alqesma_plant4_tank %></td>
-        <td><%= aradah_tank.thraween_plant5_tank %></td>
-        <td><%= aradah_tank.bani_adwan_tank %></td>
-        <td><%= aradah_tank.mashoqa_tank %></td>
-        <td><%= aradah_tank.bedah_tank %></td>
-        <td><%= aradah_tank.al_musa_tank %></td>
-        <td><%= aradah_tank.marawah_tank %></td>
-        <td><%= aradah_tank.qaran_dabi_tank %></td>
-        <td><%= aradah_tank.alhalah_tank %></td>
-        <td><%= aradah_tank.balqazmar_tank %></td>
-        <td><%= aradah_tank.bani_hasan_tank %></td>
-        <td><%= aradah_tank.alqalab_tank %></td>
-        <td><%= aradah_tank.daws_tank %></td>
-        <td><%= aradah_tank.sayhan_tank %></td>
-        <td><%= aradah_tank.alkahelah_tank %></td>
-        <td><%= aradah_tank.balhakam_tank %></td>
-        <td><%= aradah_tank.aljwfaa_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.created_at %></td>
+        <td style="text-align:center"><%= aradah_tank.date %></td>
+        <td style="text-align:center"><%= aradah_tank.user_id %></td>
+        <td style="text-align:center"><%= aradah_tank.aradah_plant_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.naqal_plant1_tnak %></td>
+        <td style="text-align:center"><%= aradah_tank.mashoqah_plant2_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.ras_manhal_plant3_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.alqesma_plant4_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.thraween_plant5_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.bani_adwan_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.mashoqa_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.bedah_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.al_musa_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.marawah_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.qaran_dabi_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.alhalah_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.balqazmar_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.bani_hasan_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.alqalab_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.daws_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.sayhan_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.alkahelah_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.balhakam_tank %></td>
+        <td style="text-align:center"><%= aradah_tank.aljwfaa_tank %></td>
         <td><%= link_to 'Show', aradah_tank %></td>
         <td><%= link_to 'Edit', edit_aradah_tank_path(aradah_tank) %></td>
         <td><%= link_to 'Delete', aradah_tank, method: :delete, data: { confirm: 'Are you sure?' } %></td>

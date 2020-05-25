@@ -1,40 +1,40 @@
 <% if current_user.admin? %> 
 <p id="notice"><%= notice %></p>
 
-<h1>Tohamhalshamel Tanks</h1>
+<h1 class="center">مناسيب خزانات مشروع تهامة الشامل</h1>
 
-<table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
-  <thead>
-    <tr>
-      <th class="bg-light">Submitted At</th>
-      <th>Date</th>
-      <th>User</th>
-      <th>Almaqwa plant tank</th>
-      <th>Gamed znad tank1</th>
-      <th>Gamed znad tank2</th>
-      <th>Gamed znad tajmee3 tank3</th>
-      <th>Nasbah plant tank</th>
-      <th>Almswadah tank</th>
-      <th>Nasbah tank</th>
-      <th>Alahsabah tank</th>
-      <th>Nawan tank</th>
-      <th>Maqwah tajme3 tank</th>
-      <th>Maqwah north plant tank</th>
-      <th>Maqwah north tank</th>
-      <th>Mamna plant tank</th>
-      <th>Mamna tank</th>
-      <th>Nera plant1 tank</th>
-      <th>Nera plant2 tank</th>
-      <th>Nera3 tank</th>
-      <th>Qelwah plant tank</th>
-      <th>Qelwah tajme3 tank</th>
-      <th>Dogah plant tank</th>
-      <th>Dogah tank</th>
-      <th>Rmaydah tank</th>
-      <th>Hajrah tank</th>
-      <th>Bani ata plant tank</th>
-      <th>Bani ata tank</th>
-      <th>Aljareen tank</th>
+<table class="table table-bordered table-striped table-hover f7", style="display: block;overflow-x: auto;">
+  <thead class="">
+    <tr class="bg-info">
+      <th style="text-align:center">Submitted At</th>
+      <th style="text-align:center">Date</th>
+      <th style="text-align:center">User</th>
+      <th style="text-align:center">مخطة المخواة</th>
+      <th style="text-align:center">خزان غامد الزناد 1</th>
+      <th style="text-align:center">خزان غامد الزناد 2</th>
+      <th style="text-align:center">خزان غامد الزناد التجميعي 3</th>
+      <th style="text-align:center">محطة نصبة</th>
+      <th style="text-align:center">خزان المسودة</th>
+      <th style="text-align:center">خزان نصبة</th>
+      <th style="text-align:center">خزان الأحسبة</th>
+      <th style="text-align:center">خزان ناوان</th>
+      <th style="text-align:center">خزان المخواة التجميعي 3</th>
+      <th style="text-align:center">محطة شمال المخواة</th>
+      <th style="text-align:center">خزان شمال المخواة</th>
+      <th style="text-align:center">محطة ممنا</th>
+      <th style="text-align:center">خزان ممنا</th>
+      <th style="text-align:center">محطة نيرا 1</th>
+      <th style="text-align:center">محطة نيرا 2</th>
+      <th style="text-align:center">خزان نيرا 3</th>
+      <th style="text-align:center">محطة قلوة</th>
+      <th style="text-align:center">خزان قلوة التجميعي</th>
+      <th style="text-align:center">محطة دوقة</th>
+      <th style="text-align:center">خزان دوقة</th>
+      <th style="text-align:center">خزان الرميضة</th>
+      <th style="text-align:center">خزان الحجرة</th>
+      <th style="text-align:center">محطة بني عطى</th>
+      <th style="text-align:center">خزان بني عطى</th>
+      <th style="text-align:center">خزان الجرين</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -43,34 +43,34 @@
     <% @tohamhalshamel_tanks.each do |tohamhalshamel_tank| %>
       <tr>
         <td class="bg-light"><%= tohamhalshamel_tank.created_at %></td>
-        <td><%= tohamhalshamel_tank.date %></td>
-        <td><%= tohamhalshamel_tank.user_id %></td>
-        <td><%= tohamhalshamel_tank.almaqwa_plant_tank %></td>
-        <td><%= tohamhalshamel_tank.gamed_znad_tank1 %></td>
-        <td><%= tohamhalshamel_tank.gamed_znad_tank2 %></td>
-        <td><%= tohamhalshamel_tank.gamed_znad_tajmee3_tank3 %></td>
-        <td><%= tohamhalshamel_tank.nasbah_plant_tank %></td>
-        <td><%= tohamhalshamel_tank.almswadah_tank %></td>
-        <td><%= tohamhalshamel_tank.nasbah_tank %></td>
-        <td><%= tohamhalshamel_tank.alahsabah_tank %></td>
-        <td><%= tohamhalshamel_tank.nawan_tank %></td>
-        <td><%= tohamhalshamel_tank.maqwah_tajme3_tank %></td>
-        <td><%= tohamhalshamel_tank.maqwah_north_plant_tank %></td>
-        <td><%= tohamhalshamel_tank.maqwah_north_tank %></td>
-        <td><%= tohamhalshamel_tank.mamna_plant_tank %></td>
-        <td><%= tohamhalshamel_tank.mamna_tank %></td>
-        <td><%= tohamhalshamel_tank.nera_plant1_tank %></td>
-        <td><%= tohamhalshamel_tank.nera_plant2_tank %></td>
-        <td><%= tohamhalshamel_tank.nera3_tank %></td>
-        <td><%= tohamhalshamel_tank.qelwah_plant_tank %></td>
-        <td><%= tohamhalshamel_tank.qelwah_tajme3_Tank %></td>
-        <td><%= tohamhalshamel_tank.dogah_plant_tank %></td>
-        <td><%= tohamhalshamel_tank.dogah_tank %></td>
-        <td><%= tohamhalshamel_tank.rmaydah_tank %></td>
-        <td><%= tohamhalshamel_tank.hajrah_tank %></td>
-        <td><%= tohamhalshamel_tank.bani_ata_plant_tank %></td>
-        <td><%= tohamhalshamel_tank.bani_ata_tank %></td>
-        <td><%= tohamhalshamel_tank.aljareen_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.date %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.user_id %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.almaqwa_plant_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.gamed_znad_tank1 %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.gamed_znad_tank2 %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.gamed_znad_tajmee3_tank3 %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.nasbah_plant_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.almswadah_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.nasbah_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.alahsabah_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.nawan_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.maqwah_tajme3_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.maqwah_north_plant_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.maqwah_north_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.mamna_plant_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.mamna_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.nera_plant1_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.nera_plant2_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.nera3_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.qelwah_plant_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.qelwah_tajme3_Tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.dogah_plant_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.dogah_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.rmaydah_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.hajrah_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.bani_ata_plant_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.bani_ata_tank %></td>
+        <td style="text-align:center"><%= tohamhalshamel_tank.aljareen_tank %></td>
         <td><%= link_to 'Show', tohamhalshamel_tank %></td>
         <td><%= link_to 'Edit', edit_tohamhalshamel_tank_path(tohamhalshamel_tank) %></td>
         <td><%= link_to 'Delete', tohamhalshamel_tank, method: :delete, data: { confirm: 'Are you sure?' } %></td>

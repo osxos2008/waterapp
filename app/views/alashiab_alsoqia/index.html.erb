@@ -1,51 +1,51 @@
 <% if current_user.admin? %>  
 <p id="notice"><%= notice %></p>
 
-<h1>بيانات السقيا والأشياب</h1>
-  <table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
+<h1 class="center">بيانات السقيا والأشياب</h1>
+  <table class="table table-bordered table-striped table-hover f7", style="display: block;overflow-x: auto;">
     <thead>
-      <tr>
-        <th>Submitted at </th>
-        <th>User</th>
-        <th>Date</th>
-        <th>المزرع (سقيا)</th>
-        <th>المزرع (ناقلات)</th>
-        <th>بلجرش (سقيا)</th>
-        <th>بلجرشي (ناقلات)</th>
-        <th>بني كبير (سقيا)</th>
-        <th>بني كبير (ناقلات)</th>
-        <th>الموسى (سقيا)</th>
-        <th>الموسى (ناقلات)</th>
-        <th>الجنابين (سقيا)</th>
-        <th>الجنابين (ناقلات)</th>
-        <th>العقيق (سقيا)</th>
-        <th>العقيق (ناقلات)</th>
-        <th>ليف (سقيا)</th>
-        <th>ليف (ناقلات)</th>
-        <th>بني حسن (سقيا)</th>
-        <th>بني حسن (ناقلات)</th>
-        <th>الحلاة (سقيا)</th>
-        <th>الحلاة (ناقلات)</th>
-        <th>دوس (سقيا)</th>
-        <th>دوس (ناقلات)</th>
-        <th>بلخزمر (سقيا)</th>
-        <th>بلخزمر ناقلات)</th>
-        <th>بني عدوان (سقيا)</th>
-        <th>بني عدوان (ناقلات)</th>
-        <th>الثراوين (سقيا)</th>
-        <th>الثرايون (ناقلات)</th>
-        <th>القسمة (سقيا)</th>
-        <th>القسمة (ناقلات)</th>
-        <th>نبهان (سقيا)</th>
-        <th>نبهان (ناقلات)</th>
-        <th>نخال (سقيا)</th>
-        <th>نخال (ناقلات)</th>
-        <th>كرا (سقيا)</th>
-        <th>كرا (ناقلات)</th>
-        <th>غامد الزناد (سقيا)</th>
-        <th>غامد الزناد (ناقلات)</th>
-        <th>إجمالي السقيا</th>
-        <th>إجمالي الناقلات</th>
+      <tr class="bg-info">
+        <th style="text-align:center">Submitted at </th>
+        <th style="text-align:center">User</th>
+        <th style="text-align:center">Date</th>
+        <th style="text-align:center">المزرع (سقيا)</th>
+        <th style="text-align:center">المزرع (ناقلات)</th>
+        <th style="text-align:center">بلجرش (سقيا)</th>
+        <th style="text-align:center">بلجرشي (ناقلات)</th>
+        <th style="text-align:center">بني كبير (سقيا)</th>
+        <th style="text-align:center">بني كبير (ناقلات)</th>
+        <th style="text-align:center">الموسى (سقيا)</th>
+        <th style="text-align:center">الموسى (ناقلات)</th>
+        <th style="text-align:center">الجنابين (سقيا)</th>
+        <th style="text-align:center">الجنابين (ناقلات)</th>
+        <th style="text-align:center">العقيق (سقيا)</th>
+        <th style="text-align:center">العقيق (ناقلات)</th>
+        <th style="text-align:center">ليف (سقيا)</th>
+        <th style="text-align:center">ليف (ناقلات)</th>
+        <th style="text-align:center">بني حسن (سقيا)</th>
+        <th style="text-align:center">بني حسن (ناقلات)</th>
+        <th style="text-align:center">الحلاة (سقيا)</th>
+        <th style="text-align:center">الحلاة (ناقلات)</th>
+        <th style="text-align:center">دوس (سقيا)</th>
+        <th style="text-align:center">دوس (ناقلات)</th>
+        <th style="text-align:center">بلخزمر (سقيا)</th>
+        <th style="text-align:center">بلخزمر ناقلات)</th>
+        <th style="text-align:center">بني عدوان (سقيا)</th>
+        <th style="text-align:center">بني عدوان (ناقلات)</th>
+        <th style="text-align:center">الثراوين (سقيا)</th>
+        <th style="text-align:center">الثراوين (ناقلات)</th>
+        <th style="text-align:center">القسمة (سقيا)</th>
+        <th style="text-align:center">القسمة (ناقلات)</th>
+        <th style="text-align:center">نبهان (سقيا)</th>
+        <th style="text-align:center">نبهان (ناقلات)</th>
+        <th style="text-align:center">نخال (سقيا)</th>
+        <th style="text-align:center">نخال (ناقلات)</th>
+        <th style="text-align:center">كرا (سقيا)</th>
+        <th style="text-align:center">كرا (ناقلات)</th>
+        <th style="text-align:center">غامد الزناد (سقيا)</th>
+        <th style="text-align:center">غامد الزناد (ناقلات)</th>
+        <th style="text-align:center">إجمالي السقيا</th>
+        <th style="text-align:center">إجمالي الناقلات</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -53,47 +53,47 @@
     <tbody>
       <% @alashiab_alsoqia.each do |alashiab_alsoqium| %>
         <tr>
-          <td><%= alashiab_alsoqium.created_at %></td>
-          <td><%= alashiab_alsoqium.user_id %></td>
-          <td style="white-space: nowrap;"><%= alashiab_alsoqium.date %></td>
-          <td><%= alashiab_alsoqium.almzre_soqia %></td>
-          <td><%= alashiab_alsoqium.almzre_naqlat %></td>
-          <td><%= alashiab_alsoqium.bljorashy_soqia %></td>
-          <td><%= alashiab_alsoqium.bljorashy_naqlat %></td>
-          <td><%= alashiab_alsoqium.bnekbeer_soqia %></td>
-          <td><%= alashiab_alsoqium.bnekbeer_naqlat %></td>
-          <td><%= alashiab_alsoqium.almosa_soqia %></td>
-          <td><%= alashiab_alsoqium.almosa_naqlat %></td>
-          <td><%= alashiab_alsoqium.aljnaben_soqia %></td>
-          <td><%= alashiab_alsoqium.aljnaben_naqlat %></td>
-          <td><%= alashiab_alsoqium.alaqeq_soqia %></td>
-          <td><%= alashiab_alsoqium.alaqeq_naqlat %></td>
-          <td><%= alashiab_alsoqium.lef_soqia %></td>
-          <td><%= alashiab_alsoqium.lef_naqlat %></td>
-          <td><%= alashiab_alsoqium.bnehasan_soqia %></td>
-          <td><%= alashiab_alsoqium.bnehasan_naqlat %></td>
-          <td><%= alashiab_alsoqium.alhlah_soqia %></td>
-          <td><%= alashiab_alsoqium.alhalah_naqlat %></td>
-          <td><%= alashiab_alsoqium.dos_soqia %></td>
-          <td><%= alashiab_alsoqium.dos_naqlat %></td>
-          <td><%= alashiab_alsoqium.blkhzmr_soqia %></td>
-          <td><%= alashiab_alsoqium.blkhzmr_naqlat %></td>
-          <td><%= alashiab_alsoqium.bneadwan_soqia %></td>
-          <td><%= alashiab_alsoqium.bneadwan_naqlat %></td>
-          <td><%= alashiab_alsoqium.althrawen_soqia %></td>
-          <td><%= alashiab_alsoqium.althrawen_naqlat %></td>
-          <td><%= alashiab_alsoqium.alqsmh_soqia %></td>
-          <td><%= alashiab_alsoqium.alqsmh_naqlat %></td>
-          <td><%= alashiab_alsoqium.nbhan_soqia %></td>
-          <td><%= alashiab_alsoqium.nbhan_naqlat %></td>
-          <td><%= alashiab_alsoqium.nkhal_soqia %></td>
-          <td><%= alashiab_alsoqium.nkhal_naqlat %></td>
-          <td><%= alashiab_alsoqium.kra_soqia %></td>
-          <td><%= alashiab_alsoqium.kra_naqlat %></td>
-          <td><%= alashiab_alsoqium.ghamidalznad_soqia %></td>
-          <td><%= alashiab_alsoqium.ghamidalznad_naqlat %></td>
-          <td><%= alashiab_alsoqium.tota_soqia %></td>
-          <td><%= alashiab_alsoqium.total_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.created_at %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.user_id %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.date %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.almzre_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.almzre_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.bljorashy_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.bljorashy_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.bnekbeer_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.bnekbeer_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.almosa_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.almosa_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.aljnaben_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.aljnaben_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.alaqeq_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.alaqeq_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.lef_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.lef_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.bnehasan_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.bnehasan_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.alhlah_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.alhalah_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.dos_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.dos_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.blkhzmr_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.blkhzmr_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.bneadwan_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.bneadwan_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.althrawen_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.althrawen_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.alqsmh_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.alqsmh_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.nbhan_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.nbhan_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.nkhal_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.nkhal_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.kra_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.kra_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.ghamidalznad_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.ghamidalznad_naqlat %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.tota_soqia %></td>
+          <td style="text-align:center"><%= alashiab_alsoqium.total_naqlat %></td>
           <td><%= link_to 'Show', alashiab_alsoqium %></td>
           <td><%= link_to 'Edit', edit_alashiab_alsoqium_path(alashiab_alsoqium) %></td>
           <td><%= link_to 'Delete', alashiab_alsoqium, method: :delete, data: { confirm: 'Are you sure?' } %></td>

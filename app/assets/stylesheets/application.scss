@@ -1,6 +1,7 @@
 @import "bulma";
 @import "functions";
 
+
 .notification {
   border-radius: 0;
 }
@@ -8,6 +9,10 @@
 .notification:not(:last-child) {
   margin-bottom: 0;
 }
+
+.center {
+  text-align: center
+ }
 
 .instrument-index-grid {
   display: grid;

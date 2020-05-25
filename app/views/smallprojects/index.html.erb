@@ -1,28 +1,28 @@
 <% if current_user.admin? %> 
 <p id="notice"><%= notice %></p>
 
-<h1>بيانات المشاريع المصغرة</h1>
+<h1 class="center">بيانات المشاريع المصغرة</h1>
 
-  <table class="table is-striped is-bordered", style="display: block;overflow-x: auto;">
-  <thead>
-    <tr>
-      <th>Submitted at </th>
-      <th>User</th>
-      <th>Date</th>
-      <th class="bg-light">المشاريع المصغرة</th>
-      <th class="bg-light">إجمالي الإنتاج بدون ثراد وبطاط</th>
-      <th>إنتاج ثراد</th>
-      <th>إنتاج بطاط</th>
-      <th class="bg-light">إجمالي الإنتاج</th>
-      <th class="bg-light">الإنتاج التفصيلي بحسب المحافظات</th>
-      <th>الباحة</th>
-      <th>بلجرشي</th>
-      <th>القرى</th>
-      <th>المندق</th>
-      <th>العقيق</th>
-      <th>المخواة</th>
-      <th>قلوة</th>
-      <th>الحجرة</th>
+  <table class="table table-bordered table-striped table-hover f7">
+  <thead class="">
+    <tr class="bg-info">
+      <th style="text-align:center">Submitted at </th>
+      <th style="text-align:center">User</th>
+      <th style="text-align:center">Date</th>
+      <th style="text-align:center">المشاريع المصغرة</th>
+      <th style="text-align:center">إجمالي الإنتاج بدون ثراد وبطاط</th>
+      <th style="text-align:center">إنتاج ثراد</th>
+      <th style="text-align:center">إنتاج بطاط</th>
+      <th style="text-align:center">إجمالي الإنتاج</th>
+      <th style="text-align:center">الإنتاج التفصيلي بحسب المحافظات</th>
+      <th style="text-align:center">الباحة</th>
+      <th style="text-align:center">بلجرشي</th>
+      <th style="text-align:center">القرى</th>
+      <th style="text-align:center">المندق</th>
+      <th style="text-align:center">العقيق</th>
+      <th style="text-align:center">المخواة</th>
+      <th style="text-align:center">قلوة</th>
+      <th style="text-align:center">الحجرة</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,23 +30,23 @@
   <tbody>
     <% @smallprojects.each do |smallproject| %>
       <tr>
-        <td><%= smallproject.created_at %></td>
-        <td><%= smallproject.user_id %></td>
-        <td style="white-space: nowrap;"><%= smallproject.date %></td>
-        <td class="bg-light"><%= smallproject.smallproject %></td>
-        <td><%= smallproject.total_wo_thrad_btat %></td>
-        <td><%= smallproject.product_thrad %></td>
-        <td><%= smallproject.product_btat %></td>
-        <td><%= smallproject.product_total %></td>
-        <td class="bg-light"><%= smallproject.detailed_production %></td>
-        <td><%= smallproject.albaha %></td>
-        <td><%= smallproject.bljorashy %></td>
-        <td><%= smallproject.alqora %></td>
-        <td><%= smallproject.almandaq %></td>
-        <td><%= smallproject.alaqeq %></td>
-        <td><%= smallproject.almekhwah %></td>
-        <td><%= smallproject.qolwah %></td>
-        <td><%= smallproject.alhgrah %></td>
+        <td style="text-align:center"><%= smallproject.created_at %></td>
+        <td style="text-align:center"><%= smallproject.user_id %></td>
+        <td  style="text-align:center"style="white-space: nowrap;"><%= smallproject.date %></td>
+        <td class="bg-light", style="text-align:center"><%= smallproject.smallproject %></td>
+        <td style="text-align:center"><%= smallproject.total_wo_thrad_btat %></td>
+        <td style="text-align:center"><%= smallproject.product_thrad %></td>
+        <td style="text-align:center"><%= smallproject.product_btat %></td>
+        <td style="text-align:center"><%= smallproject.product_total %></td>
+        <td class="bg-light", style="text-align:center"><%= smallproject.detailed_production %></td>
+        <td style="text-align:center"><%= smallproject.albaha %></td>
+        <td style="text-align:center"><%= smallproject.bljorashy %></td>
+        <td style="text-align:center"><%= smallproject.alqora %></td>
+        <td style="text-align:center"><%= smallproject.almandaq %></td>
+        <td style="text-align:center"><%= smallproject.alaqeq %></td>
+        <td style="text-align:center"><%= smallproject.almekhwah %></td>
+        <td style="text-align:center"><%= smallproject.qolwah %></td>
+        <td style="text-align:center"><%= smallproject.alhgrah %></td>
         <td><%= link_to 'Show', smallproject %></td>
         <td><%= link_to 'Edit', edit_smallproject_path(smallproject) %></td>
         <td><%= link_to 'Delete', smallproject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
