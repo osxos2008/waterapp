@@ -1,0 +1,43 @@
+<% if current_user.admin? %>
+<p id="notice"><%= notice %></p>
+
+<h1 class="center">البيان اليومي الشامل</h1>
+
+<table class="table table-bordered table-striped table-hover f7">
+  <thead class=>
+    <tr class="bg-info">
+      <th style="text-align:center">Date</th>
+      <th style="text-align:center">إجمالي الوارد من التحلية</th>
+      <th style="text-align:center">إجمالي إنتاج محطات التنقية</th>
+      <th style="text-align:center">إجمالي إنتاج الآبار</th>
+      <th style="text-align:center">إجمالي إنتاج المشاريع المصغرة</th>
+      <th style="text-align:center">إجمالي الأشياب</th>
+      <th style="text-align:center">إجمالي الإنتاج</th>
+      <th style="text-align:center">إجمالي التوزيع</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dor_masters.each do |dor_master| %>
+      <tr>
+        <td style="text-align:center"><%= dor_master.date %></td>
+        <td style="text-align:center"><%= project.tahliah_projects_totals %></td>
+        <td style="text-align:center"><%= project.plant_projects_totals %></td>
+        <td style="text-align:center"><%= project.well_projects_totals %></td>
+        <td style="text-align:center"><%= project.small_well_projects_totals %></td>
+        <td style="text-align:center"><%= project.alashiab_projects_totals %></td>
+        <td style="text-align:center"><%= project.produce_from_all_projects_totals %></td>
+        <td style="text-align:center"><%= project.distribution_from_all_projects_totals %></td>
+        <td><%= link_to 'Show', dor_master %></td>
+        <td><%= link_to 'Edit', edit_dor_master_path(dor_master) %></td>
+        <td><%= link_to 'Delete', dor_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%else%>
+<h1><%= "Please contact the admin"%>
+<%end%>

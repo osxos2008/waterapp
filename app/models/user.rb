@@ -13,6 +13,7 @@ class User < ApplicationRecord
   has_many :aljnabeen_tanks
   has_many :aradah_tanks
   has_many :tohamhalshamel_tanks
+  has_many :dor_masters
 
   before_save do
     self.project  = project.compact

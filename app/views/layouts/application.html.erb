@@ -56,7 +56,7 @@
               <%= link_to 'المشاريع المصغرة', new_smallproject_path, class: "navbar-item button is-primary is-rounded" %>
               <%= link_to 'العقيق وثراد', new_aqiq_path, class: "navbar-item button is-primary is-rounded" %>
               <%= link_to 'بطاط ويبس', new_yab_path, class: "navbar-item button is-primary is-rounded" %>
-
+              
               <div class="navbar-item has-dropdown is-hoverable">
               <%= link_to 'مناسيب الخزانات', projects_path, class: "navbar-link" %>
               <div class="navbar-dropdown is-right">
@@ -66,7 +66,9 @@
               <%= link_to 'مناسيب تهامة الشامل', new_tohamhalshamel_tank_path, class:"navbar-item" %>
               </div>
               </div>
+              <%= link_to 'DOR', dor_masters_path, class: "navbar-item button is-primary is-rounded" %>
 
+          
               <%= link_to 'Users', users_path, class: "navbar-item button is-danger is-rounded" %> 
               <% end %>
               <div class="navbar-item has-dropdown is-hoverable">
@@ -92,7 +94,7 @@
   </nav>
     <%= yield(:header) %>
     <section class="section">
-    <div class="container">
+    <div class="container-fluid">
       <%= yield %>
     </div>
   </section>

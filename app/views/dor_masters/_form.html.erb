@@ -1,0 +1,51 @@
+<% if current_user.admin? || (current_user.project.include? 6) %>
+  <%= form_with(model: dor_master, local: true, html: { 'x-data': '{ a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0, i: 0, j:0, k:0, l:0, m:0, n:0, o:0, p:0, q:0, r:0, s:0, t:0, u:0, v:0, w:0, x:0, y:0, z:0, aa:0, bb:0, cc:0}' }) do |form| %>
+    <% if dor_master.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(dor_master.errors.count, "error") %> prohibited this aqiq from being saved:</h2>
+
+        <ul>
+          <% dor_master.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+<section class="hero is-dark is-small">
+  <div class="hero-body">
+    <div class="container">
+    <div class="title is-5 text-align-center">DOR</div>
+    </div>
+  </div>
+</section>
+
+  <table class="table is-striped is-bordered", style="width:50%;margin-left:auto;margin-right:auto;">
+    <thead>
+    <tr>
+      <th style="text-align:center">الكمية</th>
+      <th style="text-align:center">البند</th>
+      <th>#</th>
+    </tr>
+    </thead>
+
+    <tr>
+    <td><%= form.date_field :date, class: 'input  is-small bg-none is-center' %></td>
+    <td style="text-align:center">التاريخ</td>
+    <td>#</td>
+    </tr>
+
+    </tbody>
+    </table>
+    <div class="is-grouped">
+              <div class="control has-text-centered">
+                <%= form.button :submit, class: 'button is-info' %>
+                <%= link_to 'Cancel', new_dor_master_path, class:'button is-light' %>
+              </div>
+    </div>
+    <% end %>
+
+<%else%>
+<h1><%= "Please contact the admin"%>
+<%end%>
+

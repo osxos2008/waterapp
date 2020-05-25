@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :dor_masters
   resources :tohamhalshamel_tanks
   resources :aradah_tanks
   resources :aljnabeen_tanks

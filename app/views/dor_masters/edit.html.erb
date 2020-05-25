@@ -1,0 +1,11 @@
+<% if current_user.admin? %> 
+<h1>Editing Dor Master</h1>
+
+<%= render 'form', dor_master: @dor_master %>
+
+<%= link_to 'Show', @dor_master %> |
+<%= link_to 'Back', dor_masters_path %>
+
+<%else%>
+<h1><%= "Please contact the admin"%>
+<%end%>
