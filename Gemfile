@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'mini_magick', '~> 4.8'
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
+#bootstrap gem 
+gem 'bootstrap-sass', '~> 3.3.6'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
