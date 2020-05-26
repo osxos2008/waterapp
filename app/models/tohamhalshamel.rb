@@ -36,7 +36,7 @@ class Tohamhalshamel < ApplicationRecord
       doqatabdulhamedwell, 
       elepwell_alhjrah, 
       alrmedahwell,
-    ].comapct.sum
+    ].compact.sum
   end
 
   def produces_total
@@ -46,7 +46,7 @@ class Tohamhalshamel < ApplicationRecord
       doqatabdulhamedwell, 
       elepwell_alhjrah, 
       alrmedahwell,
-    ].comapct.sum
+    ].compact.sum
   end
 
   def distributions_total

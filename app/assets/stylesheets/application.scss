@@ -10,10 +10,6 @@
   margin-bottom: 0;
 }
 
-.center {
-  text-align: center
- }
-
 .instrument-index-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));

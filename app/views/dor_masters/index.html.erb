@@ -1,39 +1,36 @@
 <% if current_user.admin? %>
 <p id="notice"><%= notice %></p>
 
-<h1 class="center">البيان اليومي الشامل</h1>
+<h1 class="has-text-centered">البيان اليومي الشامل</h1>
+
+<form style="display: flex; align-items: center; padding: 8px;">
+  <label for="date" style="padding-left: 4px; margin-bottom: 0">التاريخ:</label>
+  <input name="date" value='<%= params[:date] %>' placeholder="2020-01-01" />
+</form>
 
 <table class="table table-bordered table-striped table-hover f7">
-  <thead class=>
+  <thead>
     <tr class="bg-info">
-      <th style="text-align:center">Date</th>
-      <th style="text-align:center">إجمالي الوارد من التحلية</th>
-      <th style="text-align:center">إجمالي إنتاج محطات التنقية</th>
-      <th style="text-align:center">إجمالي إنتاج الآبار</th>
-      <th style="text-align:center">إجمالي إنتاج المشاريع المصغرة</th>
-      <th style="text-align:center">إجمالي الأشياب</th>
-      <th style="text-align:center">إجمالي الإنتاج</th>
-      <th style="text-align:center">إجمالي التوزيع</th>
-      <th colspan="3"></th>
+      <th class="has-text-centered">إجمالي الوارد من التحلية</th>
+      <th class="has-text-centered">إجمالي إنتاج محطات التنقية</th>
+      <th class="has-text-centered">إجمالي إنتاج الآبار</th>
+      <th class="has-text-centered">إجمالي إنتاج المشاريع المصغرة</th>
+      <th class="has-text-centered">إجمالي الأشياب</th>
+      <th class="has-text-centered">إجمالي الإنتاج</th>
+      <th class="has-text-centered">إجمالي التوزيع</th>
     </tr>
   </thead>
 
   <tbody>
-    <% @dor_masters.each do |dor_master| %>
-      <tr>
-        <td style="text-align:center"><%= dor_master.date %></td>
-        <td style="text-align:center"><%= project.tahliah_projects_totals %></td>
-        <td style="text-align:center"><%= project.plant_projects_totals %></td>
-        <td style="text-align:center"><%= project.well_projects_totals %></td>
-        <td style="text-align:center"><%= project.small_well_projects_totals %></td>
-        <td style="text-align:center"><%= project.alashiab_projects_totals %></td>
-        <td style="text-align:center"><%= project.produce_from_all_projects_totals %></td>
-        <td style="text-align:center"><%= project.distribution_from_all_projects_totals %></td>
-        <td><%= link_to 'Show', dor_master %></td>
-        <td><%= link_to 'Edit', edit_dor_master_path(dor_master) %></td>
-        <td><%= link_to 'Delete', dor_master, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <tr>
+      <td class="has-text-centered"><%= Project.tahliah_projects_totals(date: params[:date]) %></td>
+      <td class="has-text-centered"><%= Project.plant_projects_totals(date: params[:date]) %></td>
+      <td class="has-text-centered"><%= Project.well_projects_totals(date: params[:date]) %></td>
+      <td class="has-text-centered"><%= Project.small_well_projects_totals(date: params[:date]) %></td>
+      <td class="has-text-centered"><%= Project.alashiab_projects_totals(date: params[:date]) %></td>
+      <td class="has-text-centered"><%= Project.produce_from_all_projects_totals(date: params[:date]) %></td>
+      <td class="has-text-centered"><%= Project.distribution_from_all_projects_totals(date: params[:date]) %></td>
+    </tr>
   </tbody>
 </table>
 

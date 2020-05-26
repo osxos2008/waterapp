@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html dir="rtl">
 
   <head>
     <title>WaterApp</title>
@@ -44,9 +44,9 @@
       </div>
 
       <div id="navbar" class="navbar-menu">
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="field is-grouped">
+        <div class="navbar-end" style="width: 100%">
+          <div class="navbar-item" style="width: 100%">
+            <div class="field is-grouped" style="width: 100%">
             <% if user_signed_in? %>
              <% if current_user.admin? %>
               <%= link_to 'الجنابين', new_aljnaben_path, class: "navbar-item button is-primary is-rounded" %>
@@ -66,9 +66,7 @@
               <%= link_to 'مناسيب تهامة الشامل', new_tohamhalshamel_tank_path, class:"navbar-item" %>
               </div>
               </div>
-              <%= link_to 'DOR', dor_masters_path, class: "navbar-item button is-primary is-rounded" %>
-
-          
+              <%= link_to 'DOR', dor_masters_path, class: "navbar-item button is-primary is-rounded", style: 'margin-right: auto' %>
               <%= link_to 'Users', users_path, class: "navbar-item button is-danger is-rounded" %> 
               <% end %>
               <div class="navbar-item has-dropdown is-hoverable">

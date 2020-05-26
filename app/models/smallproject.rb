@@ -32,7 +32,7 @@ def produces_total
     total_wo_thrad_btat, 
     product_thrad, 
     product_btat,
-  ].comapct.sum
+  ].compact.sum
 end
 
 def distributions_total

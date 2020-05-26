@@ -63,8 +63,8 @@ class Aradah < ApplicationRecord
     [
       wells, 
       from_thrawen_tank, 
-      form_altahliah_to_naqal,
-    ].comapct.sum
+      from_altahliah_to_naqal,
+    ].compact.sum
   end
 
   def distributions_total
