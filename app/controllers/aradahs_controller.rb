@@ -24,7 +24,7 @@ class AradahsController < ApplicationController
   # POST /aradahs
   # POST /aradahs.json
   def create
-    @aradah = current_user.aradahs.build(aradah_params)
+    @aradah = current_user.aradahs.build(aradah_params.merge(date: Time.now.to_date))
 
     respond_to do |format|
       if @aradah.save
@@ -69,6 +69,57 @@ class AradahsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def aradah_params
-      params.require(:aradah).permit(:user_id, :date, :product, :wells, :from_thrawen_tank, :product_total, :distribution, :networks, :qnet_alqsmh, :qnet_althrawen, :qnet_althrawen_alatawlah, :qnet_bneedwan1, :qnet_bneedwan2, :qnet_bedah, :qnet_mashoqah, :mrawah, :qnet_total, :bnenet_blkhzmr, :bnenet_bnehasan, :bnenet_total, :mnet_alhalah, :mnet_alkhlb, :mnet_dos, :mnet_alkahla1, :mnet_alkahla2, :mnet_sehan, :mnet_blhkm, :mnet_aljawfaa, :mnet_total, :bnet_almosa, :bnet_qrnthbe, :bnet_total, :network_total, :almnahel, :qshep_nkhal, :qshep_alqsmh, :qshep_althrawen, :qshep_bneodwan, :qshep_mashoqah, :qshep_total, :bneshep_blkhzmr, :bneshep_bnehasan, :bneshep_total, :mshep_alhalah, :mshep_dos, :mshep_total, :bshep_almosa, :mnahel_total, :distripution_total)
+      params.require(:aradah).permit(
+        :user_id,
+        :date,
+        :product,
+        :wells,
+        :from_thrawen_tank,
+        :product_total,
+        :distribution,
+        :networks,
+        :qnet_alqsmh,
+        :qnet_althrawen,
+        :qnet_althrawen_alatawlah,
+        :qnet_bneedwan1,
+        :qnet_bneedwan2,
+        :qnet_bedah,
+        :qnet_mashoqah,
+        :mrawah,
+        :qnet_total,
+        :bnenet_blkhzmr,
+        :bnenet_bnehasan,
+        :bnenet_total,
+        :mnet_alhalah,
+        :mnet_alkhlb,
+        :mnet_dos,
+        :mnet_alkahla1,
+        :mnet_alkahla2,
+        :mnet_sehan,
+        :mnet_blhkm,
+        :mnet_aljawfaa,
+        :mnet_total,
+        :bnet_almosa,
+        :bnet_qrnthbe,
+        :bnet_total,
+        :network_total,
+        :almnahel,
+        :qshep_nkhal,
+        :qshep_alqsmh,
+        :qshep_althrawen,
+        :qshep_bneodwan,
+        :qshep_mashoqah,
+        :qshep_total,
+        :bneshep_blkhzmr,
+        :bneshep_bnehasan,
+        :bneshep_total,
+        :mshep_alhalah,
+        :mshep_dos,
+        :mshep_total,
+        :bshep_almosa,
+        :mnahel_total,
+        :distripution_total,
+        :from_altahliah_to_naqal,
+      )
     end
 end
