@@ -1,103 +1,125 @@
 <!DOCTYPE html>
 <html dir="rtl">
 
-  <head>
-    <title>WaterApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.js" defer></script>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  </head>
+<head>
+  <title>WaterApp</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <title>Hello Bulma!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.js" defer></script>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
 
-  <body class="<%= yield (:body_class) %>">
-      <% if flash[:notice] %>
-      <div class="notification is-success global-notification">
-        <p class="notice"><%= notice %></p>
+<body class="<%= yield (:body_class) %>">
+<% if flash[:notice] %>
+  <div class="notification is-success global-notification">
+    <p class="notice"><%= notice %></p>
+  </div>
+<% end %>
+
+<% if flash[:alert] %>
+  <div class="notification is-danger global-notification">
+    <p class="alert"><%= alert %></p>
+  </div>
+<% end %>
+
+<header class="page-header">
+  <nav class="navbar navbar-default clearfix">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <% if user_signed_in? %>
+          <% if current_user.admin? %>
+          <% end %>
+        <% else %>
+          <a class="navbar-brand" href="#">
+            <%= image_tag("logo.png", class: "img-center") %>
+          </a>
+        <% end %>
       </div>
-      <% end %>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li>
+            <%= link_to root_path do %>
+              <%= image_tag("home.png", width: '50px') %>
+            <% end %>
+          </li>
+          <% if user_signed_in? %>
+            <% if current_user.admin? %>
+              <li><%= link_to 'الجنابين', new_aljnaben_path %></li>
+              <li><%= link_to 'تهامة الشامل', new_tohamhalshamel_path %></li>
+              <li><%= link_to 'السقيا والأشياب', new_alashiab_alsoqium_path %></li>
+              <li><%= link_to 'عردة', new_aradah_path %></li>
+              <li><%= link_to 'المشاريع المصغرة', new_smallproject_path %></li>
+              <li><%= link_to 'العقيق وثراد', new_aqiq_path %></li>
+              <li><%= link_to 'بطاط ويبس', new_yab_path %></li>
 
-      <% if flash[:alert] %>
-      <div class="notification is-danger global-notification">
-        <p class="alert"><%= alert %></p>
-      </div>
-      <% end %>
-
-      <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <%= link_to root_path, class:"navbar-item" do %>
-         <%= image_tag("home.png", width: '80px') %>
-        <% end  %>
-        <div class="navbar-burger burger" data-target="navbar">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-
-      <div id="navbar" class="navbar-menu">
-        <div class="navbar-end" style="width: 100%">
-          <div class="navbar-item" style="width: 100%">
-            <div class="field is-grouped" style="width: 100%">
-            <% if user_signed_in? %>
-             <% if current_user.admin? %>
-              <%= link_to 'الجنابين', new_aljnaben_path, class: "navbar-item button is-primary is-rounded" %>
-              <%= link_to 'تهامة الشامل', new_tohamhalshamel_path, class: "navbar-item button is-primary is-rounded" %>
-              <%= link_to 'السقيا والأشياب', new_alashiab_alsoqium_path, class: "navbar-item button is-primary is-rounded" %>
-              <%= link_to 'عردة', new_aradah_path, class: "navbar-item button is-primary is-rounded" %>
-              <%= link_to 'المشاريع المصغرة', new_smallproject_path, class: "navbar-item button is-primary is-rounded" %>
-              <%= link_to 'العقيق وثراد', new_aqiq_path, class: "navbar-item button is-primary is-rounded" %>
-              <%= link_to 'بطاط ويبس', new_yab_path, class: "navbar-item button is-primary is-rounded" %>
-              
-              <div class="navbar-item has-dropdown is-hoverable">
-              <%= link_to 'مناسيب الخزانات', projects_path, class: "navbar-link" %>
-              <div class="navbar-dropdown is-right">
-              <%= link_to 'مناسيب العقيق وثراد', new_aqiq_thrad_tank_path, class:"navbar-item" %>
-              <%= link_to 'مناسيب الجنابين', new_aljnabeen_tank_path, class:"navbar-item" %>
-              <%= link_to 'مناسيب عردة', new_aradah_tank_path, class:"navbar-item" %>
-              <%= link_to 'مناسيب تهامة الشامل', new_tohamhalshamel_tank_path, class:"navbar-item" %>
-              </div>
-              </div>
-              <%= link_to 'DOR', dor_masters_path, class: "navbar-item button is-primary is-rounded", style: 'margin-right: auto' %>
-              <%= link_to 'Users', users_path, class: "navbar-item button is-danger is-rounded" %> 
-              <% end %>
-              <div class="navbar-item has-dropdown is-hoverable">
-                <%= link_to 'Account', edit_user_registration_path, class: "navbar-link" %>
+              <span class="navbar-item has-dropdown is-hoverable">
+                <li><%= link_to 'مناسيب الخزانات', projects_path, class: "navbar-link" %></li>
                 <div class="navbar-dropdown is-right">
-                  <%= link_to current_user.name, edit_user_registration_path, class:"navbar-item" %>
-                  <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
+                  <li><%= link_to 'مناسيب العقيق وثراد', new_aqiq_thrad_tank_path %></li>
+                  <li><%= link_to 'مناسيب الجنابين', new_aljnabeen_tank_path %></li>
+                  <li><%= link_to 'مناسيب عردة', new_aradah_tank_path %></li>
+                  <li><%= link_to 'مناسيب تهامة الشامل', new_tohamhalshamel_tank_path %></li>
                 </div>
-              </div>
-            <% else %>
-            <p class="control">
-              <%= link_to "Sign In", new_user_session_path, class:"navbar-item button" %>
-            </p>
-            <p class="control">
-              <%= link_to "Sign up", new_user_registration_path, class:"navbar-item button"%>
-            </p>
+              </span>
+
+              <li><%= link_to 'DOR', dor_masters_path %></li>
+              <li><%= link_to 'Users', users_path %></li>
             <% end %>
 
-          </div>
-        </div>
+            <span class="navbar-item has-dropdown is-hoverable">
+            <li><%= link_to 'Account', edit_user_registration_path, class: "navbar-link" %></li>
+            <div class="navbar-dropdown is-right">
+              <li><%= link_to current_user.name, edit_user_registration_path %></li>
+              <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+            </div>
+            </span>
+          <% else %>
+            <li><%= link_to "Sign In", new_user_session_path %></li>
+            <li><%= link_to "Sign up", new_user_registration_path %></li>
+          <% end %>
+        </ul>
       </div>
-      </div>
-  </nav>
-    <%= yield(:header) %>
-    <section class="section">
-    <div class="container-fluid">
-      <%= yield %>
     </div>
-  </section>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+  </nav>
+  <% if user_signed_in? %>
+    <% if current_user.admin? %>
+    <% end %>
+  <% else %>
+    <div class="caption clearfix">
+      <h1>الإدراة العامة لخدمات المياه بمنطقة الباحة</h1>
+    </div>
+  <% end %>
+
+
+  <div class="clear"></div>
+  <div class="clearfix">
+    <%= image_tag("header_bottom.png", width: '100%', height: "auto") %>
+  </div>
+</header>
+
+<%= yield(:header) %>
+<section class="section">
+  <div class="container-fluid">
+    <%= yield %>
+  </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
 </html>

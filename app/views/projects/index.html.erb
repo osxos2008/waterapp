@@ -92,16 +92,16 @@
   </tr>
 </thead>
 <tbody>
-        <% current_user.project.each do |x| %>
-        <% target_project = Project.projects_map[x] %>
-        <tr>
-            <td style="text-align:center"><%= target_project[:company_name]%></td>
-            <td style="text-align:center"><%= link_to target_project[:name], send(target_project[:path])  %></td>
-           <td style="text-align:center"><%= target_project[:number] %></td>
-        </tr> 
-        <% end %>   
-      </tbody>   
-  </table>
+    <% current_user.project.each do |x| %>
+    <% target_project = Project.projects_map[x] %>
+    <tr>
+        <td style="text-align:center"><%= target_project[:company_name]%></td>
+        <td style="text-align:center"><%= link_to target_project[:name], send(target_project[:path])  %></td>
+       <td style="text-align:center"><%= target_project[:number] %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
   
 <% else %>
   <h1> Please contact the Admin to assign a project </h1>
