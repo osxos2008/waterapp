@@ -51,23 +51,40 @@
         <% end %>
       </div>
       <div class="collapse navbar-collapse" id="navbar-collapse">
+        <% if user_signed_in? %>
+          <% if current_user.admin? %>
+            <ul class="nav navbar-nav" style="float: right;">
+              <li>
+                <%= link_to root_path do %>
+                  <%= image_tag("home.png", width: '50px') %>
+                <% end %>
+              </li>
+            </ul>
+          <% end %>
+        <% end %>
+
         <ul class="nav navbar-nav">
-          <li>
-            <%= link_to root_path do %>
-              <%= image_tag("home.png", width: '50px') %>
-            <% end %>
-          </li>
           <% if user_signed_in? %>
             <% if current_user.admin? %>
-              <li><%= link_to 'الجنابين', new_aljnaben_path %></li>
-              <li><%= link_to 'تهامة الشامل', new_tohamhalshamel_path %></li>
-              <li><%= link_to 'السقيا والأشياب', new_alashiab_alsoqium_path %></li>
-              <li><%= link_to 'عردة', new_aradah_path %></li>
-              <li><%= link_to 'المشاريع المصغرة', new_smallproject_path %></li>
-              <li><%= link_to 'العقيق وثراد', new_aqiq_path %></li>
-              <li><%= link_to 'بطاط ويبس', new_yab_path %></li>
+            <% end %>
+            <% else %>
+              <li>
+                <%= link_to root_path do %>
+                  <%= image_tag("home.png", width: '50px') %>
+                <% end %>
+              </li>
+            <% end %>
+            <% if user_signed_in? %>
+              <% if current_user.admin? %>
+                <li><%= link_to 'الجنابين', new_aljnaben_path %></li>
+                <li><%= link_to 'تهامة الشامل', new_tohamhalshamel_path %></li>
+                <li><%= link_to 'السقيا والأشياب', new_alashiab_alsoqium_path %></li>
+                <li><%= link_to 'عردة', new_aradah_path %></li>
+                <li><%= link_to 'المشاريع المصغرة', new_smallproject_path %></li>
+                <li><%= link_to 'العقيق وثراد', new_aqiq_path %></li>
+                <li><%= link_to 'بطاط ويبس', new_yab_path %></li>
 
-              <span class="navbar-item has-dropdown is-hoverable">
+                <span class="navbar-item has-dropdown is-hoverable">
                 <li><%= link_to 'مناسيب الخزانات', projects_path, class: "navbar-link" %></li>
                 <div class="navbar-dropdown is-right">
                   <li><%= link_to 'مناسيب العقيق وثراد', new_aqiq_thrad_tank_path %></li>
@@ -77,49 +94,49 @@
                 </div>
               </span>
 
-              <li><%= link_to 'DOR', dor_masters_path %></li>
-              <li><%= link_to 'Users', users_path %></li>
-            <% end %>
+                <li><%= link_to 'DOR', dor_masters_path %></li>
+                <li><%= link_to 'Users', users_path %></li>
+              <% end %>
 
-            <span class="navbar-item has-dropdown is-hoverable">
+              <span class="navbar-item has-dropdown is-hoverable">
             <li><%= link_to 'Account', edit_user_registration_path, class: "navbar-link" %></li>
             <div class="navbar-dropdown is-right">
               <li><%= link_to current_user.name, edit_user_registration_path %></li>
               <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
             </div>
             </span>
-          <% else %>
-            <li><%= link_to "Sign In", new_user_session_path %></li>
-            <li><%= link_to "Sign up", new_user_registration_path %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <% if user_signed_in? %>
-    <% if current_user.admin? %>
-    <% end %>
-  <% else %>
-    <div class="caption clearfix">
-      <h1>الإدراة العامة لخدمات المياه بمنطقة الباحة</h1>
-    </div>
-  <% end %>
+            <% else %>
+              <li><%= link_to "Sign In", new_user_session_path %></li>
+              <li><%= link_to "Sign up", new_user_registration_path %></li>
+            <% end %>
+            </ul>
+            </div>
+            </div>
+            </nav>
+            <% if user_signed_in? %>
+              <% if current_user.admin? %>
+              <% end %>
+            <% else %>
+              <div class="caption clearfix">
+                <h1>الإدراة العامة لخدمات المياه بمنطقة الباحة</h1>
+              </div>
+            <% end %>
 
 
-  <div class="clear"></div>
-  <div class="clearfix">
-    <%= image_tag("header_bottom.png", width: '100%', height: "auto") %>
-  </div>
-</header>
+            <div class="clear"></div>
+            <div class="clearfix">
+              <%= image_tag("header_bottom.png", width: '100%', height: "auto") %>
+            </div>
+            </header>
 
-<%= yield(:header) %>
-<section class="section">
-  <div class="container-fluid">
-    <%= yield %>
-  </div>
-</section>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
-</html>
+            <%= yield(:header) %>
+            <section class="section">
+              <div class="container-fluid">
+                <%= yield %>
+              </div>
+            </section>
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            </body>
+            </html>
