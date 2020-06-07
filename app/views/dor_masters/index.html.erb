@@ -5,7 +5,7 @@
 
 <form style="display: flex; align-items: center; padding: 8px;">
   <label for="date" style="padding-left: 4px; margin-bottom: 0">التاريخ:</label>
-  <input name="date" value='<%= params[:date] %>' placeholder="2020-01-01" />
+  <input name="date" type="date" value='<%= params[:date] %>' min="01-01-2020" placeholder="01-01-2020" />
 </form>
 
 <table class="table table-bordered table-striped table-hover f7">
