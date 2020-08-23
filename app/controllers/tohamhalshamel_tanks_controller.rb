@@ -24,7 +24,7 @@ class TohamhalshamelTanksController < ApplicationController
   # POST /tohamhalshamel_tanks
   # POST /tohamhalshamel_tanks.json
   def create
-    @tohamhalshamel_tank = TohamhalshamelTank.new(tohamhalshamel_tank_params)
+    @tohamhalshamel_tank = current_user.tohamhalshamel_tanks.build(tohamhalshamel_tank_params)
 
     respond_to do |format|
       if @tohamhalshamel_tank.save

@@ -5,6 +5,14 @@ class DorMastersController < ApplicationController
   # GET /dor_masters.json
   def index
     @dor_masters = DorMaster.all
+    respond_to do |format|
+      format.xlsx {
+        response.headers[
+          'Content-Disposition'
+        ] = "attachment; filename=DOR.xlsx"
+      }
+      format.html { render :index }
+    end
   end
 
   # GET /dor_masters/1
@@ -71,4 +79,4 @@ class DorMastersController < ApplicationController
     def dor_master_params
       params.require(:dor_master).permit(:date, :user_id)
     end
-end
+  end

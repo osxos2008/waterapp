@@ -41,7 +41,6 @@ class Aqiq < ApplicationRecord
     self.aqiq_total_distribution = [blue, jarab, alaunog, almshereef, alamer_faisal_Tank].compact.sum
     self.almnahel_total = [almzree_mnahel, baljurashy_mnahel, bany_kabeer_mnahel, allehyan_mnahel, alsenaeeh_mnahel].compact.sum
     self.total_distribution = [total_produce, total_albaha_distribution, baljurashy_total_distribution, aqiq_total_distribution, almnahel_total].compact.sum
-    self.date = created_at.to_date
   end
 
   def tahliah_total

@@ -1,0 +1,19 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "DOR") do |sheet|
+  # Create the header row
+  sheet.add_row ["إجمالي الوارد من التحلية",
+   "إجمالي إنتاج محطات التنقية",
+   "إجمالي إنتاج الآبار",
+   "إجمالي إنتاج المشاريع المصغرة",
+   "إجمالي توزيع الأشياب",
+   "إجمالي الإنتاج",
+   "إجمالي التوزيع"]
+  # Create entries for each item
+  @dor_masters.each do |item|
+    sheet.add_colmun [item.Project.tahliah_projects_totals, item.Project.plant_projects_totals,
+                   item.Project.well_projects_totals, item.Project.small_well_projects_totals,
+                   item.Project.alashiab_projects_totals,item.Project.produce_from_all_projects_totals,
+                   item.Project.distribution_from_all_projects_totals]
+  end
+end

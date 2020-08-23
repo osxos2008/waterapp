@@ -24,7 +24,7 @@ class AradahTanksController < ApplicationController
   # POST /aradah_tanks
   # POST /aradah_tanks.json
   def create
-    @aradah_tank = AradahTank.new(aradah_tank_params)
+    @aradah_tank = current_user.aradah_tanks.build(aradah_tank_params)
 
     respond_to do |format|
       if @aradah_tank.save

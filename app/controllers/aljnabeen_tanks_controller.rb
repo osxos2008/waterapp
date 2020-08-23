@@ -24,7 +24,7 @@ class AljnabeenTanksController < ApplicationController
   # POST /aljnabeen_tanks
   # POST /aljnabeen_tanks.json
   def create
-    @aljnabeen_tank = AljnabeenTank.new(aljnabeen_tank_params)
+    @aljnabeen_tank = current_user.aljnabeen_tanks.build(aljnabeen_tank_params)
 
     respond_to do |format|
       if @aljnabeen_tank.save
