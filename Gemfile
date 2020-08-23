@@ -31,6 +31,7 @@ gem 'mini_magick', '~> 4.8'
 gem 'image_processing', '~> 1.2'
 #bootstrap gem 
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'sprockets-rails', '2.3.3'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
