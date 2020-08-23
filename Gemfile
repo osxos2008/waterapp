@@ -74,5 +74,5 @@ end
 
 
 gem 'rubyzip', '>= 1.2.1'
-gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
+gem 'axlsx'#, git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
 gem 'caxlsx_rails'
