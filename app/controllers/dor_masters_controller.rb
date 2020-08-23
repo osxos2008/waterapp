@@ -5,14 +5,7 @@ class DorMastersController < ApplicationController
   # GET /dor_masters.json
   def index
     @dor_masters = DorMaster.all
-    respond_to do |format|
-      format.xlsx {
-        response.headers[
-          'Content-Disposition'
-        ] = "attachment; filename=DOR.xlsx"
-      }
-      format.html { render :index }
-    end
+    
   end
 
   # GET /dor_masters/1
