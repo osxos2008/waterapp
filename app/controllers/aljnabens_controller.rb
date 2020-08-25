@@ -29,7 +29,7 @@ class AljnabensController < ApplicationController
 
     respond_to do |format|
       if @aljnaben.save
-        format.html { redirect_to new_aljnaben_path, notice: 'Order was successfully created.' }
+        format.html { redirect_to new_aljnaben_path, notice: 'تم حفظ بيانات مشروع الجنابين بنجاح.' }
         format.json { render :show, status: :created, location: @aljnaben }
       else
         format.html { render :new }
