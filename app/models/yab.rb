@@ -5,7 +5,7 @@ class Yab < ApplicationRecord
             :yabs_distribution,
             :batat_distribution,
             :yabs_tank,
-            presence: true
+            presence: true,
             numericality: { only_integer: true , message: "أرقام فقط" } , length: { mimimum: 1 , maximum: 8 , message: "الرقم كبير جداً" } 
   validates :date, presence: true
 
