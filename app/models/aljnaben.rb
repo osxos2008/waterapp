@@ -1,9 +1,17 @@
 class Aljnaben < ApplicationRecord
   belongs_to :user
 
-  validates :purification_station,:alrahwah_Well,:quantity_sent_from_desalination,
-            :abdaan,:alfrya,:alqame,:shra,:alrahwah,
-            :aljbail_aljnaben, numericality: { only_integer: true , message: "أرقام فقط" } , length: { mimimum: 1 , maximum: 8 , message: "الرقم كبير جداً" } 
+  validates :purification_station,
+            :alrahwah_Well,
+            :quantity_sent_from_desalination,
+            :abdaan,
+            :alfrya,
+            :alqame,
+            :shra,
+            :alrahwah,
+            :aljbail_aljnaben, 
+            presence: true,
+            numericality: { only_integer: true , message: "أرقام فقط" } , length: { mimimum: 1 , maximum: 8 , message: "الرقم كبير جداً" } 
   validates :date, presence: true
 
 

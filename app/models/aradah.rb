@@ -35,7 +35,7 @@ class Aradah < ApplicationRecord
                         :mshep_dos,
                         :bshep_almosa,
                         presence: true,
-                        numericality: { less_than: 100_001 }
+                        numericality: { only_integer: true , message: "أرقام فقط" } , length: { mimimum: 1 , maximum: 8 , message: "الرقم كبير جداً" } 
   validates_presence_of :date
 
   before_save do

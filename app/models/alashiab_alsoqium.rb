@@ -1,42 +1,44 @@
 class AlashiabAlsoqium < ApplicationRecord
     belongs_to :user
 
-    validates :almzre_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :almzre_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :bljorashy_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :bljorashy_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :bnekbeer_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :bnekbeer_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :almosa_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :almosa_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :aljnaben_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :aljnaben_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :alaqeq_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :alaqeq_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :lef_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :lef_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :bnehasan_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :bnehasan_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :alhlah_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :alhalah_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :dos_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :dos_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :blkhzmr_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :blkhzmr_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :bneadwan_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :bneadwan_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :althrawen_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :althrawen_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :alqsmh_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :alqsmh_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :nbhan_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :nbhan_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :nkhal_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :nkhal_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :kra_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :kra_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :ghamidalznad_soqia, presence: true, length: { mimimum: 1 , maximum: 5 }
-    validates :ghamidalznad_naqlat, presence: true, length: { mimimum: 1 , maximum: 5 }
+    validates   :almzre_soqia, 
+                :almzre_naqlat, 
+                :bljorashy_soqia, 
+                :bljorashy_naqlat, 
+                :bnekbeer_soqia, 
+                :bnekbeer_naqlat, 
+                :almosa_soqia, 
+                :almosa_naqlat, 
+                :aljnaben_soqia, 
+                :aljnaben_naqlat, 
+                :alaqeq_soqia, 
+                :alaqeq_naqlat, 
+                :lef_soqia, 
+                :lef_naqlat, 
+                :bnehasan_soqia, 
+                :bnehasan_naqlat, 
+                :alhlah_soqia, 
+                :alhalah_naqlat, 
+                :dos_soqia, 
+                :dos_naqlat, 
+                :blkhzmr_soqia, 
+                :blkhzmr_naqlat, 
+                :bneadwan_soqia, 
+                :bneadwan_naqlat, 
+                :althrawen_soqia, 
+                :althrawen_naqlat, 
+                :alqsmh_soqia, 
+                :alqsmh_naqlat, 
+                :nbhan_soqia, 
+                :nbhan_naqlat, 
+                :nkhal_soqia, 
+                :nkhal_naqlat, 
+                :kra_soqia, 
+                :kra_naqlat, 
+                :ghamidalznad_soqia, 
+                :ghamidalznad_naqlat, 
+                presence: true,
+                numericality: { only_integer: true , message: "أرقام فقط" } , length: { mimimum: 1 , maximum: 8 , message: "الرقم كبير جداً" }
     validates :date, presence: true
 
     before_save do

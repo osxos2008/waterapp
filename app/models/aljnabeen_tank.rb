@@ -1,13 +1,15 @@
 class AljnabeenTank < ApplicationRecord
   belongs_to :user
   
-  validates :almontag_tank, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :aljbeel_Tank, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :abdan_tank, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :alfryh_tank, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :algema_tank, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :shra_tank, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :alrahwa_tank, presence: true, length: { mimimum: 1 , maximum: 5 } 
+  validates :almontag_tank, 
+            :aljbeel_Tank, 
+            :abdan_tank, 
+            :alfryh_tank,
+            :algema_tank, 
+            :shra_tank, 
+            :alrahwa_tank,
+            presence: true, 
+            numericality: { only_integer: true , message: "أرقام فقط" } , length: { mimimum: 1 , maximum: 8 , message: "الرقم كبير جداً" }  
   validates :date, presence: true
 
 end

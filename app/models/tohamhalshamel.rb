@@ -1,25 +1,27 @@
 class Tohamhalshamel < ApplicationRecord
   belongs_to :user
   
-  validates :alahsabiawell_almekhwah, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :doqahwell_qlwah, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :doqatabdulhamedwell, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :elepwell_alhjrah, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :alrmedahwell, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :almekhwah, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :qlwah, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :doqatabdulhamed, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :alhjrah, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :ghamidalznad, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :nsbah, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :almswdah, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :nawan, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :shmalalmekhwah, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :nera, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :mmna, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :bneatta, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :algreen, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :alrmedah, presence: true, length: { mimimum: 1 , maximum: 5 }
+  validates :alahsabiawell_almekhwah, 
+            :doqahwell_qlwah, 
+            :doqatabdulhamedwell, 
+            :elepwell_alhjrah, 
+            :alrmedahwell, 
+            :almekhwah, 
+            :qlwah, 
+            :doqatabdulhamed, 
+            :alhjrah, 
+            :ghamidalznad, 
+            :nsbah, 
+            :almswdah, 
+            :nawan, 
+            :shmalalmekhwah, 
+            :nera, 
+            :mmna, 
+            :bneatta, 
+            :algreen, 
+            :alrmedah,
+            presence: true,
+            numericality: { only_integer: true , message: "أرقام فقط" } , length: { mimimum: 1 , maximum: 8 , message: "الرقم كبير جداً" } 
   validates :date, presence: true
 
   before_save do

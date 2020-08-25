@@ -1,28 +1,30 @@
 class AqiqThradTank < ApplicationRecord
   belongs_to :user
 
-  validates :aqiq_station1, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :aqiq_station2, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :aqiq_station3, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :aqiq_station4, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :shahbah_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :bani_kaber_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :bani_dhabyan_station_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :bani_dahabyan_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :bani_hedah_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :baljurashy_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :thrad_station1_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :susabad_station_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :mushereef_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :aunoq_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :jarab_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :blue_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :thrad_station2_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :thrad_station3_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :thrad_station4_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :almzree_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :thrad_station5_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :bani_saeed_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :aom_gayth_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
+  validates :aqiq_station1, 
+            :aqiq_station2, 
+            :aqiq_station3, 
+            :aqiq_station4, 
+            :shahbah_tank, 
+            :bani_kaber_tank,
+            :bani_dhabyan_station_tank, 
+            :bani_dahabyan_tank, 
+            :bani_hedah_tank, 
+            :baljurashy_tank, 
+            :thrad_station1_tank,
+            :susabad_station_tank, 
+            :mushereef_tank, 
+            :aunoq_tank, 
+            :jarab_tank, 
+            :blue_tank, 
+            :thrad_station2_tank,
+            :thrad_station3_tank, 
+            :thrad_station4_tank, 
+            :almzree_tank, 
+            :thrad_station5_tank, 
+            :bani_saeed_tank,
+            :aom_gayth_tank, 
+            presence: true,
+            numericality: { only_integer: true , message: "أرقام فقط" } , length: { mimimum: 1 , maximum: 8 , message: "الرقم كبير جداً" } 
   validates :date, presence: true
 end

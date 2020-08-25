@@ -1,98 +1,37 @@
-<% if current_user.admin? %>  
-<p id="notice"><%= notice %></p>
+<% if current_user.admin? || (current_user.project.include? 1)%>  
 
-<p>
-  <strong>User:</strong>
-  <%= @aljnaben.user_id %>
-</p>
+<table class="table table-sm table-dark">
+  <thead>
+    <tr>
+      <th style="text-align:center" scope="col">#</th>
+      <th style="text-align:center" scope="col">إنتاج محطة التنقية</th>
+      <th style="text-align:center" scope="col">بئر الرهوه</th>
+      <th style="text-align:center" scope="col">كمية المياه المرسلة من التحلية</th>
+      <th style="text-align:center" scope="col">عبدان</th>
+      <th style="text-align:center" scope="col">الفريا</th>
+      <th style="text-align:center" scope="col">القمع</th>
+      <th style="text-align:center" scope="col">شرى</th>
+      <th style="text-align:center" scope="col">الرهوه</th>
+      <th style="text-align:center" scope="col">شيب الجبيل</th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>Date:</strong>
-  <%= @aljnaben.date %>
-</p>
+  <tbody>
+  <tr>
+    <th scope="row">1</th>
+    <td style="text-align:center"><%=@aljnaben.purification_station%></td>
+    <td style="text-align:center"><%=@aljnaben.alrahwah_Well%></td>
+    <td style="text-align:center"><%=@aljnaben.quantity_sent_from_desalination%></td>
+    <td style="text-align:center"><%=@aljnaben.abdaan%></td>
+    <td style="text-align:center"><%=@aljnaben.alfrya%></td>
+    <td style="text-align:center"><%=@aljnaben.alqame%></td>
+    <td style="text-align:center"><%=@aljnaben.shra%></td>
+    <td style="text-align:center"><%=@aljnaben.alrahwah%></td>
+    <td style="text-align:center"><%=@aljnaben.aljbail_aljnaben%></td>
+  </tr>
 
-<p>
-  <strong>Product:</strong>
-  <%= @aljnaben.product %>
-</p>
 
-<p>
-  <strong>Purification station:</strong>
-  <%= @aljnaben.purification_station %>
-</p>
-
-<p>
-  <strong>Alrahwah well:</strong>
-  <%= @aljnaben.alrahwah_Well %>
-</p>
-
-<p>
-  <strong>Quantity sent from desalination:</strong>
-  <%= @aljnaben.quantity_sent_from_desalination %>
-</p>
-
-<p>
-  <strong>Product total:</strong>
-  <%= @aljnaben.product_total %>
-</p>
-
-<p>
-  <strong>Distribution:</strong>
-  <%= @aljnaben.distribution %>
-</p>
-
-<p>
-  <strong>Networks:</strong>
-  <%= @aljnaben.networks %>
-</p>
-
-<p>
-  <strong>Abdaan:</strong>
-  <%= @aljnaben.abdaan %>
-</p>
-
-<p>
-  <strong>Alfrya:</strong>
-  <%= @aljnaben.alfrya %>
-</p>
-
-<p>
-  <strong>Alqame:</strong>
-  <%= @aljnaben.alqame %>
-</p>
-
-<p>
-  <strong>Shra:</strong>
-  <%= @aljnaben.shra %>
-</p>
-
-<p>
-  <strong>Alrahwah:</strong>
-  <%= @aljnaben.alrahwah %>
-</p>
-
-<p>
-  <strong>Networks total:</strong>
-  <%= @aljnaben.networks_total %>
-</p>
-
-<p>
-  <strong>Almnahel:</strong>
-  <%= @aljnaben.almnahel %>
-</p>
-
-<p>
-  <strong>Aljbail aljnaben:</strong>
-  <%= @aljnaben.aljbail_aljnaben %>
-</p>
-
-<p>
-  <strong>Distribution total:</strong>
-  <%= @aljnaben.distribution_total %>
-</p>
-
-<%= link_to 'Edit', edit_aljnaben_path(@aljnaben) %> |
-<%= link_to 'Back', aljnabens_path %>
+<%= link_to 'Back', new_aljnaben_path %>
 <%else%>
 <h1><%= "Please contact the admin"%>
 <%end%>

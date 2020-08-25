@@ -2,17 +2,19 @@ class Smallproject < ApplicationRecord
   belongs_to :user
 
 
-  validates :total_wo_thrad_btat, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :product_thrad, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :product_btat, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :albaha, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :bljorashy, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :alqora, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :almandaq, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :alaqeq, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :almekhwah, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :qolwah, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :alhgrah, presence: true, length: { mimimum: 1 , maximum: 5 } 
+  validates :total_wo_thrad_btat, 
+            :product_thrad, 
+            :product_btat, 
+            :albaha, 
+            :bljorashy, 
+            :alqora, 
+            :almandaq, 
+            :alaqeq, 
+            :almekhwah, 
+            :qolwah, 
+            :alhgrah,
+            presence: true,
+            numericality: { only_integer: true , message: "أرقام فقط" } , length: { mimimum: 1 , maximum: 8 , message: "الرقم كبير جداً" } 
   validates :date, presence: true
   
   before_save do

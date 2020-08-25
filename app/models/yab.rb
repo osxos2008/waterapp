@@ -1,10 +1,12 @@
 class Yab < ApplicationRecord
   belongs_to :user
 
-  validates :yabs_produce, presence: true, length: { mimimum: 1 , maximum: 5 } 
-  validates :yabs_distribution, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :batat_distribution, presence: true, length: { mimimum: 1 , maximum: 5 }
-  validates :yabs_tank, presence: true, length: { mimimum: 1 , maximum: 5 }
+  validates :yabs_produce, 
+            :yabs_distribution,
+            :batat_distribution,
+            :yabs_tank,
+            presence: true
+            numericality: { only_integer: true , message: "أرقام فقط" } , length: { mimimum: 1 , maximum: 8 , message: "الرقم كبير جداً" } 
   validates :date, presence: true
 
   def well_total
