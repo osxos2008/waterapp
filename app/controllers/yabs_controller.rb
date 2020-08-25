@@ -30,7 +30,7 @@ class YabsController < ApplicationController
 
     respond_to do |format|
       if @yab.save
-        format.html { redirect_to new_yab_path, notice: 'Yab was successfully created.' }
+        format.html { redirect_to @yab, notice: 'Yab was successfully created.' }
         format.json { render :show, status: :created, location: @yab }
       else
         format.html { render :new }

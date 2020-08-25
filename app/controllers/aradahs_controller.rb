@@ -28,7 +28,7 @@ class AradahsController < ApplicationController
 
     respond_to do |format|
       if @aradah.save
-        format.html { redirect_to new_aradah_path, notice: 'Aradah was successfully created.' }
+        format.html { redirect_to @aradah, notice: 'Aradah was successfully created.' }
         format.json { render :show, status: :created, location: @aradah }
       else
         format.html { render :new }

@@ -29,7 +29,7 @@ class AqiqThradTanksController < ApplicationController
 
     respond_to do |format|
       if @aqiq_thrad_tank.save
-        format.html { redirect_to new_aqiq_thrad_tank_path, notice: 'Aqiq thrad tank was successfully created.' }
+        format.html { redirect_to @aqiq_thrad_tank, notice: 'Aqiq thrad tank was successfully created.' }
         format.json { render :show, status: :created, location: @aqiq_thrad_tank }
       else
         format.html { render :new }

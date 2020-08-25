@@ -29,7 +29,7 @@ class TohamhalshamelsController < ApplicationController
 
     respond_to do |format|
       if @tohamhalshamel.save
-        format.html { redirect_to new_tohamhalshamel_path, notice: 'Tohamhalshamel was successfully created.' }
+        format.html { redirect_to @tohamhalshamel, notice: 'Tohamhalshamel was successfully created.' }
         format.json { render :show, status: :created, location: @tohamhalshamel }
       else
         format.html { render :new }

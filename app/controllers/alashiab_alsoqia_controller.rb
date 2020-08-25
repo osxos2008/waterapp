@@ -29,7 +29,7 @@ class AlashiabAlsoqiaController < ApplicationController
 
     respond_to do |format|
       if @alashiab_alsoqium.save
-        format.html { redirect_to new_alashiab_alsoqium_path, notice: 'Alashiab alsoqium was successfully created.' }
+        format.html { redirect_to @alashiab_alsoqium, notice: 'Alashiab alsoqium was successfully created.' }
         format.json { render :show, status: :created, location: @alashiab_alsoqium }
       else
         format.html { render :new }

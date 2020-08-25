@@ -24,6 +24,8 @@ class ApplicationController < ActionController::Base
       new_aljnabeen_tank_path
     elsif resource.project.include? 10
       new_aradah_tank_path
+    elsif resource.project.include? 11
+      new_tohamhalshamel_tank_path
     else
       projects_path
     end

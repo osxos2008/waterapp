@@ -29,7 +29,7 @@ class AqiqsController < ApplicationController
 
     respond_to do |format|
       if @aqiq.save
-        format.html { redirect_to new_aqiq_path, notice: 'Aqiq was successfully created.' }
+        format.html { redirect_to @aqiq, notice: 'Aqiq was successfully created.' }
         format.json { render :show, status: :created, location: @aqiq }
       else
         format.html { render :new }
