@@ -3,19 +3,19 @@
 
 <h1 class="center">بيانات مشروع عردة</h1>
 
-<table class="table table-bordered table-striped table-hover f7", style="display: block;overflow-x: auto;">
-  <thead class="">
+<table class="table table-bordered table-striped table-hover f7", style="display: block;overflow-x: auto ;">
+  <thead>
     <tr class="bg-info">
       <th style="text-align:center">Submitted at </th>
       <th style="text-align:center">User</th>
       <th style="text-align:center">Date</th>
-      <th style="text-align:center">الإنتاج</th>
+      <th class="bg-dark" style="text-align:center">الإنتاج</th>
       <th style="text-align:center">إنتاج آبار عردة</th>
       <th style="text-align:center">الوارد من التحلية لخزان نخال</th>
       <th style="text-align:center">الوارد من التحلية لخزان الثراوين</th>
       <th style="text-align:center">إجمالي الإنتاج</th>
-      <th style="text-align:center">التوزيع</th>
-      <th style="text-align:center">الشبكات</th>
+      <th class="bg-dark" style="text-align:center">التوزيع</th>
+      <th class="bg-dark" style="text-align:center">الشبكات</th>
       <th style="text-align:center">القسمة</th>
       <th style="text-align:center">الثراوين</th>
       <th style="text-align:center">الثراوين الاطاولة</th>
@@ -41,7 +41,7 @@
       <th style="text-align:center">قرن ظبي</th>
       <th style="text-align:center">إجمالي توزيع الباحة</th>
       <th style="text-align:center">إجمالي توزيع الشبكات</th>
-      <th style="text-align:center">المناهل</th>
+      <th class="bg-dark" style="text-align:center">المناهل</th>
       <th style="text-align:center">نخال</th>
       <th style="text-align:center">القسمة</th>
       <th style="text-align:center">الثراوين</th>
@@ -67,13 +67,13 @@
         <td style="text-align:center"><%= aradah.created_at %></td>
         <td style="text-align:center"><%= aradah.user_id %></td>
         <td style="text-align:center"><%= aradah.date %></td>
-        <td class="bg-light" style="text-align:center"><%= aradah.product %></td>
+        <td class="bg-dark" style="text-align:center"></td>
         <td style="text-align:center"><%= aradah.wells %></td>
         <td style="text-align:center"><%= aradah.from_altahliah_to_naqal %></td>
         <td style="text-align:center"><%= aradah.from_thrawen_tank %></td>
         <td style="text-align:center"><%= aradah.product_total %></td>
-        <td class="bg-light" style="text-align:center"><%= aradah.distribution %></td>
-        <td class="bg-light" style="text-align:center"><%= aradah.networks %></td>
+        <td class="bg-dark" style="text-align:center"></td>
+        <td class="bg-dark" style="text-align:center"></td>
         <td style="text-align:center"><%= aradah.qnet_alqsmh %></td>
         <td style="text-align:center"><%= aradah.qnet_althrawen %></td>
         <td style="text-align:center"><%= aradah.qnet_althrawen_alatawlah %></td>
@@ -99,7 +99,7 @@
         <td style="text-align:center"><%= aradah.bnet_qrnthbe %></td>
         <td class="bg-light" style="text-align:center"><%= aradah.bnet_total %></td>
         <td class="bg-light" style="text-align:center"><%= aradah.network_total %></td>
-        <td class="bg-light" style="text-align:center"><%= aradah.almnahel %></td>
+        <td class="bg-dark" style="text-align:center"></td>
         <td style="text-align:center"><%= aradah.qshep_nkhal %></td>
         <td style="text-align:center"><%= aradah.qshep_alqsmh %></td>
         <td style="text-align:center"><%= aradah.qshep_althrawen %></td>

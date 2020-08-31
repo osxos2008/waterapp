@@ -10,7 +10,7 @@
       <th style="text-align:center">Submitted at </th>
       <th style="text-align:center">Date</th>
       <th style="text-align:center">User</th>
-      <th style="text-align:center">الإنتاج</th>
+      <th class="bg-dark" style="text-align:center">الإنتاج</th>
       <th style="text-align:center">إنتاج العقيق</th>
       <th style="text-align:center">إنتاج ثراد</th>
       <th style="text-align:center">الوارد من التحلية إلى المزرع</th>
@@ -19,7 +19,7 @@
       <th style="text-align:center">الوارد من التحلية إلى عردة</th>
       <th style="text-align:center">الوارد من التحلية إلى عبدان</th>
       <th style="text-align:center">إجمالي الإنتاج</th>
-      <th style="text-align:center">التوزيع</th>
+      <th class="bg-dark" style="text-align:center">التوزيع</th>
       <th style="text-align:center">الباحة (شهبه1)</th>
       <th style="text-align:center">الباحة (شهبه2)</th>
       <th style="text-align:center">المزرع</th>
@@ -40,7 +40,7 @@
       <th style="text-align:center">المشيريف</th>
       <th style="text-align:center">خزان الأمير فيصل</th>
       <th style="text-align:center">إجمالي توزيع شبكات العقيق</th>
-      <th style="text-align:center">المناهل</th>
+      <th class="bg-dark" style="text-align:center">المناهل</th>
       <th style="text-align:center">مناهل المزرع</th>
       <th style="text-align:center">مناهل بلجرشي</th>
       <th style="text-align:center">مناهل بني كبير</th>
@@ -58,7 +58,7 @@
         <td class="bg-light", style="text-align:center"><%= aqiq.created_at %></td>
         <td style="text-align:center"><%= aqiq.date %></td>
         <td style="text-align:center"><%= aqiq.user_id %></td>
-        <td class="bg-light", style="text-align:center"><%= aqiq.product %></td>
+        <td class="bg-dark", style="text-align:center"><%= aqiq.product %></td>
         <td style="text-align:center"><%= aqiq.aqiq_produce %></td>
         <td style="text-align:center"><%= aqiq.thrad_produce %></td>
         <td style="text-align:center"><%= aqiq.from_althlya_to_almzree %></td>
@@ -66,14 +66,14 @@
         <td style="text-align:center"><%= aqiq.from_althlya_to_shahba %></td>
         <td style="text-align:center"><%= aqiq.from_althlya_to_aradah %></td>
         <td style="text-align:center"><%= aqiq.from_althlya_to_abdan %></td>
-        <td class="bg-light", style="text-align:center"><%= aqiq.total_produce %></td>
-        <td class="bg-light", style="text-align:center"><%= aqiq.distribution %></td>
+        <td  style="text-align:center"><%= aqiq.total_produce %></td>
+        <td class="bg-dark", style="text-align:center"><%= aqiq.distribution %></td>
         <td style="text-align:center"><%= aqiq.albaha_shahba1 %></td>
         <td style="text-align:center"><%= aqiq.albaha_shahba2 %></td>
         <td style="text-align:center"><%= aqiq.almzree %></td>
         <td style="text-align:center"><%= aqiq.bany_dhabyan %></td>
         <td style="text-align:center"><%= aqiq.almusa %></td>
-        <td class="bg-light", style="text-align:center"><%= aqiq.total_albaha_distribution %></td>
+        <td style="text-align:center"><%= aqiq.total_albaha_distribution %></td>
         <td style="text-align:center"><%= aqiq.baljurashy %></td>
         <td style="text-align:center"><%= aqiq.bany_kaber %></td>
         <td style="text-align:center"><%= aqiq.alhbees %></td>
@@ -81,21 +81,21 @@
         <td style="text-align:center"><%= aqiq.bany_heda %></td>
         <td style="text-align:center"><%= aqiq.algabar_alawla %></td>
         <td style="text-align:center"><%= aqiq.algabar_alsufla %></td>
-        <td class="bg-light", style="text-align:center"><%= aqiq.baljurashy_total_distribution %></td>
+        <td style="text-align:center"><%= aqiq.baljurashy_total_distribution %></td>
         <td style="text-align:center"><%= aqiq.blue %></td>
         <td style="text-align:center"><%= aqiq.jarab %></td>
         <td style="text-align:center"><%= aqiq.alaunog %></td>
         <td style="text-align:center"><%= aqiq.almshereef %></td>
         <td style="text-align:center"><%= aqiq.alamer_faisal_Tank %></td>
-        <td class="bg-light", style="text-align:center"><%= aqiq.aqiq_total_distribution %></td>
-        <td class="bg-light", style="text-align:center"><%= aqiq.almnahel %></td>
+        <td style="text-align:center"><%= aqiq.aqiq_total_distribution %></td>
+        <td class="bg-dark", style="text-align:center"><%= aqiq.almnahel %></td>
         <td style="text-align:center"><%= aqiq.almzree_mnahel %></td>
         <td style="text-align:center"><%= aqiq.baljurashy_mnahel %></td>
         <td style="text-align:center"><%= aqiq.bany_kabeer_mnahel %></td>
         <td style="text-align:center"><%= aqiq.allehyan_mnahel %></td>
         <td style="text-align:center"><%= aqiq.alsenaeeh_mnahel %></td>
-        <td class="bg-light", style="text-align:center"><%= aqiq.almnahel_total %></td>
-        <td class="bg-light", style="text-align:center"><%= aqiq.total_distribution %></td>
+        <td style="text-align:center"><%= aqiq.almnahel_total %></td>
+        <td style="text-align:center"><%= aqiq.total_distribution %></td>
         <td><%= link_to 'Show', aqiq %></td>
         <td><%= link_to 'Edit', edit_aqiq_path(aqiq) %></td>
         <td><%= link_to 'Delete', aqiq, method: :delete, data: { confirm: 'Are you sure?' } %></td>
