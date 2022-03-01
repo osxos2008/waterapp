@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.7'
 # Use ActiveStorage variant
 gem 'mini_magick', '~> 4.8'
 # Use Active Storage variant
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 #bootstrap gem 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sprockets-rails', '2.3.3'
